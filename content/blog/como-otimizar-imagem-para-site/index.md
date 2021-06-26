@@ -5,10 +5,10 @@ description: "Saiba como Otimizar Imagens de seu site, um dos fatores que mais i
 date: "2019-09-07T18:25:00.000Z"
 categories: [front-end, otimização]
 image:
-  feature: /images/posts/thumbs/o-que-sera-no-futuro.png
+  feature: /images/posts/thumbs/como-otimizar-imagens-para-site.png
 ---
 
-![Como otimizar imagens para site](/images/posts/thumbs/o-que-sera-no-futuro.png)
+![Como otimizar imagens para site](/images/posts/thumbs/como-otimizar-imagens-para-site.png)
 
 Saiba como **otimizar imagens** de seu site e aumente a velocidade de carregamento de sua página.
 
