@@ -1,7 +1,7 @@
 ---
 title: Extreme Programming
 slug: extreme-programming
-description:"Extreme Programming possui valores baseados em simplicidade, comunicação,  feedback, coragem e respeito. Juntamente com práticas eficazes recomendadas."
+description: "Extreme Programming possui valores baseados em simplicidade, comunicação, feedback, coragem e respeito. Juntamente com práticas eficazes recomendadas."
 date: "2019-12-07T23:39:44.000Z"
 categories: [conceito, programação]
 image:
