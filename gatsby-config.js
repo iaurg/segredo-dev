@@ -83,5 +83,33 @@ module.exports = {
     `gatsby-plugin-offline`,
     "gatsby-plugin-dark-mode",
     `gatsby-plugin-postcss`,
+    {
+      resolve: `gatsby-plugin-advanced-sitemap`,
+      options: {
+        query: `
+        {
+          allMarkdownRemark(sort: {order: DESC, fields: [frontmatter___date]}, limit: 1000) {
+            edges {
+              node {
+                fields {
+                  slug
+                }
+                frontmatter {
+                  slug
+                }
+                id
+              }
+            }
+          }
+        }
+        `,
+      mapping: {
+        allMarkdownRemark: {
+            sitemap: `posts`,
+        },  
+      },
+      addUncaughtPages: true, // optional: will fill up pages that are not caught by queries and mapping and list them under `sitemap-pages.xml`         
+    }
+  }
   ],
 }
