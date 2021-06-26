@@ -31,7 +31,7 @@ Cada tipo de vulnerabilidade possui muito conteúdo, exemplo, passo-a-passo que 
 - [Insecure Direct Object References (IDOR)](#insecure-direct-object-references-idor-)
 - [Application Logic Vulnerabilities](#application-logic-vulnerabilities)
 
-### Open Redirect Vulnerabilities
+<h3 id="open-redirect-vulnerabilities">Open Redirect Vulnerabilities</h3>
 
 Alguns sites utilizam redirecionamento através da url para encaminhar o usuário à algum lugar, por exemplo encaminhar o usuário para uma página após o login. É possível modificar esses valores e verificar se o servidor faz algum tratamento antes de executar esta ação, caso não, esses valores podem ser alterados e com isso enviar o usuário para qualquer página/url sem que o usuário perceba.
 
@@ -42,7 +42,7 @@ Este tipo de vulnerabilidade acontece por causa do excesso de confiança, o usu�
 
 > Aprenda a invadir, invadindo.
 
-### HTTP Parameter Pollution
+<h3 id="http-parameter-pollution">HTTP Parameter Pollution</h3>
 
 Essa invasão funciona manipulando os parâmetros http que são enviados ou recebidos pelo site que podem realizar alterações tanto no back como no front. 
 
@@ -52,7 +52,7 @@ Muitas aplicações ficam vulneráveis apenas com poluição de HTTP, sempre est
 
 Normalmente quando um site está vulnerável com HPP provavelmente terão várias rotas com o mesmo problema. HPP é muito "tentativa e erro" observando o que o servidor faz com seu código.
 
-### Cross Site Request Forgery (CSRF)
+<h3 id="cross-site-request-forgery-csrf-">Cross Site Request Forgery (CSRF)</h3>
 
 CSRF é a interceptação de requisições através de outros sites, você é capaz de fazer uma requisição utilizando os cookies ou sessões guardadas no browser e utilizar para enviar requisições através de outros sites.
 
@@ -68,7 +68,7 @@ Se um site estiver usando token CSRF tente removê-lo ou alterar para ver se o s
 
 [Um exemplo de invasão](https://www.corben.io/tricky-CORS/) passando pelo CORS no Yahoo.
 
-### HTML Injection
+<h3 id="html-injection">HTML Injection</h3>
 
 É uma forma de invasão onde você pode manipular a tratativa do site em relação ao HTML recebido fazendo com que sejam inseridos elementos HTML manipulados dentro do site.
 
@@ -78,7 +78,7 @@ HTML Injection Stored: quando o servidor salva as informações do HTML e sempre
 
 HTML Injection Reflected: que aparece apenas uma vez a alteração para o usuário final.
 
-### CRLF Injection
+<h3 id="crlf-injection">CRLF Injection</h3>
 
 %0d%0a (quebra linha e retorna) este comando alerta a requisição para pular uma linha (terminar linha) e injetar o próximo conteúdo em um header dentro da requisição. Pode ser utilizado para enviar requisições GET por exemplo e "sequestrar" os tokens que o usuário está utilizando sem que ele perceba. É um ataque do tipo "injeção" onde dados são enviados para o servidor e alteram de alguma forma o comportamento esperado de retorno ou execução.
 
@@ -88,7 +88,7 @@ Sempre verifique como encoded characters podem ser utilizados principalmente em 
 
 > Não fique subestimado por empresas grandes ou marcas conhecidas, eles também podem falhar.
 
-### Cross-Site Scripting
+<h3 id="cross-site-scripting">Cross-Site Scripting</h3>
 
 XSS ocorre quando sites executam caracteres especiais sem sanitiza-los, o que faz o browser executar códigos JavaScript que não deveriam ser executados. Os caracteres normalmente incluem ("), (') e (<>). Esses são caracteres especiais pois são utilizados no html para indicar inicio e fim de instruções. Por exemplo, caso um site não sanitize esse tipo de caracter você é capaz de enviar um script via input e fazer com que o site responda com um alert informando algo.
 
@@ -115,7 +115,7 @@ Quando estiver procurando por XSS lembre-se de testar todas as opções de campo
 
 > Como um hacker tente pensar de forma que o desenvolvedor não tenha pensado, por exemplo, o que acontece se passar dois src para uma tag image? Como isso será renderizado?
 
-### Template Injection
+<h3 id="template-injection">Template Injection</h3>
 
 Template engines são códigos usados para gerar conteúdo dinâmico dentro de uma página, site, e-mail ou qualquer coisa que seja gerada dinamicamente. Esse template possui alguns "espaços" que receberão um conteúdo futuro que será renderizado neste local. Assim a lógica de apresentação fica separada da lógica de aplicação.
 
@@ -123,19 +123,19 @@ Um exemplo de template é uma página de usuário onde é sempre utilizado o mes
 
 Existem dois tipos de template injection, client side e server side. Ambos acontecem quando as engines renderizam inputs do usuário sem sanitizar de forma correta. Algumas vezes template injection pode evoluir para remote code execution.
 
-**Server Side Template Injections (SSTI): **Quando as injeções ocorrem no lado do servidor, normalmente templates são renderizados por alguma linguagem de programação back-end como PHP, Ruby, Python... Para identificar esta vulnerabilidade primeiro você precisa identificar qual linguagem ou framework o back-end está utilizando e então pode preencher algum campo de usuário com uma expressão da linguagem utilizada por exemplo ({{7*7}}) se o template renderizar 49 o código foi executado no servidor e retornado para você no template.
+**Server Side Template Injections (SSTI):** Quando as injeções ocorrem no lado do servidor, normalmente templates são renderizados por alguma linguagem de programação back-end como PHP, Ruby, Python... Para identificar esta vulnerabilidade primeiro você precisa identificar qual linguagem ou framework o back-end está utilizando e então pode preencher algum campo de usuário com uma expressão da linguagem utilizada por exemplo ({{7*7}}) se o template renderizar 49 o código foi executado no servidor e retornado para você no template.
 
-**Client Side Template Injections (CSTI): **CSTI ocorrem quando ferramentas que geram template no lado do cliente como Angular e React, permite a injeção de código, normalmente podem ser uma porta para o XSS, apesar de terem vários padrões de segurança pré-configurados que previnem injeções de códigos existem alguns "bypass" conhecidos e que podem ser explorados.
+**Client Side Template Injections (CSTI):** CSTI ocorrem quando ferramentas que geram template no lado do cliente como Angular e React, permite a injeção de código, normalmente podem ser uma porta para o XSS, apesar de terem vários padrões de segurança pré-configurados que previnem injeções de códigos existem alguns "bypass" conhecidos e que podem ser explorados.
 
 > Sempre que estiver procurando uma vulnerabilidade tente entender e conhecer as tecnologias que a aplicação utiliza, isso lhe dará pistas para encontrar novas formas de invadir e encontrar coisas interessantes.
 
-### SQL Injection
+<h3 id="sql-injection">SQL Injection</h3>
 
 Essa falha ocorre quando o site que hospeda o banco de dados permite que o usuário faça solicitações com query "não esperadas" e obtenha retornos de informações que não deveriam ser retornadas para o ambiente público. Normalmente esses ataques são muitos bem pagos pois permitem que o atacante escale e obtenha informações para manipular ou extrair dados do sistema e até mesmo tornar-se administrador.
 
 Sempre investigue e altere parâmetros de url dos sites para entender como eles estão sendo interpretados. Procure formas de passar dados para os sites de formas que não são esperadas para que você possa analisar como os retornos são computados.
 
-### Server Side Request Forgery (SSRF)
+<h3 id="server-side-request-forgery-ssrf-">Server Side Request Forgery (SSRF)</h3>
 
 Neste tipo de invasão o atacante é capaz de executar requisições direto pelo servidor. É similar ao CSRF com uma diferença, o alvo aqui é o site em si ao invés de se aproveitar do usuário.
 
@@ -151,7 +151,7 @@ Ao tentar invadir usando SSRF tente um port scanning nas portas 22 (SSH), 80 (HT
 
 Se tiver acesso ao DNS você pode controlar as requisições e adicionar um subdominio seu para receptar as informações.
 
-### XML External Entity Vulnerability
+<h3 id="xml-external-entity-vulnerability">XML External Entity Vulnerability</h3>
 
 Esta falha explora a vulnerabilidade de como uma aplicação faz o parse de um XML, como a aplicação processa os dados inclusos nos campos.
 
@@ -161,19 +161,19 @@ Arquivos .docx, .xlsx, .pptx... são XML também, preste atenção em servidores
 
 > Sempre analise sites que permitem uploads de arquivos
 
-### Remote Code Execution
+<h3 id="remote-code-execution">Remote Code Execution</h3>
 
 Injeção de código que é interpretado e executado por uma aplicação. Normalmente permitido por aplicações que não fazem nenhum tipo de sanitização ou validação em inputs.
 
-### Memory
+#### Memory
 
-**Buffer Overflow: **É quando o programa escreve além do limite de memória disponível, isso abre uma brecha para o invasor injetar algum código através do overflow e fazer com que o programa retorne algo inesperado.
+**Buffer Overflow:** É quando o programa escreve além do limite de memória disponível, isso abre uma brecha para o invasor injetar algum código através do overflow e fazer com que o programa retorne algo inesperado.
 
-**Read out of Bounds: **Quando você é capaz de ler mais itens na memória do que o esperado. Essa falha é onde você solicita um valor do ponteiro X porém o programa retorna para você muito mais do que o esperado. Exemplo de falha [Heartbleed](https://en.wikipedia.org/wiki/Heartbleed).
+**Read out of Bounds:** Quando você é capaz de ler mais itens na memória do que o esperado. Essa falha é onde você solicita um valor do ponteiro X porém o programa retorna para você muito mais do que o esperado. Exemplo de falha [Heartbleed](https://en.wikipedia.org/wiki/Heartbleed).
 
-**Memory Corruption: **Este tipo de falha induz o código a performar uma ação fora do esperado expondo valores da memória que não deveriam ser retornados.
+**Memory Corruption:** Este tipo de falha induz o código a performar uma ação fora do esperado expondo valores da memória que não deveriam ser retornados.
 
-### Sub Domain Takeover
+<h3 id="sub-domain-takeover">Sub Domain Takeover</h3>
 
 É basicamente você se apropriar de um subdominio. Um site cria algum subdominio porém nunca aponta ele para algum lugar ou aponta para um serviço que permite a criação de dominios personalizados, deixando vulverável para que outra pessoa possa fazer isso.
 
@@ -188,11 +188,11 @@ Exemplo:
 
 5. Todo o tráfego para subdomain.example.com é direcionado a um site malicioso que se parece com example.com
 
-### Race Conditions
+<h3 id="race-conditions">Race Conditions</h3>
 
 Quando dois processos ocorrerem em paralelo executando uma mesma ação, resultando em uma duplicação de requisições ou resultados. Sempre que existe consultas, lógicas de códigos ou atualizações em banco de dados é uma possibilidade de se aproveitar de uma race condition, essas operações possuem um delay e dependendo de como forem implementadas podem ser burladas.
 
-### Insecure Direct Object References (IDOR)
+<h3 id="insecure-direct-object-references-idor-">Insecure Direct Object References (IDOR)</h3>
 
 Esse tipo de falha ocorre quando um usuário pode acessar algum valor ou objeto que não deveria ser acessível para ele, por exemplo um usuário ao logar em um site é direcionado para example.com/user=123, se ele modificar o parametro para example.com/user=321 e ele conseguir acessar as informações deste outro usuário o site está vulnerável por um bug IDOR.
 
@@ -200,7 +200,7 @@ Encontrar falhas IDOR requerem tanto habilidade quanto observação, ao analisar
 
 > Seja criativo quando estiver hackeando, pense fora da caixa.
 
-### OAuth
+#### OAuth
 
 OAuth é uma tecnologia que permite o acesso a API's fazendo validações via parâmetros e garantindo acesso a informações. Normalmente utilizado para fazer login em sites usando aplicativos de terceiros como Facebook, Twitter, Google... 
 
@@ -210,7 +210,7 @@ OAuth pode ser complicado de entender no começo devido ao número de processos 
 
 > Um bom hacking é uma combinação de observação e habilidades.
 
-### Application Logic Vulnerabilities
+<h3 id="application-logic-vulnerabilities">Application Logic Vulnerabilities</h3>
 
 Este tipo de vulnerabilidade é diferente das demais vistas anteriormente, itens como XSS, HTML Injection... envolvem algum tipo de envio ou manipulação de informações, application logic vulnerabilites foca em manipular cenários e procurar bugs na aplicação se aproveitando do código da aplicação e de decisões do desenvolvedor.
 
