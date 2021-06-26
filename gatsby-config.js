@@ -6,7 +6,7 @@ module.exports = {
       name: `@iaurg`,
       summary: `web dev`,
     },
-    description: `As descobertas que faço e coisas que aprendo`,
+    description: `Blog onde reuno meus conhecimentos e estudos sobre desenvolvimento web e tecnologias.`,
     siteUrl: `https://segredo.dev`,
     social: {
       twitter: `iaurg`,
