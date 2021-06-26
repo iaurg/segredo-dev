@@ -36,8 +36,8 @@ Já fiz o inicio do projeto e tenho uma funcionalidade básica do blog. Os próx
 - [x] Atrelar imagens do backup aos posts
 - [x] Verificar paginação com lazy loading
 - [ ] Checar itens de SEO
-- [ ] Checar performance
-- [ ] Transferência de DNS
+- [x] Checar performance
+- [x] Transferência de DNS
 
 ### Posso melhorar em algo?
-Se eu puder melhorar em algo ou você souber uma maneira melhor de fazer algum dos itens nesse repositório fique a vontade para [abrir uma issue](https://github.com/iaurg/segredo.dev/issues/new), ficarei grato.
+Se eu puder melhorar em algo ou você souber uma maneira melhor de fazer algum dos itens nesse repositório fique a vontade para [abrir uma issue](https://github.com/iaurg/segredo-dev/issues/new), ficarei grato.
