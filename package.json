@@ -42,7 +42,7 @@
     "prettier": "2.0.5",
     "tailwindcss": "^1.6.2"
   },
-  "homepage": "https://github.com/renyuanz/leonids#readme",
+  "homepage": "https://github.com/iaurg/segredo-dev#readme",
   "keywords": [
     "gatsby"
   ],
@@ -50,7 +50,7 @@
   "main": "n/a",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/renyuanz/leonids.git"
+    "url": "git+https://github.com/iaurg/segredo-dev.git"
   },
   "scripts": {
     "build": "gatsby build",
