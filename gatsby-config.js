@@ -1,15 +1,15 @@
 module.exports = {
-  pathPrefix: "/leonids",
+  pathPrefix: "/iaurg",
   siteMetadata: {
-    title: `Leonids`,
+    title: `Segredo Dev`,
     author: {
-      name: `@ry_zou`,
+      name: `@iaurg`,
       summary: `web dev`,
     },
-    description: `A simple, fixed sidebar two columns Gatsby.js blog starter.`,
-    siteUrl: `https://renyuanz.github.io/leonids`,
+    description: `As descobertas que faço e coisas que aprendo`,
+    siteUrl: `https://segredo.dev`,
     social: {
-      twitter: `ry_zou`,
+      twitter: `iaurg`,
     },
     defaultImage: "images/bg.jpeg",
   },
@@ -55,15 +55,15 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        trackingId: `UA-62251910-1`,
+        trackingId: `UA-138531025-1`,
       },
     },
     `gatsby-plugin-feed`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Ryz`,
-        short_name: `Ryz`,
+        name: `iaurg`,
+        short_name: `iaurg`,
         start_url: `/`,
         background_color: `#ffffff`,
         theme_color: `#663399`,
