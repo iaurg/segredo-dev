@@ -15,9 +15,9 @@ image:
 Analisar gráfico de bundle no Next.js:
 
 1. Abra seu `package.json` e  adicione o script:
-
+  ```json
     "analyze": "ANALYZE=true next build"
-
+  ```
 2. Ficará algo próximo disso:
   ```json
     {

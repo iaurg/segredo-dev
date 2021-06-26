@@ -31,7 +31,7 @@ Sobre o **Next.js**:
 - **Roteamento Automático**: As URL's no Next js são mapeadas com base na pasta `pages`, então qualquer arquivo nesta pasta se torna uma página, sem a necessidade de uma configuração extra. (é possível personalizar isto caso precise)
 - **Code Splitting Automático**: Essa funcionalidade permite que as páginas sejam renderizadas apenas com os pacotes que elas precisam. Digamos que apenas uma página de seu site utilize o Ant Design, este pacote será atrelado apenas a esta página. Isso garante que cada página tenha apenas o código necessário para sua renderização, diminuindo o tamanho (kB) de cada página e melhorando a velocidade de renderização. Houve uma [contribuição do time do Google](https://www.techrepublic.com/article/insiders-look-at-googles-web-framework-contributions-to-next-js-and-more/) para melhorar esta funcionalidade recentemente.
 - **Suporte a TypeScript**: Configuração e compilação automáticos integrados similar a uma IDE.
-- **Internacionalização: **Como padrão o Next.js já possui uma estrutura para identificação de idiomas diferentes, trabalhando com rotas exclusivas e traduções via locale.
+- **Internacionalização:** Como padrão o Next.js já possui uma estrutura para identificação de idiomas diferentes, trabalhando com rotas exclusivas e traduções via locale.
 - **Otimização de Imagem**: Componente nativo do Next para otimização de suas imagens com redimensionamento, lazyload, imagens em formato moderno e de fácil implementação.
 
 ## Next.js e Server Side Rendering

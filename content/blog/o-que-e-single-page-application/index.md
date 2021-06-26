@@ -1,7 +1,7 @@
 ---
 title: O que é Single Page Application (SPA)?
 slug: o-que-e-single-page-application
-date: 2019-05-06T10:14:05.000Z
+date: "2019-05-06T10:14:05.000Z"
 categories: [front-end]
 image:
   feature: /images/posts/thumbs/o-que-e-single-page-application.png
