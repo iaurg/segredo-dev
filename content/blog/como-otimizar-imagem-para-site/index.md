@@ -24,7 +24,7 @@ As formas de otimização de imagem são:
 - [Otimização de imagem com CDN](#otimizar-imagem-com-cdn)
 - [Otimizando imagem com media queries (CSS)](#otimizar-imagem-com-media-queries)
 
-### Otimizar imagem com compressor de imagem
+<h3 id="otimizar-imagem-compressor">Otimizar imagem com compressor de imagem</h3>
 
 ![imagem-otimizada-para-site-comprimida](/images/posts/imagem-otimizada-para-site-comprimida.png)
 
@@ -42,13 +42,13 @@ Sites para otimizar imagem online:
 
 [Compress PNG](https://compresspng.com/): Envio e download de imagens em JPEG, PNG, SVG e GIF.
 
-### Otimizar imagem removendo data
+<h3 id="otimizar-imagem-removendo-data">Otimizar imagem removendo data</h3>
 
 Essa é uma otimização mais específica mas pode ser necessária em seu caso. Uma grande parte de imagens que são registradas por celulares ou câmeras fotográficas guardam informações dentro das imagens para que possam ser consultadas posteriormente, dados como hora da foto, abertura da câmera, tipo de flash, quantidade de cores... A não ser que seu site utilize essas informações elas são totalmente desnecessárias e ocupam uma quantidade de bytes em sua imagem.
 
 Utilizando o [Verexfi](https://www.verexif.com) para remover esses dados extras da imagem ([dancing](https://flic.kr/p/UEahaD)) consegui diminuir de 1.66MB para 1.63MB, como são informações em texto a diferença é pequena, mas 0.03MB em milhares de imagens pode ter um impacto bem grande.
 
-### Otimizar imagem utilizando o formato certo
+<h3 id="otimizar-imagem-utilizando-formato-correto">Otimizar imagem utilizando o formato certo</h3>
 
 Atualmente na web os formatos mais utilizados são JPG, PNG, GIF e SVG. Existe um gráfico divertido que realmente pode te ajudar na escolha do que utilizar em seu site ou aplicação:
 
@@ -96,7 +96,7 @@ Resumidamente para você fazer a escolha correta da imagem pode seguir os seguin
 
 Pensar nesse ponto pode ser apenas um detalhe quando seu site possui poucas visitas, mas com o crescimento de acessos com certeza cada imagem e detalhe farão a diferença na quantidade de banda que será utilizada.
 
-### Otimização de imagem com CDN
+<h3 id="otimizar-imagem-com-cdn">Otimização de imagem com CDN</h3>
 
 Uma ótima técnica que você pode utilizar em conjunto com as demais para otimizar as imagens de seu site é a distribuição de arquivos via CDN (Content Delivery Network) ou Rede de Distribuição de Conteúdo. Basicamente esta técnica utiliza um grupo de servidores distrbuidos para disponibilizar seus arquivos de forma rápida e segura.
 
@@ -118,7 +118,7 @@ Legal né? Você pode utilizar muitas opções com essa API.
 
 A CDN dá uma liberdade maior no controle de arquivos que são fornecidos em seu site, normalmente começa a ser utilizada quando o projeto começa a criar grandes proporções, mas não seria nada mal utilizar desde o começo uma CDN básica.
 
-### Otimizando imagens via media queries
+<h3 id="otimizar-imagem-com-media-queries">Otimizando imagens via media queries</h3>
 
 Uma ótima forma de trabalhar com imagens em diversos dispositivos é utilizando media queries para alterar a imagem de acordo com a resolução. Esta propriedade permite que uma imagem seja carregada apenas na resolução escolhida.
 
