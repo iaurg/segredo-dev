@@ -109,8 +109,9 @@ Por exemplo você pode ter uma imagem:
 ![imagem-imgix](https://assets.imgix.net/hp/snowshoe.jpg?q=70&amp;auto=compress&amp;w=900&amp;h=600)
 
 E utilizando parâmetros via URL na consulta criar algo como:
-
-`https://assets.imgix.net/hp/snowshoe.jpg?q=70&auto=compress&w=900&h=600&fit=crop&crop=focalpoint&fp-x=.41&fp-y=.43&fp-z=1.59&blend64=aHR0cHM6Ly9hc3NldHMuaW1naXgubmV0L2hwL3NhbGUtYmx1ZS5wbmc_aD02MDE&bx=0&bm=normal&mark64=aHR0cHM6Ly9hc3NldHMuaW1naXgubmV0L2hwL3dhbmRlci1sb2dvLmFpP3c9MzAwJmZtPXBuZw&markscale=8&markpad=20&markalign=top`
+```
+https://assets.imgix.net/hp/snowshoe.jpg?q=70&auto=compress&w=900&h=600&fit=crop&crop=focalpoint&fp-x=.41&fp-y=.43&fp-z=1.59&blend64=aHR0cHM6Ly9hc3NldHMuaW1naXgubmV0L2hwL3NhbGUtYmx1ZS5wbmc_aD02MDE&bx=0&bm=normal&mark64=aHR0cHM6Ly9hc3NldHMuaW1naXgubmV0L2hwL3dhbmRlci1sb2dvLmFpP3c9MzAwJmZtPXBuZw&markscale=8&markpad=20&markalign=to
+```
 
 ![imagem-imgix](https://assets.imgix.net/hp/snowshoe.jpg?q=70&amp;auto=compress&amp;w=900&amp;h=600&amp;fit=crop&amp;crop=focalpoint&amp;fp-x=.41&amp;fp-y=.43&amp;fp-z=1.59&amp;blend64=aHR0cHM6Ly9hc3NldHMuaW1naXgubmV0L2hwL3NhbGUtYmx1ZS5wbmc_aD02MDE&amp;bx=0&amp;bm=normal&amp;mark64=aHR0cHM6Ly9hc3NldHMuaW1naXgubmV0L2hwL3dhbmRlci1sb2dvLmFpP3c9MzAwJmZtPXBuZw&amp;markscale=8&amp;markpad=20&amp;markalign=top)
 
