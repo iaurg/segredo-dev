@@ -61,4 +61,6 @@ Todos os desafios que realizei estão [neste repositório](https://github.com/ia
 
 Depois de 20 dias de muita luta, código em C, Rush, exames e descobrindo como passar na Moulinette o resultado foi alcançado e me tornei um cadete da 42, receber a mensagem: **"É com muito orgulho que anunciamos que você é oficialmente Cadete da 42 São Paulo!"** é realmente gratificante e com certeza os próximos desafios serão ainda mais recompensadores.
 
+Agora a jornada realmente começa, aqui é onde se inicia o processo de formação de engenheiro de software da 42. Poderei aprender como computadores e linguagens de programação funcionam "embaixo do capô", podendo assim, aprender qualquer nova tecnologia de forma muito mais rápida e eficiente sempre que necessário, buscando ser capaz de resolver problemas complexos de forma autônoma, criativa e colaborativa.
+
 Até mais!
