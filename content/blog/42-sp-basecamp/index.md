@@ -1,18 +1,31 @@
 ---
-title: Experiência 42 Basecamp
+title: Experiência no processo seletivo da 42 SP
 slug: 42-basecamp
-description: "Como foi minha experiência no processo seletivo da 42 SP"
+description: "Como foi minha experiência no processo seletivo da 42 SP uma escola de programação peer-to-peer"
 date: "2021-07-13T03:15:39.000Z"
 ---
 
-> Creio que o aprendizado na 42 pode ser resumido em compatilhamento de conteúdo e iteração entre pares, esta é a chave da 42.
+> Creio que o aprendizado na 42 pode ser resumido em compartilhamento de conteúdo e iteração entre pares, esta é a chave da 42.
 
-## Como conheci a 42?
+Neste artigo sobre a 42 sp:
+
+- [Como conheci a 42?](#como-conheci-a-42)
+- [O que é a escola 42?](#o-que-e-a-escola-42)
+- [Como funciona a 42 sp?](#como-funciona-a-42-sp)
+- [Como entrar na 42 sp?](#como-entrar-na-42-sp)
+- [O Basecamp da 42](#o-basecamp-da-42)
+- [Pós Basecamp](#pos-basecamp)
+- [Como são chamados os alunos da Escola de programação 42?](#como-sao-chamados-os-alunos)
+
+<h2 id="como-conheci-a-42">Como conheci a 42?</h2>
+
 Conheci a 42 SP em 2020 através do Fabio Akita em seu vídeo [Guia DEFINITIVO de Aprendendo a Aprender | A maior BRONCA da sua vida [RATED R]](https://youtu.be/oUPaJxk6TZ0?t=2722) e a partir desse vídeo eu me interessei pelo processo da escola em sí, mas por ser em São Paulo e exigir a presença física eu "desconsiderei" por enquanto fazer parte da escola, pois seria complicado me mudar para São Paulo por 1 mês para fazer parte da piscina presencial. Porém com o crescimento da pandemia a escola precisou se adaptar e seu processo seletivo de 2021 foi aberto para ser realizado online, então eu aproveitei essa chance.
 
-## O que é a escola 42?
+<h2 id="o-que-e-a-escola-42">O que é a escola 42?</h2>
 
-A primeira 42 foi a École 42 na França, uma escola de programação privada, gratuita, aberta em 2013 por Xavier Niel, bilionário empreendedor do ramo de telecomunicações. Com uma metodologia disruptiva, um modelo nunca visto e filosofia de aprendizado libertadora.
+A primeira 42 foi a [École 42](https://en.wikipedia.org/wiki/42_(school)) na França, uma escola de programação privada, gratuita, aberta em 2013 por Xavier Niel, bilionário empreendedor do ramo de telecomunicações. Com uma metodologia disruptiva, um modelo nunca visto e filosofia de aprendizado libertadora. É uma escola focada em aprendizado entre pares.
+
+<h2 id="como-funciona-a-42-sp">Como funciona a 42 sp?</h2>
 
 A 42 é uma escola de programação baseada em aprendizagem coletiva, onde você aprende ao mesmo tempo que ensina. Este processo é chamado de “peer-to-peer learning”, ou aprendizado entre pares, é um modelo de aprendizado no qual os participantes aprendem uns com os outros ao invés de um único professor. Isso exercita o pensamento crítico, trabalho em grupo, comunicação e senso de comunidade. Membros também avaliam uns aos outros e aprendem mais a cada feedback dado ou recebido de seus pares.
 
@@ -20,9 +33,9 @@ Todos esse sistema é estruturado em volta de uma comunidade, desafios e gamific
 
 O currículo abrange linguagens fundamentais de programação, começando com C e extendendo para programação imperativa/funcional e orientada a objetos - algoritmos, inteligência artificial, gráficos, integração tecnológica, programação de sistema, rede e administrador do sistema, segurança e vírus, dados e base de dados e computação paralela. Existem diversos projetos e desafios disponíveis, podendo ser executados de acordo com a escolha do aluno.
 
-## Como funciona o processo seletivo?
+<h2 id="como-entrar-na-42-sp">Como entrar na 42 sp?</h2>
 
-O processo para fazer parte da 42 e se tornar um "cadete" (nome dado para alunos) é composto de 3 etapas:
+O processo para entrar da 42 e se tornar um "cadete" (como são chamados os alunos) é composto de 3 etapas:
 
 1. **Teste de memória e lógica**: Neste teste basicamente são apresentados dois "jogos" para você solucionar problemas em níveis, assim como indicado no site da 42 recomendo que reserve as 2 horas para concluí-los, no meu caso eu separei um sábado tranquilo para poder resolver apenas estes problemas. O primeiro jogo será o de memória similar a um "Genius", para você selecionar a sequência correta e o jogo de lógica é baseado em comandos para mover uma nave em um tabuleiro, ambos são baseados em níveis, legais e iterativos.
 
@@ -30,7 +43,7 @@ O processo para fazer parte da 42 e se tornar um "cadete" (nome dado para alunos
 
 3. **Basecamp**: Esta é a última etapa do processo seletivo, para participar dela você precisa ser sorteado após a conclusão das duas etapas anteriores. Neste momento você fará parte da imersão na 42.
 
-## O Basecamp da 42
+<h2 id="o-basecamp-da-42">O Basecamp da 42</h2>
 
 Esta parte do processo seletivo é realmente desafiadora, é exigido o máximo de você e é basicamente uma imersão total no mundo da 42. Realmente você precisará de muitas horas para conseguir se dedicar ao processo completo e fazer todas as atividades exigidas, eu intercalei o programa enquanto trabalhava, mas não recomendo, se puder separar esses 20 dias para fazer apenas o programa com certeza será mais tranquilo. 
 
@@ -57,10 +70,16 @@ Creio que esta etapa do Basecamp para todos que participam é muito valiosa, pel
 
 Todos os desafios que realizei estão [neste repositório](https://github.com/iaurg/42sp).
 
-## Pós Basecamp
+<h2 id="pos-basecamp">Pós Basecamp</h2>
 
 Depois de 20 dias de muita luta, código em C, Rush, exames e descobrindo como passar na Moulinette o resultado foi alcançado e me tornei um cadete da 42, receber a mensagem: **"É com muito orgulho que anunciamos que você é oficialmente Cadete da 42 São Paulo!"** é realmente gratificante e com certeza os próximos desafios serão ainda mais recompensadores.
 
 Agora a jornada realmente começa, aqui é onde se inicia o processo de formação de engenheiro de software da 42. Poderei aprender como computadores e linguagens de programação funcionam "embaixo do capô", podendo assim, aprender qualquer nova tecnologia de forma muito mais rápida e eficiente sempre que necessário, buscando ser capaz de resolver problemas complexos de forma autônoma, criativa e colaborativa.
+
+<h2 id="como-sao-chamados-os-alunos">Como são chamados os alunos da Escola de programação 42?</h2>
+
+Os alunos da 42 são chamados de **cadete**, todos que passaram pelo processo seletivo completo e que agora fazem parte do programa com duração média de 10 meses com foco em tornar-se um engenheiro de software.
+
+Se quiser saber mais algo sobre a 42 é só falar comigo.
 
 Até mais!
