@@ -14,7 +14,10 @@ Saiba como **otimizar imagens** de seu site e aumente a velocidade de carregamen
 
 Em algum momento você precisará **otimizar as imagens** de seu site ou aplicação web, afinal este é um dos itens que mais consomem recursos quando o usuário acessa seu site. Imagens se não forem configuradas corretamente, otimizadas e dispostas em formatos corretos podem consumir muito da banda de seu usuário, caso ele esteja usando um 3G/4G isso será uma tragédia!
 ![](/images/posts/otimizar-imagem-para-site.png)
+
 Explicação em vídeo sobre métodos de otimizar imagens para seu site carregar mais rápido e utilizar recursos de forma eficiente:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/APk2pXRkB48?start=284" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 As formas de otimização de imagem são:
 
