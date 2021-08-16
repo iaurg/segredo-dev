@@ -10,6 +10,14 @@ image:
 
 ![Configurar testes no Next.js](/images/posts/thumbs/nextjs-jest-test.png)
 
+**Atualização 16/08/2021**: Agora o Next.js possui uma parte exclusiva para testes dentro da documentação:
+- [Testes em Next.js](https://nextjs.org/docs/testing?utm_source=segredo-dev&utm_medium=link&utm_campaign=post&utm_id=post-test-nextjs)
+
+Exemplos de código:
+- [Testes em Next.js com Cypress](https://github.com/vercel/next.js/tree/canary/examples/with-cypress?utm_source=segredo-dev&utm_medium=link&utm_campaign=post&utm_id=post-test-nextjs)
+- [Testes em Next.js com Jest e React Testing Library](https://github.com/vercel/next.js/tree/canary/examples/with-jest?utm_source=segredo-dev&utm_medium=link&utm_campaign=post&utm_id=post-test-nextjs)
+
+
 Olá, neste post vou detalhar como configurar o [Jest](https://jestjs.io/pt-BR/) + [Testing Library](https://testing-library.com/) em seu projeto [Next.js](https://nextjs.org/).
 
 Existe um [repositório](https://github.com/zeit/next.js/tree/canary/examples/with-jest-react-testing-library) oficial da equipe do Nextjs com uma configuração inicial utilizando esses pacotes, porém neste tutorial irei detalhar como iniciar sua própria configuração com algumas melhorias que julgo necessárias para um processo de testes eficiente.
