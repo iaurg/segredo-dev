@@ -44,6 +44,8 @@ Server Side Rendering Animado
 
 Uma ótima introdução para saber como utilizar o Next.js feita pelo [Willian Justen](https://willianjusten.com.br/?utm_source=segredodev&amp;utm_medium=post&amp;utm_campaign=o_que_e_nextjs), recomendo que assista para conseguir fixar melhor e entender os conceitos do Next js e quando usá-lo.
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/X3W-YFe2_io" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ## Como instalar o Next.js?
 
 É bem simples iniciar um projeto com o Next.js, a forma mais rápida é utilizando:
