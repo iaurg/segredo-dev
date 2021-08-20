@@ -39,6 +39,9 @@ Sobre o **Next.js**:
 O grande diferencial no começo do Next.js foi a possibilidade de utilizar a renderização na parte do servidor (SSR) isto resolve um problema em aplicações e sites construídos com React que necessitam principalmente de SEO. Em algumas aplicações React você acabará percebendo que nem sempre é eficiente carregar todo o conteúdo na parte do cliente (client-side) que é o padrão do React. Atualmente o Next js consegue trabalhar de forma hibrida com SSG e SSR.
 
 Veja neste vídeo como funciona a construção de uma página com SSR:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/0bvo6UKkNDA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 Server Side Rendering Animado
 ## Mini Aula introdutória sobre Next.js
 
