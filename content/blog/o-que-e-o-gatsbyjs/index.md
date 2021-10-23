@@ -14,7 +14,7 @@ O [**Gatsby**](https://www.gatsbyjs.com) é um framework que reúne as melhores 
 
 Com o **Gatsby.js** você pode desenvolver em React e quando fizer o "build" de seu código ele irá gerar arquivos estáticos que serão acessados pelos usuários. Isto traz diversas vantagens para seus sites como suporte a SEO, uma velocidade incrível, sistema de cache, e diversos outros itens que você pode comparar [nesta página](https://www.gatsbyjs.com/features). A comunidade do Gatsby oferece diversos plugins e sites pré-desenvolvidos para que você possa iniciar seu projeto com meio caminho andado.
 
-Caso queira iniciar seu desenvolvimento em **Gatsby **recomendo o [curso completo sobre Gatsby do Willian Justen](https://www.udemy.com/course/gatsby-crie-um-site-pwa-com-react-graphql-e-netlify-cms/?couponCode=PROMOSET20), este material irá auxiliar você em toda a estrutura e ecossistema do Gatsby.
+Caso queira iniciar seu desenvolvimento em **Gatsby** recomendo o [curso completo sobre Gatsby do Willian Justen](https://www.udemy.com/course/gatsby-crie-um-site-pwa-com-react-graphql-e-netlify-cms/?couponCode=PROMOSET20), este material irá auxiliar você em toda a estrutura e ecossistema do Gatsby.
 
 ## Como o Gatsby funciona
 
