@@ -35,7 +35,7 @@ O currículo abrange linguagens fundamentais de programação, começando com C 
 
 <h2 id="como-entrar-na-42-sp">Como entrar na 42 sp?</h2>
 
-O processo para entrar da 42 e se tornar um "cadete" (como são chamados os alunos) é composto de 3 etapas:
+O processo para entrar na 42 e se tornar um "cadete" (como são chamados os alunos da 42) é composto de 3 etapas:
 
 1. **Teste de memória e lógica**: Neste teste basicamente são apresentados dois "jogos" para você solucionar problemas em níveis, assim como indicado no site da 42 recomendo que reserve as 2 horas para concluí-los, no meu caso eu separei um sábado tranquilo para poder resolver apenas estes problemas. O primeiro jogo será o de memória similar a um "Genius", para você selecionar a sequência correta e o jogo de lógica é baseado em comandos para mover uma nave em um tabuleiro, ambos são baseados em níveis, legais e iterativos.
 
@@ -53,7 +53,7 @@ Como uma das propostas da escola é a iteração com a comunidade eu visava faze
 
 O conteúdo em sí do Basecamp é uma introdução a conceitos mais amplos, é apresentado basicamente C e Shell, com diversos desafios que vão exigir que você dê seu máximo tanto em pesquisa, entendimento, como em troca de informação com a comunidade. As "listas" de desafios possuem um avanço escalonar e você consegue evoluir de forma contínua conforme se dedica, e ao mesmo tempo toda a comunidade evolui em um mesmo passo.
 
-Porém além das listas e computação em sí creio que o maior aprendizado do Basecamp é a comunicação, troca de informação e crescimento em pares, isto é "escancarado" como uma forma ótima de aprender de maneira rápida e consistente, todo o sistema de feedback e gamificação proposto pela 42 induz você a crescer de forma contínua ao mesmo tempo que ensina e aprende e isso com certeza muda sua forma de ver muitas coisas.
+Porém, além das listas e computação em sí creio que o maior aprendizado do Basecamp é a comunicação, troca de informação e crescimento em pares, isto é "escancarado" como uma forma ótima de aprender de maneira rápida e consistente, todo o sistema de feedback e gamificação proposto pela 42 induz você a crescer de forma contínua ao mesmo tempo que ensina e aprende e isso com certeza muda sua forma de ver muitas coisas.
 
 Creio que alguns pontos interessantes a se pensar e ter em mente enquanto participa do processo seletivo da 42 SP são:
 - Não acredite em boatos. A mente fica tentando encontrar fórmulas mágicas para ganhar medalhas, para passar no processo... E tudo isso vai ser apenas teoria, foque em participar do programa.
@@ -68,7 +68,7 @@ Creio que alguns pontos interessantes a se pensar e ter em mente enquanto partic
 
 Creio que esta etapa do Basecamp para todos que participam é muito valiosa, pelo simples fato de mostrar para muitos que é possível aprender e crescer se dedicando e se desafiando, e que errar faz parte, este é o melhor aprendizado de tudo isso.
 
-Todos os desafios que realizei estão [neste repositório](https://github.com/iaurg/42sp).
+Todos os desafios que realizei no basecamp estão [neste repositório](https://github.com/iaurg/42sp).
 
 <h2 id="pos-basecamp">Pós Basecamp</h2>
 
