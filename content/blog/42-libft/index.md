@@ -2,7 +2,7 @@
 title: O primeiro projeto na 42, o libft!
 slug: 42-libft
 description: "O processo de desenvolvimento do primeiro projeto na 42, uma biblioteca completa em C"
-date: "2021-11-27T03:09:39.000Z"
+date: "2021-07-22T03:09:39.000Z"
 ---
 
 Após o basecamp este é o primeiro desafio dentro do curso da 42, resumi-se a um projeto para que você crie uma biblioteca em C que possa ser usada em projetos futuros.
