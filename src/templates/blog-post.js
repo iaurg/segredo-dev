@@ -9,7 +9,6 @@ import BuyMeACoffee from "../components/buymeacoffee"
 
 const BlogPostTemplate = ({ data, pageContext, location }) => {
   const post = data.markdownRemark
-  // const siteTitle = data.site.siteMetadata.title
   const { previous, next } = pageContext
 
   return (
@@ -17,8 +16,9 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
       <SEO
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
+        slug={post.frontmatter.slug}
       />
-      <article class="blog-post">
+      <article className="blog-post">
         <header>
           <h1
             style={{
@@ -96,6 +96,7 @@ export const pageQuery = graphql`
         title
         date(formatString: "MMMM DD, YYYY")
         description
+        slug
       }
     }
   }
