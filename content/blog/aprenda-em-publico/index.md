@@ -1,7 +1,7 @@
 ---
 title: Aprenda em público
 slug: aprenda-em-publico
-description: "A maneira mais rápida de aprender, crescer em sua carreira e construir um network."
+description: "A maneira mais rápida de aprender, crescer em sua carreira e construir um network. Aprender em público fará você avançar enquanto constroi sua carreira."
 date: "2020-10-20T03:15:39.000Z"
 image:
   feature: /images/posts/thumbs/aprenda-em-publico.jpg
@@ -41,13 +41,13 @@ Você acha que acabou? Não pare por aqui:
 
 Se você está cansado de criar coisas únicas, comece a construir uma base de conhecimento persistente que cresce com o tempo. [Abra o código do seu conhecimento](https://www.swyx.io/speaking/open-source-knowledge/)! Em cada etapa do caminho: Documente o que você fez e os problemas que resolveu.
 
-A outra ideia desta regra é: Tente fazer o seu melhor para estar certo, mas não se preocupe quando estiver errado. Repetidamente. Se você se sentir desconfortável, ou como um [impostor](https://pt.wikipedia.org/wiki/S%C3%ADndrome_do_impostor), ótimo. Você está empurrando você mesmo e evoluindo. Não assuma que você sabe tudo, mas dê o seu melhor, e deixe a internet corrigir você quando você estiver inevitavelmente errado. 
+A outra ideia desta regra é: Tente fazer o seu melhor para estar certo, mas não se preocupe quando estiver errado. Repetidamente. Se você se sentir desconfortável, ou como um [impostor](https://pt.wikipedia.org/wiki/S%C3%ADndrome_do_impostor), ótimo. Você está empurrando você mesmo e evoluindo. Não assuma que você sabe tudo, mas dê o seu melhor, e deixe a internet corrigir você quando você estiver inevitavelmente errado.
 
 As pessoas acham que você é péssimo? Ótimo. Você concorda. Peça que expliquem, em detalhes, porque você é péssimo. Você quer apenas se sentir bem ou **ser** bom? Sem objeções, sem mágoas. Então vá embora e prove que eles estão errados. E caso eles se tornem abusivos, apenas bloqueie.
 
 Eu mencionei que ensinar é a melhor forma de aprender? Fale enquanto você programa. Pode ser estressante e eu não tenho feito muito isso mas as minhas melhores entrevistas técnicas foram quando eu terminei falando como se estivesse ensinando ao invés de tentar provar meu conhecimento. Nós somos animais, somos atraidos pela confiança e podemos sentir o cheiro do desespero.
 
-Em algum momento você terá algum suporte. Pessoas percebem aprendizes genuinos. Elas irão querer ajudar você. Não fale para eles, mas eles apenas se tornam seus mentores. Isso é muito importante: [Pegue o que eles deixam para trás](https://www.swyx.io/learn-in-public-hack/). Pense como se eles estivessem lhe dando tarefas para serem completadas. Quando alguém disser "Alguém poderia ajudar com __" você será aquela criança na primeira fileira com a mão sempre levantada. Estes são engenheiros seniores, algumas das pessoas mais solicitadas em tecnologia. Eles vão passar mais tempo com você, um a um, se você os ajudar (p.s. e sempre há algo em que eles querem ajuda). Você não pode pagar por essas coisas. Eles vão te ensinar de graça. A maioria das pessoas não vê o que está bem na frente delas. Exceto você.
+Em algum momento você terá algum suporte. Pessoas percebem aprendizes genuinos. Elas irão querer ajudar você. Não fale para eles, mas eles apenas se tornam seus mentores. Isso é muito importante: [Pegue o que eles deixam para trás](https://www.swyx.io/learn-in-public-hack/). Pense como se eles estivessem lhe dando tarefas para serem completadas. Quando alguém disser "Alguém poderia ajudar com \_\_" você será aquela criança na primeira fileira com a mão sempre levantada. Estes são engenheiros seniores, algumas das pessoas mais solicitadas em tecnologia. Eles vão passar mais tempo com você, um a um, se você os ajudar (p.s. e sempre há algo em que eles querem ajuda). Você não pode pagar por essas coisas. Eles vão te ensinar de graça. A maioria das pessoas não vê o que está bem na frente delas. Exceto você.
 
 "Com tantos desenvolvedores juniores por aí, por que eles vão ajudar justo eu?", Você pergunta.
 
