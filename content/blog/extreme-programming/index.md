@@ -14,16 +14,17 @@ Continuando a ideia de simplesmente colocar aqui o que venho pensando e analisan
 
 Nos últimos meses venho me aprofundando cada vez mais na parte de desenvolvimento para web, antigamente eu focava totalmente na parte visual (UI) que ainda gosto, e limitava a minha aplicação de conhecimentos web ao bom e velho Wordpress. Conseguia fazer algumas coisas "intermediárias" como modificar alguns plugins e reestruturar temas. Mas era isso, eu deixava um visual bacana e me esforçava para fazê-lo funcionar no Wordpress.
 
-Porém como tudo, um dia eu senti a necessidade de mudar, cansei de depender de terceiros para ter um plugin ou poder fazer algo diferente. Eis que escolhi me aprofundar no desenvolvimento web de maneira séria e contínua. De primeira eu tomei um puta choque pois meu conhecimento estava literalmente congelado na época de HTML + CSS + Wordpress, vi que estava totalmente fora do que estava rolando no mercado, fui descobrir Git, Bibliotecas JS, Metodologias e tudo que envolve esse ecossistema apenas na metade de 2018, atrasado pra caramba né? 😨. 
+Porém como tudo, um dia eu senti a necessidade de mudar, cansei de depender de terceiros para ter um plugin ou poder fazer algo diferente. Eis que escolhi me aprofundar no desenvolvimento web de maneira séria e contínua. De primeira eu tomei um puta choque pois meu conhecimento estava literalmente congelado na época de HTML + CSS + Wordpress, vi que estava totalmente fora do que estava rolando no mercado, fui descobrir Git, Bibliotecas JS, Metodologias e tudo que envolve esse ecossistema apenas na metade de 2018, atrasado pra caramba né? 😨.
 
-Aqui vai uma dica: Questione-se. Esteja sempre se perguntando o que pode fazer, como pode melhorar, se está dando o seu máximo. Creio que pelo fato de eu ter ficado muito fechado, trabalhando em casa, com clientes fixos e sem contato com uma comunidade ativa acabei me cegando. 
+Aqui vai uma dica: Questione-se. Esteja sempre se perguntando o que pode fazer, como pode melhorar, se está dando o seu máximo. Creio que pelo fato de eu ter ficado muito fechado, trabalhando em casa, com clientes fixos e sem contato com uma comunidade ativa acabei me cegando.
 
 Dei uma espertada após ler alguns livros e repensar um pouco os conceitos da vida, resumindo em uma frase: "Busque maestria".
 
 O primeiro contato com esse assunto foi no livro Mastery  de George Leonard, que apesar de falar sobre Aikido (arte marcial japonesa), pode ser muito bem aplicado em outras áreas, tem um "resumo" do [Seiiti Arata](https://www.youtube.com/watch?v=y1ySJOE3DX8) caso queira dar uma olhada. Desse ponto para frente foram muitas outras descobertas que ficam para outra hora.
 
 ## Porque extreme programming?
-![Everything and nothing at a time](https://images.unsplash.com/photo-1489369786243-bef2ec8cb71d?ixlib=rb-1.2.1&amp;q=80&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=1080&amp;fit=max&amp;ixid=eyJhcHBfaWQiOjExNzczfQ)Photo by [Yoann Boyer](https://unsplash.com/@yoannboyer?utm_source=ghost&utm_medium=referral&utm_campaign=api-credit) / [Unsplash](https://unsplash.com/?utm_source=ghost&utm_medium=referral&utm_campaign=api-credit)
+
+![Everything and nothing at a time](https://images.unsplash.com/photo-1489369786243-bef2ec8cb71d?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjExNzczfQ)Photo by [Yoann Boyer](https://unsplash.com/@yoannboyer?utm_source=ghost&utm_medium=referral&utm_campaign=api-credit) / [Unsplash](https://unsplash.com/?utm_source=ghost&utm_medium=referral&utm_campaign=api-credit)
 Nesses meses me aprofundando totalmente na área de ciência da computação com foco em web acabei me deparando com muitos conceitos, que por sinal ainda estou digerindo, porém, um deles me chamou muita atenção e parece bom para ser aprofundado, o [Extreme Programming](https://en.wikipedia.org/wiki/Extreme_programming). Conceito que também tem muitas das ideias apresentadas no livro The Pragmatic Programmer.
 
 Lendo o que Ron Jeffries diz em [seu post](https://ronjeffries.com/xprog/what-is-extreme-programming/) sobre extreme programming o primeiro parágrafo possui ótimos pontos para que este conceito mereça uma atenção:
@@ -53,7 +54,7 @@ Kent Beck define coragem como "ação efetiva diante do medo". Essa definição 
 Os membros de um time precisam respeitar uns aos outros para que a comunicação seja eficaz e as análises sejam feitas de forma concisa, assim todos conseguem encontrar a melhor forma de agir e encontrar soluções.
 
 Com esses valores a XP se sustenta e aplica suas práticas de forma dinâmica e flexível. Irei me aprofundar nas práticas para trazer um conceito mais amplo. Deixarei a imagem que ilustra as práticas utilizadas quando você se torna um programador "extreme".
-![](/images/posts/extreme-programming-praticas-1.jpg)
+
 A principio parece  algo tranquilo e fácil de aplicar como um estilo de desenvolvimento, mas confesso que é bem difícil e você precisa estar em constante alerta para se manter excelente. Trata-se de uma observação contínua de seu trabalho e da qualidade de tudo que é feito.
 
 O tipo de excelência que busco.

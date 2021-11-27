@@ -29,6 +29,7 @@ No aprendizado supervisionado o ML recebe uma previsão do que ele precisa retor
 - Regression:
 
 Qual seria o valor? Qual seria a nota?
+
 - Classification:
 
 Qual classe isso pertence?
@@ -40,9 +41,11 @@ No aprendizado não supervisionado o ML analisa os dado e define o que ele preci
 - Clustering:
 
 Existem grupos distintos? Qual grupo pertence?
+
 - Anomaly Detection:
 
 Esse comportamento é estranho?
+
 - Recomendation:
 
 Qual opção devo escolher?
@@ -66,7 +69,7 @@ A intenção é identificar o interesse do usuário se ele deseja alugar/comprar
 - Separar entidades importantes para que possa ser analisado e considerado como definidores da frase.
 
 Caso já possua uma base de dados para alimentar o bot é excelente, faça uma curadoria desses dados e forneça como input, com isso o treinamento fica muito mais eficiente.
-![LUIS](/content/images/2020/01/Screenshot_2020-01-06-LUIS.png)
+![LUIS](/images/posts/Screenshot_2020-01-06-LUIS.png)
 
 Neste exemplo o bot criado utilizando o Luis da Microsoft com um pouco de treino é capaz de identificar as palavras-chave de uma frase e separá-las em variáveis que podem ser utilizadas para algum filtro posterior. Talvez o direcionamento para o setor de acordo, apontamento para uma página... Enfim, diversas possibilidades.
 

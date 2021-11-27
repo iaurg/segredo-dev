@@ -52,7 +52,7 @@ Rigido ===================================> Flexível
 
 Menos complexo ===================================> Mais complexo
 
-Normalmente componentes rígidos serão mais fáceis de criar e manter, menos opções e variações, menos código para administrar, rápido para criar, simples de entender, fácil de testar. E como componentes rígidos utilizam menos *props* ficam mais fáceis de serem mantidos, props são fáceis de adicionar porém difíceis de remover quando o componente já está sendo utilizado no projeto.
+Normalmente componentes rígidos serão mais fáceis de criar e manter, menos opções e variações, menos código para administrar, rápido para criar, simples de entender, fácil de testar. E como componentes rígidos utilizam menos _props_ ficam mais fáceis de serem mantidos, props são fáceis de adicionar porém difíceis de remover quando o componente já está sendo utilizado no projeto.
 
 Os componentes flexíveis possuem suas vantagens que são mais adaptáveis em diversos contextos, podem ser mais personalizados, atendem diversas necessidades de uma vez.
 
@@ -60,13 +60,12 @@ Ao criar componentes reutilizáveis opte por iniciar com componentes rígidos e 
 
 ### Dicas na construção de componente
 
-1 - Cuidado com elementos de [marcação fracos](https://html.spec.whatwg.org/multipage/grouping-content.html#the-p-element) como `<p>``<i>` e afins. Ao criar um componente que receba um `{children}` imagine o seguinte cenário:
+1 - Cuidado com elementos de [marcação fracos](https://html.spec.whatwg.org/multipage/grouping-content.html#the-p-element) como ` <p>``<i> ` e afins. Ao criar um componente que receba um `{children}` imagine o seguinte cenário:
 
     // Evite isso!
     <p>
     {children}
     </p>
-    
 
 Caso alguém passe uma `<div>` como children o seu componente terá um [erro na validação HTML](https://stackoverflow.com/questions/10763780/putting-div-inside-p-is-adding-an-extra-p). Prefira a utilização de estruturas como:
 
@@ -74,19 +73,17 @@ Caso alguém passe uma `<div>` como children o seu componente terá um [erro na 
     <div>
     {children}
     </div>
-    
 
 2 - Determine os tipos das propriedades passadas ao componente utilizando [prop-types](https://www.npmjs.com/package/prop-types) de preferência com alertas no sistema de lint, isso irá prevenir diversos erros e auxiliar na utilização do componente por outras pessoas deixando o seu componente mais claro e didático sobre quais dados ele necessita.
 
-3 - Evite utilizar manualmente ID's no HTML de seus componentes, eles podem facilmente ser replicados através da estrutura dando uma duplicidade de HTML ID que pode desestabilizar sua estrutura. Caso seja necessário um ID passe ele via *props*.
+3 - Evite utilizar manualmente ID's no HTML de seus componentes, eles podem facilmente ser replicados através da estrutura dando uma duplicidade de HTML ID que pode desestabilizar sua estrutura. Caso seja necessário um ID passe ele via _props_.
 
 4 - Declare valores de propriedades padrões em seus componentes, elas ajudarão quem utiliza o componente a entender melhor o funcionamento e irão prevenir erros de renderização caso nenhum valor seja passado.
 
 5 - Preocupe-se com a acessibilidade de seu componente declarando tags semânticas e marcações corretas para os elementos. Muitos usuários navegam utilizando leitores de tela e podem se beneficiar com esses detalhes.
 
-6 - Se o seu component utilizar diversas *props* considere passá-las como um objeto configurável para facilitar na utilização do componente e evitar o desgaste por excesso de declaração. Por exemplo em um component de usuário:
+6 - Se o seu component utilizar diversas _props_ considere passá-las como um objeto configurável para facilitar na utilização do componente e evitar o desgaste por excesso de declaração. Por exemplo em um component de usuário:
 
-    
     // São poucas props mas podem crescer conforme seu contexto
     <Usuario
         nome="Italo"
@@ -95,9 +92,9 @@ Caso alguém passe uma `<div>` como children o seu componente terá um [erro na 
         cor="Preto"
         vivo={true}
     />
-    
+
     // Neste caso podemos passá-las como config. Caso os dados retornados da API sejam iguais suas props você apenas passa o objeto, simples.
-    
+
     <Usuario
         dados={{
             nome:"Italo",
@@ -107,16 +104,14 @@ Caso alguém passe uma `<div>` como children o seu componente terá um [erro na 
             vivo:true
         }}
     />
-    
 
 7 - Sempre que possível foque em ter componentes que podem ser renderizados via Server Side Rendering, no caso de sites que se beneficiam dessa tecnologia. Isso fará com que você deixe de utilizar propriedades que dependam do navegador para serem funcionais como document, window, setTimeout...
 
 8 - Foque na responsabilidade de cada componente ter um propósito. Quanto maior e mais complexo for o componente mais difícil será administrá-lo. Componentes simples e diretos serão fáceis de editar, manter e criar.
 
 ## Atomic Design
-![Atomic Design](/images/posts/atomic-design.png)
 
-O conceito de *atomic design* divide as estruturas em átomos, moléculas, organismos, templates e páginas. Criando uma hierarquia entre os elementos da interface e desacoplando cada um para que possam ser reutilizados de maneira eficiente. Essa conceito facilita a visualização e separação de componentes. Novamente o exemplo da indústria automobilística se adequa aqui, um carro é um sistema construído com milhares de pequenas peças e sistemas em conjunto, podemos abstraí-lo como um sistema de átomos unidos.
+O conceito de _atomic design_ divide as estruturas em átomos, moléculas, organismos, templates e páginas. Criando uma hierarquia entre os elementos da interface e desacoplando cada um para que possam ser reutilizados de maneira eficiente. Essa conceito facilita a visualização e separação de componentes. Novamente o exemplo da indústria automobilística se adequa aqui, um carro é um sistema construído com milhares de pequenas peças e sistemas em conjunto, podemos abstraí-lo como um sistema de átomos unidos.
 
 ### Átomos
 

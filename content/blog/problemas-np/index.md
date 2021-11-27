@@ -7,7 +7,7 @@ image:
   feature: /images/posts/thumbs/problemas-np.jpg
 ---
 
-![Habilidades para ser um bom programador](/images/posts/thumbs/problemas-np.jpg)
+![Problemas NP completo](/images/posts/thumbs/problemas-np.png)
 
 Os NP são problemas que ainda não possuem um algoritmo com uma solução eficiente em relação a tempo polinomial.  O que os torna umas das grandes questões ainda em aberto na ciência da computação.
 

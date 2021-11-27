@@ -11,12 +11,13 @@ image:
 ![Configurar testes no Next.js](/images/posts/thumbs/nextjs-jest-test.png)
 
 **Atualização 16/08/2021**: Agora o Next.js possui uma parte exclusiva para testes dentro da documentação:
+
 - [Testes em Next.js](https://nextjs.org/docs/testing?utm_source=segredo-dev&utm_medium=link&utm_campaign=post&utm_id=post-test-nextjs)
 
 Exemplos de código:
+
 - [Testes em Next.js com Cypress](https://github.com/vercel/next.js/tree/canary/examples/with-cypress?utm_source=segredo-dev&utm_medium=link&utm_campaign=post&utm_id=post-test-nextjs)
 - [Testes em Next.js com Jest e React Testing Library](https://github.com/vercel/next.js/tree/canary/examples/with-jest?utm_source=segredo-dev&utm_medium=link&utm_campaign=post&utm_id=post-test-nextjs)
-
 
 Olá, neste post vou detalhar como configurar o [Jest](https://jestjs.io/pt-BR/) + [Testing Library](https://testing-library.com/) em seu projeto [Next.js](https://nextjs.org/).
 
@@ -34,9 +35,7 @@ Primeiro vamos iniciar um projeto Next padrão inserindo o comando `npx create-n
 
 Preencha com o nome que quer utilizar em sua pasta e aperte Enter. Eu utilizei o nome nextjs-jest.
 
-Assim que o comando terminar de executar todos os serviços, será exibido em seu terminal o seguinte:
-
-![nextjs-jest-start](/content/images/2019/12/nextjs-jest-start.png)
+Assim que o comando terminar de executar todos os serviços, será exibido o retorno em seu terminal.
 
 Execute os dois último comandos apresentados `cd nome-de-seu-projeto` e depois `yarn dev` ou `npm run dev`. Se tudo deu certo você poderá acessar seu projeto no endereço [http://localhost:3000](http://localhost:3000) e verá uma tela de boas vindas.
 
@@ -47,12 +46,10 @@ Pronto, iniciamos um projeto básico de Next.js.
 Para que possamos executar testes em nosso projeto de maneira eficiente precisaremos de alguns pacotes que facilitem esse processo. Execute o seguinte comando dentro da pasta do projeto Next que você deseja realizar testes:
 
     yarn add jest @testing-library/react @types/jest @testing-library/jest-dom babel-jest @babel/core -D
-    
 
 ou caso utilize npm
 
     npm install jest @testing-library/react @types/jest @testing-library/jest-dom babel-jest @babel/core --save-dev
-    
 
 ## Arquivos de configuração
 
@@ -80,7 +77,6 @@ Este arquivo informa para que o babel passe por dentro das pastas do Next, você
     {
       "presets": ["next/babel"]
     }
-    
 
 ### package.json
 
@@ -108,22 +104,19 @@ Depois adicione dentro do arquivo Header.test.js:
     import { render } from '@testing-library/react';
     import '@testing-library/jest-dom/extend-expect';
     import Header from './Header';
-    
+
     it('should render Header', () => {
       const { getByText } = render(<Header />);
       expect(getByText('Header')).toBeInTheDocument();
     });
-    
 
 E no arquivo de Header.js:
 
     import React from 'react';
-    
+
     export default function Header() {
       return <p>Header</p>;
     }
-    
-    
 
 Salve os dois arquivo e no terminal rode o comando `yarn test` ou `npm run test`, se tudo deu certo você terá um tela como essa:
 ![nextjs-jest-tested](/content/images/2019/12/nextjs-jest-tested.png)
