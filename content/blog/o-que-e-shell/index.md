@@ -13,7 +13,7 @@ Shell é um programa especial disponibilizado ao usuário ou algum programa para
 
 A função do Shell é executar comandos e informações para o sistema operacional. Normalmente esses comandos são enviados pelo usuário utilizando uma CLI (Command Line Interface) através de um Terminal/Command Prompt. Ele é responsável pela comunicação entre usuário e sistema operacional.
 
-Trabalhar com o Shell pode ser complicado para iniciantes pois é dificil memorizar e entender tantos comandos de uma vez, mas esta é uma ferramenta muito poderosa e vale a pena aprender. Com os conhecidos como shell scripts você é capaz de automatizar tarefas e executar comandos em sequência programada em diversas situações, além de ter um controle maior sobre como as coisas funcionam e se comunica.
+Trabalhar com o Shell pode ser complicado para iniciantes pois é dificil memorizar e entender tantos comandos de uma vez, mas esta é uma ferramenta muito poderosa e vale a pena aprender. Com os conhecidos shell scripts você é capaz de automatizar tarefas e executar comandos em sequência programada em diversas situações.
 
 ## Tipos de Shell
 
