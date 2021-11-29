@@ -3,7 +3,7 @@ module.exports = {
   siteMetadata: {
     title: `Segredo Dev`,
     author: {
-      name: `@iaurg`,
+      name: `Italo Aurelio @iaurg`,
       summary: `web dev`,
     },
     description: `Blog onde reuno meus conhecimentos e estudos sobre desenvolvimento web e tecnologias.`,
@@ -103,13 +103,13 @@ module.exports = {
           }
         }
         `,
-      mapping: {
-        allMarkdownRemark: {
+        mapping: {
+          allMarkdownRemark: {
             sitemap: `posts`,
-        },  
+          },
+        },
+        addUncaughtPages: true, // optional: will fill up pages that are not caught by queries and mapping and list them under `sitemap-pages.xml`
       },
-      addUncaughtPages: true, // optional: will fill up pages that are not caught by queries and mapping and list them under `sitemap-pages.xml`         
-    }
-  }
+    },
   ],
 }
