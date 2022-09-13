@@ -16,6 +16,7 @@ Neste artigo sobre a 42 sp:
 - [O Basecamp da 42](#o-basecamp-da-42)
 - [Pós Basecamp](#pos-basecamp)
 - [Como são chamados os alunos da Escola de programação 42?](#como-sao-chamados-os-alunos)
+- [O que são human coders?](#o-que-sao-human-coders)
 
 <h2 id="como-conheci-a-42">Como conheci a 42?</h2>
 
@@ -96,6 +97,14 @@ Agora a jornada realmente começa, aqui é onde se inicia o processo de formaç�
 <h2 id="como-sao-chamados-os-alunos">Como são chamados os alunos da Escola de programação 42?</h2>
 
 Os alunos da 42 são chamados de **cadete**, todos que passaram pelo processo seletivo completo e que agora fazem parte do programa com duração média de 10 meses com foco em tornar-se um engenheiro de software.
+
+<h2 id="o-que-sao-human-coders">O que são human coders?</h2>
+
+Após a conclusão do curso da 42 o aluno se torna um <strong>human coder</strong>, termo criado pela própria escola para designar profissionais da área que possuem conhecimentos técnicos e sociais capazes de mudar o mundo.
+
+Cada human coder forma um novo cidadão pronto para o mundo digital e analógico, que sabe como aprender a aprender, é capaz de colaborar em ambientes diversos e resolver problemas complexos além de obviamente, saber programar.
+
+[Saiba mais sobre os human coders](https://www.humancoders.com.br?utm_source=post-blog&utm_medium=segredo-dev&utm_campaign=link-post-42-basecamp) e como eles impactam o mundo.
 
 Se quiser saber mais algo sobre a 42 é só falar comigo.
 
