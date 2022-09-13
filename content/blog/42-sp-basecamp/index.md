@@ -23,7 +23,15 @@ Conheci a 42 SP em 2020 através do Fabio Akita em seu vídeo [Guia DEFINITIVO d
 
 <h2 id="o-que-e-a-escola-42">O que é a escola 42?</h2>
 
-A primeira 42 foi a [École 42](https://en.wikipedia.org/wiki/42_(school)) na França, uma escola de programação privada, gratuita, aberta em 2013 por Xavier Niel, bilionário empreendedor do ramo de telecomunicações. Com uma metodologia disruptiva, um modelo nunca visto e filosofia de aprendizado libertadora. É uma escola focada em aprendizado entre pares.
+A primeira 42 foi a [École 42](<https://en.wikipedia.org/wiki/42_(school)>) na França, uma escola de programação privada, gratuita, aberta em 2013 por Xavier Niel, bilionário empreendedor do ramo de telecomunicações. Com uma metodologia disruptiva, um modelo nunca visto e filosofia de aprendizado libertadora. É uma escola focada em aprendizado entre pares.
+
+Entenda sobre como funciona a escolha 42 e sua metodologia com Karen Kanaan, uma das fundadoras da 42 São Paulo.
+
+<iframe width="560" height="315"
+src="https://www.youtube.com/embed/8zoACO603dg"
+frameborder="0"
+allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+allowfullscreen></iframe>
 
 <h2 id="como-funciona-a-42-sp">Como funciona a 42 sp?</h2>
 
@@ -43,9 +51,17 @@ O processo para entrar na 42 e se tornar um "cadete" (como são chamados os alun
 
 3. **Basecamp**: Esta é a última etapa do processo seletivo, para participar dela você precisa ser sorteado após a conclusão das duas etapas anteriores. Neste momento você fará parte da imersão na 42.
 
+As suas principais dúvidas sobre <strong>como entrar na 42</strong> com certeza estão respondidas nesse vídeo:
+
+<iframe width="560" height="315"
+src="https://www.youtube.com/embed/AdOem2G2oxg"
+frameborder="0"
+allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+allowfullscreen></iframe>
+
 <h2 id="o-basecamp-da-42">O Basecamp da 42</h2>
 
-Esta parte do processo seletivo é realmente desafiadora, é exigido o máximo de você e é basicamente uma imersão total no mundo da 42. Realmente você precisará de muitas horas para conseguir se dedicar ao processo completo e fazer todas as atividades exigidas, eu intercalei o programa enquanto trabalhava, mas não recomendo, se puder separar esses 20 dias para fazer apenas o programa com certeza será mais tranquilo. 
+Esta parte do processo seletivo é realmente desafiadora, é exigido o máximo de você e é basicamente uma imersão total no mundo da 42. Realmente você precisará de muitas horas para conseguir se dedicar ao processo completo e fazer todas as atividades exigidas, eu intercalei o programa enquanto trabalhava, mas não recomendo, se puder separar esses 20 dias para fazer apenas o programa com certeza será mais tranquilo.
 
 Mas, mesmo intercalando com o trabalho eu me desafiei a fazer da melhor maneira possível, então eu intercalava 2 horários, 05:00 as 12:00 e das 18:00 as 23:00 (ou mais) em dias de semana, e finais de semana eu ficava o dia todo das 05:00 as 23:00. Ainda assim é preciso ter uma liberdade de horários para conseguir realizar todos os desafios, a minha situação me proporcionava horários flexíveis, alguns eventos podem ocorrer em horário comercial ou durar muitas horas. Tenha isso em mente antes de entrar.
 
@@ -56,6 +72,7 @@ O conteúdo em sí do Basecamp é uma introdução a conceitos mais amplos, é a
 Porém, além das listas e computação em sí creio que o maior aprendizado do Basecamp é a comunicação, troca de informação e crescimento em pares, isto é "escancarado" como uma forma ótima de aprender de maneira rápida e consistente, todo o sistema de feedback e gamificação proposto pela 42 induz você a crescer de forma contínua ao mesmo tempo que ensina e aprende e isso com certeza muda sua forma de ver muitas coisas.
 
 Creio que alguns pontos interessantes a se pensar e ter em mente enquanto participa do processo seletivo da 42 SP são:
+
 - Não acredite em boatos. A mente fica tentando encontrar fórmulas mágicas para ganhar medalhas, para passar no processo... E tudo isso vai ser apenas teoria, foque em participar do programa.
 - Entenda a lógica da escola, se a base da escola é aprendizado em pares, não adianta ficar fechado tentando fazer tudo sozinho, simplesmente não faz sentido. Apenas saber como fazer todos os exercícios não é o suficiente.
 - Aceite seus erros e falhas, terão vários.
