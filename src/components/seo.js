@@ -78,7 +78,9 @@ const SEO = ({ description, lang, meta, title, slug }) => {
           content: metaDescription,
         },
       ].concat(meta)}
-    />
+    >
+      <link rel="canonical" href={`${metaSlug}/`} />
+    </Helmet>
   )
 }
 
