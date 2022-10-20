@@ -48,7 +48,7 @@ const BlogIndex = ({
 
   return (
     <Layout location={location} title={siteTitle}>
-      <SEO title="Home" />
+      <SEO title="Home" slug="" />
       {posts.map(({ node }) => {
         const title = node.frontmatter.title || node.fields.slug
         return (
@@ -89,14 +89,14 @@ const BlogIndex = ({
           <li>
             {!isFirst && (
               <Link to={prevPage} rel="prev">
-                ← Previous Page
+                ← Página anterior
               </Link>
             )}
           </li>
           <li>
             {!isLast && (
               <Link to={nextPage} rel="next">
-                Next Page →
+                Próxima página →
               </Link>
             )}
           </li>
