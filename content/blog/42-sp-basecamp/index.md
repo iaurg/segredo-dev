@@ -26,7 +26,7 @@ Conheci a 42 SP em 2020 através do Fabio Akita em seu vídeo [Guia DEFINITIVO d
 
 A primeira 42 foi a [École 42](<https://en.wikipedia.org/wiki/42_(school)>) na França, uma escola de programação privada, gratuita, aberta em 2013 por Xavier Niel, bilionário empreendedor do ramo de telecomunicações. Com uma metodologia disruptiva, um modelo nunca visto e filosofia de aprendizado libertadora. É uma escola focada em aprendizado entre pares.
 
-Entenda sobre como funciona a escolha 42 e sua metodologia com Karen Kanaan, uma das fundadoras da 42 São Paulo.
+Entenda sobre como funciona a escola 42 e sua metodologia com Karen Kanaan, uma das fundadoras da 42 São Paulo.
 
 <iframe width="560" height="315"
 src="https://www.youtube.com/embed/8zoACO603dg"
