@@ -30,7 +30,7 @@ const SEO = ({ description, lang, meta, title, slug }) => {
 
   const metaDescription = description || site.siteMetadata.description
   const metaSlug = slug
-    ? `${site.siteMetadata.siteUrl}/${slug}`
+    ? `${site.siteMetadata.siteUrl}/${slug}/`
     : site.siteMetadata.siteUrl
 
   return (
@@ -79,7 +79,7 @@ const SEO = ({ description, lang, meta, title, slug }) => {
         },
       ].concat(meta)}
     >
-      <link rel="canonical" href={`${metaSlug}/`} />
+      <link rel="canonical" href={`${metaSlug}`} />
     </Helmet>
   )
 }
