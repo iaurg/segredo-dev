@@ -50,6 +50,10 @@ const SEO = ({ description, lang, meta, title, slug }) => {
           content: title,
         },
         {
+          property: "og:image",
+          content: `${site.siteMetadata.siteUrl}/images/og-image-default.jpg`,
+        },
+        {
           property: `og:description`,
           content: metaDescription,
         },
