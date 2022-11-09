@@ -59,24 +59,20 @@ const Layout = ({ location, title, children }) => {
   const header = (
     <>
       {toggle}
-      <h2
+      <Link
         style={{
           ...scale(1),
+          boxShadow: `none`,
+          color: `inherit`,
           marginBottom: 0,
           marginTop: 0,
           fontFamily: `Montserrat, sans-serif`,
+          fontWeight: `bold`,
         }}
+        to={`/`}
       >
-        <Link
-          style={{
-            boxShadow: `none`,
-            color: `inherit`,
-          }}
-          to={`/`}
-        >
-          {title}
-        </Link>
-      </h2>
+        {title}
+      </Link>
     </>
   )
 
