@@ -9,6 +9,7 @@ Neste artigo sobre a como a internet funciona:
 
 - [Como os computadores se conectam](#como-os-computadores-se-conectam)
 - [Clientes e Servers](#clients-e-servers)
+- [O que são os pacotes de rede?](#o-que-sao-os-pacotes-de-rede)
 - [Como a internet funciona em vídeo introdutório](#como-a-internet-funciona-video)
 
 A maioria de nós apenas usa a internet, sem entender exatamente como ela funciona.
@@ -39,9 +40,13 @@ Se eu quero me comunicar com um **server** preciso saber o endereço dele, posso
 
 Exatamente como correspondências (mail), ai que surgem os e-mails que seriam correspondências digitais!
 
+<h2 id="o-que-sao-os-pacotes-de-rede">O que são os pacotes de rede?</h2>
+
 O papel principal da internet é enviar e receber <a href="https://pt.wikipedia.org/wiki/Pacote" target="_blank">pacotes</a>, exatamente como um sistema de entregas, ela recebe um pacote, garante que ele está seguro e que chegará até o seu destinatário e envia este pacote. Estes pacotes terão todo o conteúdo que o server ou client precisam trocar e informações extras de identificação para organizar esse pacote durante o tráfego.
 
 Porém este pacote não é encaminhado todo de uma vez, a forma mais tradicional é dividir este pacote em diversos pacotes menores e encaminhar através de vários caminhos diferentes para que caso alguns desses caminhos "falhe" você não perca toda a mensagem.
+
+Os pacotes de rede são as informações em código binário com camadas de segurança e identificação que são enviados através da internet. Estes pacotes normalmente são enviados utilizando dois principais protocólos de comunicação, o <a href="https://pt.wikipedia.org/wiki/Transmission_Control_Protocol" target="_blank">TCP</a> e o <a href="https://pt.wikipedia.org/wiki/User_Datagram_Protocol" target="_blank">UDP</a>, podendo variar em qualidade de entrega e forma de envio de acordo com cada demanda.
 
 Com diversos pacotes e informações sendo trafegadas de acordo, entre vários clientes e servidores nós temos o que chamamos de internet, uma imensa rede de computadores conectados trocando informações.
 
