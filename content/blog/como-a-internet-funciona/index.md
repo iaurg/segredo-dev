@@ -42,7 +42,7 @@ Exatamente como correspondências (mail), ai que surgem os e-mails que seriam co
 
 <h2 id="o-que-sao-os-pacotes-de-rede">O que são os pacotes de rede?</h2>
 
-O papel principal da internet é enviar e receber <a href="https://pt.wikipedia.org/wiki/Pacote" target="_blank">pacotes</a>, exatamente como um sistema de entregas, ela recebe um pacote, garante que ele está seguro e que chegará até o seu destinatário e envia este pacote. Estes pacotes terão todo o conteúdo que o server ou client precisam trocar e informações extras de identificação para organizar esse pacote durante o tráfego.
+<a href="https://pt.wikipedia.org/wiki/Pacote" target="_blank">O papel principal da internet é enviar e receber pacotes</a>, exatamente como um sistema de entregas, ela recebe um pacote, garante que ele está seguro e que chegará até o seu destinatário e envia este pacote. Estes pacotes terão todo o conteúdo que o server ou client precisam trocar e informações extras de identificação para organizar esse pacote durante o tráfego.
 
 Porém este pacote não é encaminhado todo de uma vez, a forma mais tradicional é dividir este pacote em diversos pacotes menores e encaminhar através de vários caminhos diferentes para que caso alguns desses caminhos "falhe" você não perca toda a mensagem.
 
