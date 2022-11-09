@@ -1,27 +1,19 @@
 ---
-title: Como a internet funciona
+title: Entenda como funciona a internet e como o sinal chega
 slug: como-a-internet-funciona
-description: "A maioria de nós apenas usa a internet, sem entender exatamente como ela funciona. Neste post vamos ter uma ideia de como tudo se conecta e interage através desta rede que chamamos de internet."
+description: "A maioria de nós apenas usa a internet, sem entender exatamente como ela funciona. Entenda como tudo se conecta!"
 date: "2022-11-07T10:55:41.000Z"
 ---
 
 Neste artigo sobre a como a internet funciona:
 
-- [Como a internet funciona vídeo introdutório](#como-a-internet-funciona-video)
 - [Como os computadores se conectam](#como-os-computadores-se-conectam)
 - [Clientes e Servers](#clients-e-servers)
+- [Como a internet funciona em vídeo introdutório](#como-a-internet-funciona-video)
 
 A maioria de nós apenas usa a internet, sem entender exatamente como ela funciona.
 
 Hoje vamos ter uma ideia de como tudo se conecta e interage através desta rede.
-
-<h2 id="como-a-internet-funciona-video">Como a internet funciona em vídeo introdutório:</h2>
-
-<iframe width="560" height="315"
-src="https://www.youtube.com/embed/YSXdJCDc_fs"
-frameborder="0"
-allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-allowfullscreen></iframe>
 
 <h2 id="como-os-computadores-se-conectam">Como os computadores se conectam</h2>
 
@@ -52,5 +44,15 @@ O papel principal da internet é enviar e receber <a href="https://pt.wikipedia.
 Porém este pacote não é encaminhado todo de uma vez, a forma mais tradicional é dividir este pacote em diversos pacotes menores e encaminhar através de vários caminhos diferentes para que caso alguns desses caminhos "falhe" você não perca toda a mensagem.
 
 Com diversos pacotes e informações sendo trafegadas de acordo, entre vários clientes e servidores nós temos o que chamamos de internet, uma imensa rede de computadores conectados trocando informações.
+
+<h2 id="como-a-internet-funciona-video">Como a internet funciona em vídeo introdutório:</h2>
+
+Agora que você já sabe um pouco mais sobre como a internet funciona, que tal assistir um vídeo introdutório sobre o assunto?Confira abaixo:
+
+<iframe width="560" height="315"
+src="https://www.youtube.com/embed/YSXdJCDc_fs"
+frameborder="0"
+allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+allowfullscreen></iframe>
 
 Espero que possa ter ajudado você, até mais!
