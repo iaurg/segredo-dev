@@ -1,6 +1,6 @@
 ---
 title: Experiência no processo seletivo da 42 SP
-slug: 42-basecamp
+slug: 42-sp-basecamp
 description: "Como foi minha experiência no processo seletivo da 42 SP uma escola de programação peer-to-peer"
 date: "2021-07-13T03:15:39.000Z"
 ---
