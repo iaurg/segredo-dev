@@ -109,3 +109,52 @@ Cada human coder forma um novo cidadão pronto para o mundo digital e analógico
 Se quiser saber mais algo sobre a 42 é só falar comigo.
 
 Até mais!
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "O que é a escola 42?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "É uma escola de programação privada, gratuita, aberta em 2013 por Xavier Niel, bilionário empreendedor do ramo de telecomunicações. Com uma metodologia disruptiva, um modelo nunca visto e filosofia de aprendizado libertadora. É uma escola focada em aprendizado entre pares."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Como funciona a 42 sp?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A 42 é uma escola de programação baseada em aprendizagem coletiva, onde você aprende ao mesmo tempo que ensina. Este processo é chamado de “peer-to-peer learning”, ou aprendizado entre pares, é um modelo de aprendizado no qual os participantes aprendem uns com os outros ao invés de um único professor."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Como entrar na 42 sp?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "O processo para entrar na 42 e se tornar um “cadete” (como são chamados os alunos da 42) é composto de 3 etapas: Teste de memória e lógica, Check-in e a piscina."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Como são chamados os alunos da Escola de programação 42?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Os alunos da 42 são chamados de cadete, todos que passaram pelo processo seletivo completo e que agora fazem parte do programa com duração média de 10 meses com foco em tornar-se um engenheiro de software."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "O que são human coders?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Após a conclusão do curso da 42 o aluno se torna um human coder, termo criado pela própria escola para designar profissionais da área que possuem conhecimentos técnicos e sociais capazes de mudar o mundo.\n\nCada human coder forma um novo cidadão pronto para o mundo digital e analógico, que sabe como aprender a aprender, é capaz de colaborar em ambientes diversos e resolver problemas complexos além de obviamente, saber programar."
+      }
+    }
+  ]
+}
+</script>

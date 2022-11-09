@@ -61,3 +61,29 @@ allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
 allowfullscreen></iframe>
 
 Espero que possa ter ajudado você, até mais!
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org/",
+  "@type": "FAQPage",
+  "mainEntity": [{
+    "@type": "Question",
+    "name": "Como os computadores se conectam",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Normalmente quando pensamos em internet nos vem uma ideia de nuvem ou algo intocável que flutua por ai, porém a visão de nuvem é apenas um termo de marketing, na verdade a internet funciona através de cabos, vários cabos, muitos cabos!"
+    }
+  },{
+    "@type": "Question",
+    "name": "O que são os pacotes de rede?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "O papel principal da internet é enviar e receber pacotes, exatamente como um sistema de entregas, ela recebe um pacote, garante que ele está seguro e que chegará até o seu destinatário e envia este pacote. Estes pacotes terão todo o conteúdo que o server ou client precisam trocar e informações extras de identificação para organizar esse pacote durante o tráfego.
+
+Porém este pacote não é encaminhado todo de uma vez, a forma mais tradicional é dividir este pacote em diversos pacotes menores e encaminhar através de vários caminhos diferentes para que caso alguns desses caminhos “falhe” você não perca toda a mensagem.
+
+Os pacotes de rede são as informações em código binário com camadas de segurança e identificação que são enviados através da internet. Estes pacotes normalmente são enviados utilizando dois principais protoclos de comunicação, o TCP e o UDP, podendo variar em qualidade de entrega e forma de envio de acordo com cada demanda."
+    }
+  }]
+}
+</script>
