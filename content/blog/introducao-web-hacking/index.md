@@ -9,7 +9,7 @@ image:
 
 ![Introdução Web Hacking](/images/posts/thumbs/introducao-web-hacking.jpg)
 
-Este post é um resumo de minha leitura do livro [Web Hacking 101](https://www.hackerone.com/blog/Hack-Learn-Earn-with-a-Free-E-Book) do [Peter Yaworksi](https://www.torontowebsitedeveloper.com/) onde a ideia do livro é introduzir os principais tipos de falhas de segurança que normalmente são exploradas em programas de bug bounty por [Hackers Éticos](https://en.wikipedia.org/wiki/White_hat_(computer_security)). Aqui trago as seções sobre tipos de vulnerabilidades onde cada uma é apresentada de forma rápida.
+Este post é um resumo de minha leitura do livro [Web Hacking 101](https://www.hackerone.com/blog/Hack-Learn-Earn-with-a-Free-E-Book) do [Peter Yaworksi](https://www.torontowebsitedeveloper.com/) onde a ideia do livro é introduzir os principais tipos de falhas de segurança que normalmente são exploradas em programas de bug bounty por [Hackers Éticos](<https://en.wikipedia.org/wiki/White_hat_(computer_security)>). Aqui trago as seções sobre tipos de vulnerabilidades onde cada uma é apresentada de forma rápida.
 
 Cada tipo de vulnerabilidade possui muito conteúdo, exemplo, passo-a-passo que pode ser encontrado em diversos sites, a ideia aqui é ter um acesso ao "o que existe de vulnerabilidade" como uma introdução.
 
@@ -44,7 +44,7 @@ Este tipo de vulnerabilidade acontece por causa do excesso de confiança, o usu�
 
 <h3 id="http-parameter-pollution">HTTP Parameter Pollution</h3>
 
-Essa invasão funciona manipulando os parâmetros http que são enviados ou recebidos pelo site que podem realizar alterações tanto no back como no front. 
+Essa invasão funciona manipulando os parâmetros http que são enviados ou recebidos pelo site que podem realizar alterações tanto no back como no front.
 
 Neste tipo de ataque você não sabe como o código é processado no servidor, você apenas solicita uma informação e recebe uma resposta, o HPP consiste em enviar uma informação inesperada e receber uma resposta inesperada, é preciso trabalhar em cima dessa "caixa preta" para receber e testar o que o servidor está executando.
 
@@ -58,7 +58,7 @@ CSRF é a interceptação de requisições através de outros sites, você é ca
 
 Requisições GET nunca podem realizar alterações/atualizações no backend, caso alterem é uma possível ameaça de CSRF.
 
-Para fazer CSRF com POST você precisa de mais configurações e passar alguns headers para conseguir acesso, as vezes o CORS pode barrar, mas existem formas de passar por ele, como por exemplo alterando content-types de dados que são enviados ou trocando o tipo da requisição que é feita, tudo depende de como o alvo está configurado. 
+Para fazer CSRF com POST você precisa de mais configurações e passar alguns headers para conseguir acesso, as vezes o CORS pode barrar, mas existem formas de passar por ele, como por exemplo alterando content-types de dados que são enviados ou trocando o tipo da requisição que é feita, tudo depende de como o alvo está configurado.
 
 Outro exemplo é digamos que um site verifique se a url de origem inicia com www.site.com, esta regra pode ser burlada utilizando subdominios "wildcard", por exemplo utilizando um subdominio www.site.com.attacker.com como origin e fazendo um redirect.
 
@@ -141,7 +141,7 @@ Neste tipo de invasão o atacante é capaz de executar requisições direto pelo
 
 Dependendo de como o servidor está organizado, com uma vulnerabilidade SSRF o atacante pode ser capaz de se conectar com redes internas ou extenas. Os limites das requisições do servidor determinarão o que pode ser feito em um SSRF.
 
-Por exemplo, normalmente bancos de dados são configurados em servidores locais sem acesso a internet, liberando o acesso apenas para servidores especificos que no caso seria o servidor do site. Se você conseguir acessar o servidor do site, provalmente conseguirá escalar até o banco de dados, se este estiver protegido você ainda pode tentar ataques de redirecionamento ou passar por blacklists.
+Por exemplo, normalmente bancos de dados são configurados em servidores locais sem acesso a [internet](https://segredo.dev/como-a-internet-funciona/), liberando o acesso apenas para servidores especificos que no caso seria o servidor do site. Se você conseguir acessar o servidor do site, provalmente conseguirá escalar até o banco de dados, se este estiver protegido você ainda pode tentar ataques de redirecionamento ou passar por blacklists.
 
 Depois de confirmar que está com o SSRF você pode testar se o servidor aceita requisições GET ou POST, normalmente requisições POST são mais interessantes pois podem manipular dados, GET em geral apenas extrai dados.
 
@@ -178,6 +178,7 @@ Injeção de código que é interpretado e executado por uma aplicação. Normal
 É basicamente você se apropriar de um subdominio. Um site cria algum subdominio porém nunca aponta ele para algum lugar ou aponta para um serviço que permite a criação de dominios personalizados, deixando vulverável para que outra pessoa possa fazer isso.
 
 Exemplo:
+
 1. example.com se inscreve no Heroku
 
 2. example.com cria uma entrada DNS apontandosubdominio.example.com para unicorn457.heroku.com
@@ -202,7 +203,7 @@ Encontrar falhas IDOR requerem tanto habilidade quanto observação, ao analisar
 
 #### OAuth
 
-OAuth é uma tecnologia que permite o acesso a API's fazendo validações via parâmetros e garantindo acesso a informações. Normalmente utilizado para fazer login em sites usando aplicativos de terceiros como Facebook, Twitter, Google... 
+OAuth é uma tecnologia que permite o acesso a API's fazendo validações via parâmetros e garantindo acesso a informações. Normalmente utilizado para fazer login em sites usando aplicativos de terceiros como Facebook, Twitter, Google...
 
 Esta validação possui vários passos durante seu processo o que abre uma brecha para ser explorada, por exemplo alterando o tipo de informação que é requisitada na url para que o server da aplicação responda de forma diferente ou refletindo de alguma forma o redirecionamento do usuário enviando as informações de retorno para um servidor malicioso.
 

@@ -37,7 +37,7 @@ Quando você tiver mapeado o máximo de tecnologias que conseguiu se lembrar, ma
 
 Meu mapa:
 ![Mapa de tecnologias](https://github.com/iaurg/Computer-Science-Study/raw/master/resumos/livros/programador-apaixonado/images/mapa-tecnologias.png)
-Verde: Domino a linguagem 
+Verde: Domino a linguagem
 
 Turquesa: Conheço e sei, mas sem dominio e sem uso no dia-a-dia.
 
@@ -47,7 +47,9 @@ Analisando este gráfico vejo que a minha média está no meio, onde é uma zona
 
 Tendências de linguagens de programação em 2019:
 ![Tendências de linguagens de programação em 2019](https://github.com/iaurg/Computer-Science-Study/raw/master/resumos/livros/programador-apaixonado/images/trends-de-2019.jpg)
+
 ## Oferta e Demanda
+
 ![Gráfico de oferta e demanda](https://github.com/iaurg/Computer-Science-Study/raw/master/resumos/livros/programador-apaixonado/images/oferta_demanda.png)
 O grande equilibrio do mercado, se existem muitas pessoas querendo e poucas oferecendo o serviço, o preço é alto. Em oposto, se existem muitas pessoas oferecendo o serviço e pouca demanda, o preço é baixo.
 
@@ -138,11 +140,11 @@ Assuma riscos em sua carreira. Não deixe o medo te consumir. E se você não es
 **Exercício:**️
 Quais são os seus maiores medos com relação à sua carreira? Pense sobre as últimas decisões que você tomou. Faça uma lista de escolhas que fez e pense o quanto dessas decisões foram conduzidas pelo medo? Como você poderia reverter e tomar uma decisão com menos medo?
 
-08/04/2020 *R:* Creio que uma das preocupações é em relação ao tempo, parece que não vai dar tempo de aprender tudo que quero. Mas sei que esta é uma ansiedade sem base pois a maestria de algo vem com a pratica deliberada, algo que me ajudou muito nessa questão foram os videos do Fabio Akita explorando a [dimensão do tempo](https://www.youtube.com/watch?v=Qb5b8ZE9tIY).
+08/04/2020 _R:_ Creio que uma das preocupações é em relação ao tempo, parece que não vai dar tempo de aprender tudo que quero. Mas sei que esta é uma ansiedade sem base pois a maestria de algo vem com a pratica deliberada, algo que me ajudou muito nessa questão foram os videos do Fabio Akita explorando a [dimensão do tempo](https://www.youtube.com/watch?v=Qb5b8ZE9tIY).
 
 Poucas das minhas escolhas são tomadas com medo, existe uma incerteza por fatores externos que não podem ser controlados por mim, mas esse é um fator comum. As escolha dos últimos anos é o foco em ser excelente, então venho melhorando pouco a pouco para alcançar o que busco.
 
-22/08/2020 *R:* Nos últimos 4 meses tomei algumas decisões baseadas na confiança, apesar de ter o medo de agir em um ponto onde não tinha um conhecimento total, fui confiante por ter estudado e arrisquei para tentar o melhor. Não sei se teria uma forma para reverter e tomar uma decisão com menos medo, assumir responsabilidades com "skin in the game" sempre terão uma ponta de incerteza, mas talvez se eu tivesse uma bagagem mais densa sobre o assunto o medo seria menor pelo excesso de confiança.
+22/08/2020 _R:_ Nos últimos 4 meses tomei algumas decisões baseadas na confiança, apesar de ter o medo de agir em um ponto onde não tinha um conhecimento total, fui confiante por ter estudado e arrisquei para tentar o melhor. Não sei se teria uma forma para reverter e tomar uma decisão com menos medo, assumir responsabilidades com "skin in the game" sempre terão uma ponta de incerteza, mas talvez se eu tivesse uma bagagem mais densa sobre o assunto o medo seria menor pelo excesso de confiança.
 
 ## Seja generalista
 
@@ -267,7 +269,7 @@ Conhecendo a empresa e o ramo de atuação você terá a capacidade de fazer mud
 1. Procure um livro básico sobre negócios, e trabalhe com ele.
 2. Peça para alguém orientá-lo na área de finanças de sua empresa e explicar como funcionam as coisas.
 
-*R:* Já faço isso, como atuo em minha própria empresa entender de negócios e finanças é obrigatório, além de que utilizo este mesmo conhecimento para a vida pessoal fazendo controle de finanças e investimentos. Concordo com o autor do livro que este é um conhecimento descartado pela maioria e que o entendimento de negócios e economia em um geral pode lhe dar uma vantagem em diversos aspectos, sua visão vai além.
+_R:_ Já faço isso, como atuo em minha própria empresa entender de negócios e finanças é obrigatório, além de que utilizo este mesmo conhecimento para a vida pessoal fazendo controle de finanças e investimentos. Concordo com o autor do livro que este é um conhecimento descartado pela maioria e que o entendimento de negócios e economia em um geral pode lhe dar uma vantagem em diversos aspectos, sua visão vai além.
 
 ## Encontre um mentor
 
@@ -386,7 +388,7 @@ Trate seus projetos como corrida e você chegará ao final muito mais rápido do
 **Exercício:**
 Olhe para sua escrivaninha. Examine as tarefas que estão lá por um longo tempo, os projetos que estão começando a tomar forma, ou aqueles em que você está um pouco travado -- talvez por questões burocráticas, talvez travados por conta de alguma análise.
 
-Encontre um que você poderia fazer nas horas livres do seu trabalho normal, quando você estaria provavelmente navegando pela internet, checando e-mails ou tendo um almoço por mais de uma hora. Transforme um projeto de meses em uma tarefa de menos de uma semana
+Encontre um que você poderia fazer nas horas livres do seu trabalho normal, quando você estaria provavelmente navegando pela [internet](https://segredo.dev/como-a-internet-funciona/), checando e-mails ou tendo um almoço por mais de uma hora. Transforme um projeto de meses em uma tarefa de menos de uma semana
 
 ## Leitor de mentes
 
@@ -452,9 +454,9 @@ O que poderiamos fazer se conseguissemos esse nível de interesse e foco em toda
 
 > Quãos mais divertido você pode tornar seu trabalho?
 
-Provavelmente as tarefas "chatas" são chatas por dois motivos: 
+Provavelmente as tarefas "chatas" são chatas por dois motivos:
 
-1 - Elas não ativam a nossa criatividade 
+1 - Elas não ativam a nossa criatividade
 
 2 - Elas não são desafiadoras
 
@@ -539,7 +541,7 @@ Certifique-se de que você durma bem hoje. Amanhã, tome café da manhã e, ent�
 
 Quanto antes descobrir suas falhas mais robusto seu software tende a ficar. Por mais que algumas práticas de identificação de erros mostrem suas falhas, deixe seu ego de lado e busque melhorar. A qualidade de seu software agradece.
 
-O pior dos erros é aquele que você não sabe que está comentendo. Se você nunca andou em um campo minado antes, você pode não saber onde *não* pisar. Todos cometem erros, porém o amador não sabe o que fazer quando erra e o profissional se adapta e corrige o erro com maestria.
+O pior dos erros é aquele que você não sabe que está comentendo. Se você nunca andou em um campo minado antes, você pode não saber onde _não_ pisar. Todos cometem erros, porém o amador não sabe o que fazer quando erra e o profissional se adapta e corrige o erro com maestria.
 
 Erros podem ser cometidos tanto no ambito de programação como em outros pontos de atuação como comunicação, venda, design...
 
@@ -616,7 +618,7 @@ Faça com que os outros percebam o seu valor. Normalmente isso pode ser equilibr
 
 Entender o que é importante em cada relacionamento é uma parte crucial para formar percepções verossímeis naqueles com quem você interage. Pense nos diferentes tipos de relacionamento que você geralmente tem com as pessoas do escritório. Por exemplo, você provavelmente tem colegas que fazem o mesmo tipo de serviço que você. Você também provavelmente tem um chefe direto, e talvez você tenha um ou mais clientes e um gerente.
 
-Pegue esses grupos diferentes e os liste. Próximo a cada um, escreva quais dos seus atributos mais provavelmente vão conduzir a percepção daquele grupo sobre você. 
+Pegue esses grupos diferentes e os liste. Próximo a cada um, escreva quais dos seus atributos mais provavelmente vão conduzir a percepção daquele grupo sobre você.
 
 Pense sobre sua lista. Como você poderia mudar seu comportamento com o resultado dessa lista? O que você já vem ajustando conforme interage com cada grupo? O que você não tem ajustado em seu comportamento?
 
@@ -636,7 +638,7 @@ Reverta o relacionamento. Ao invés de se achar um gênio da computação, vire 
 
 Analise os e-mails que você já enviou para clientes, gerentes ou colegas e coloque-se no lugar deles. Como você se sente? Veja as coisas do ponto de vista deles.
 
-2 - Pule a cerca: Encontre uma oportunidade para ser jogado em uma situação em que você *não* é especialista e, portanto, depende daqueles que são.
+2 - Pule a cerca: Encontre uma oportunidade para ser jogado em uma situação em que você _não_ é especialista e, portanto, depende daqueles que são.
 
 Imagine-se em um time de pessoas profissionais na área dela em que você foi introduzido como iniciante. Como você gostaria de ser tratado por seus colegas?
 
@@ -709,11 +711,11 @@ Para começar a sair do "buraco" e ser ouvido pelo mundo comece pela web.
 
 **Exercicio:**
 
-1 - Se ainda não tem um blog, faça agora mesmo. 
+1 - Se ainda não tem um blog, faça agora mesmo.
 
-2 - Faça uma lista de possíveis tópicos para seu blogs 
+2 - Faça uma lista de possíveis tópicos para seu blogs
 
-3 - Deixe a sua lista aberta e escreva um artigo para cada tópico que listar ali. Cada dia escolha um item e escreva. 
+3 - Deixe a sua lista aberta e escreva um artigo para cada tópico que listar ali. Cada dia escolha um item e escreva.
 
 4 - Não pense muito, apenas escreva e publique.
 
@@ -775,7 +777,7 @@ Algumas das mentes mais influentes do mundo do software estão acessíveis por e
 
 **Exercicio:**
 
-1 - Escolha um de seus softwares favoritos e mande um e-mail para o criador, agradecendo, dando alguma dica, tente criar algum vínculo. 
+1 - Escolha um de seus softwares favoritos e mande um e-mail para o criador, agradecendo, dando alguma dica, tente criar algum vínculo.
 
 2 - Pense onde você pode encontrar uma pessoa que você admira e gostaria de aprender algo. Dê um jeito de começar uma conversa, mesmo se isso te deixar desconfortável.
 
