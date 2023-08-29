@@ -16,7 +16,7 @@ allowfullscreen></iframe>
 
 Primeiro ele define o conceito de trabalho para pessoas que trabalham com conhecimento, normalmente trabalho é relacionado com o esforço que você despende em uma tarefa, mas isso só é válido em trabalhos manuais, quanto mais tempo você ficar trabalhando, mais resultado terá, mas existe um limite de horas que você consegue trabalhar por dia, você terá um teto. 
 
-A solução que ele apresenta para esse problema de limite, é alavancagem, onde o que você precisa fazer é encontrar formas de alavancar e melhorar o seu trabalho `produção = volume x alavancagem` que é o`número de vezes que você faz algo, vezes o quanto você ganha cada vez que faz isso.` Entendendo que o trabalho está dentro dessa fórmula para você ter mais resultado é necessário: aumentar o volume e a alavancagem. 
+A solução que ele apresenta para esse problema de limite, é alavancagem, onde o que você precisa fazer é encontrar formas de alavancar e melhorar o seu trabalho `produção = volume x alavancagem` que é o `número de vezes que você faz algo, vezes o quanto você ganha cada vez que faz isso.` Entendendo que o trabalho está dentro dessa fórmula para você ter mais resultado é necessário: aumentar o volume e a alavancagem. 
 
 O volume é limitado por tempo e disposição física, existe um limite. A alavancagem é ilimitada.
 
@@ -24,13 +24,13 @@ Um exemplo de alavancagem:
 
 O melhor vendedor da terra vs um vendedor comum com um time, o vendedor com time vencerá pois ele tem um volume maior de aproveitamento, por mais que concorra com o melhor.
 
-Alavancagem: É a diferença entre o que você coloca e o que você recebe.
+Alavancagem: É a diferença entre o que você coloca de esforço e o que você recebe de retorno.
 
 Você faz mais dinheiro trocando o seu tempo por mais resultados.
 
 ## Porque coisas novas atrapalham você
 
-Por ser empreendedor normalmente você tende a querer aceitar diversas possíveis boas ideias, e isso faz que seu foco seja dissipado, dificultando o crescimento de quaisquer uma das ideias.
+Por ser empreendedor normalmente você tende a querer aceitar diversas possíveis boas ideias, e isso faz com que seu foco seja dissipado, dificultando o crescimento de quaisquer uma das ideias.
 
 > A habilidade de dizer não é o que te faz crescer, não o que você escolhe fazer.
 
@@ -102,7 +102,7 @@ Com isso você deve direcionar todos os seus esforços em apenas um negócio, pa
 
 ![](/images/posts/decolando-um-projeto-hormozi.png)
 
-E infelizmente para você decidir seguir com apenas um projeto você precisará ter algumas conversas difíceis, talvez você precisa demitir pessoas, fechar empresas, destruir algo que foi construído… Mas é isso, o ajuste precisa ser feito para que você possa evoluir.
+E infelizmente para você decidir seguir com apenas um projeto você precisará ter algumas conversas difíceis, talvez você precise demitir pessoas, fechar empresas, destruir algo que foi construído… Mas é isso, o ajuste precisa ser feito para que você possa evoluir.
 
 ### Você precisa aprender a dizer não as tentações
 
@@ -116,7 +116,7 @@ Se você fizer algo melhor, você terá mais resultados, seu retorno será maior
 
 ![](/images/posts/better-is-the-secret.png)
 
-Quaisquer que sejam as atividades, se você focar em melhorar elas o seu resultado será elevado, e normalmente o melhor vem de tarefas "chatas”. Normalmente nesta etapa quando as coisas começam a se tornar chatas, você precisa manter sua consistência para evitar entrar no ciclo que vimos anteriormente sobre começar coisas novas, o novo sempre será excitante e animador, você está fazendo apenas a parte que “parece” legal.
+Quaisquer que sejam as atividades, se você focar em melhorar elas o seu resultado será elevado, e normalmente o melhor vem de tarefas "chatas”. Nesta etapa quando as coisas começam a se tornar chatas, você precisa manter sua consistência para evitar entrar no ciclo que vimos anteriormente sobre começar coisas novas, o novo sempre será excitante e animador, você está fazendo apenas a parte que “parece” legal.
 
 > O resultado vem de fazer todas as merdas que você **sabe que deveria fazer, mas não faz.**
 
@@ -132,7 +132,7 @@ Você já sabe o que precisa ser feito, apenas ignora e fica buscando novas cois
 
 > A maioria perde a oportunidade porque ela está vestida de macacão e parece trabalho.
 
-A ideia é apresentada por Hormozi é clara e direta, porém não é fácil de ser executada, você precisa manter o foco e a consistência para que possa crescer e ter resultados, e isso é algo que você precisa fazer todos os dias, não é algo que você faz uma vez e pronto, você precisa fazer todos os dias, e isso é difícil. A consistência é o que faz a diferença.
+A ideia apresentada por Hormozi é clara e direta, porém não é fácil de ser executada, você precisa manter o foco e a consistência para que possa crescer e ter resultados, e isso é algo que você precisa fazer todos os dias, não é algo que você faz uma vez e pronto, e isso é difícil. A consistência é o que faz a diferença.
 
 Reflita sobre o que você está fazendo hoje, e se você está fazendo o que precisa ser feito, ou se está apenas se distraindo com coisas novas e legais. O seu negócio precisa de você!
 
