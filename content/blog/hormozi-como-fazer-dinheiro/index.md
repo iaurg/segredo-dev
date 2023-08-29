@@ -1,7 +1,7 @@
 ---
 title: Hormozi - Como fazer dinheiro
 slug: hormozi-como-fazer-dinheiro
-date: "2022-08-29T02:27:06.000Z"
+date: "2023-08-29T02:27:06.000Z"
 description: "Hormozi trás nesse vídeo sua teoria de como fazer dinheiro, que pode ser resumida em apenas um objetivo aumento de foco."
 categories: [filosofia, empreendedorismo]
 ---
