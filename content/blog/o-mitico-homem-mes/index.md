@@ -295,3 +295,15 @@ E também alguns tipos de tristezas intrínsecas:
 Promover uma atitude orientada ao usuário, visando ao sistema completo, pode muito bem ser a mais importante função do gerente de programação.
 
 Inclua em seus planos o verbo descartar. Você terá que fazer isso de qualquer jeito.
+
+## 19 - Mítico Homem Mês 20 anos depois
+
+O gerenciamento de projeto de software é mais parecido com qualquer outro gerenciamento do que a maioria dos programadores acreditam.
+
+O autor recomenda fortemente o livro Peopleware.
+
+> O espaço daqueles que mais desempenham é mais silencioso, mais privado, mais bem protegido contra interrupções, e é algo maior que isso… Realmente importa para você, se o silêncio, o espaço e a privacidade ajudam sua equipe atual a fazer melhor o seu trabalho ou alternativamente ajudam você a atrair e manter as melhores pessoas.
+
+O autor termina reforçando que a disciplina de engenharia de software ainda é um campo em constante experimento e evolução, possivelmente teremos mais alguns anos de mudanças, novos paradigmas e desafios pela frente. O poço de alcatrão ainda será pegajoso por um bom tempo.
+
+Fim.
