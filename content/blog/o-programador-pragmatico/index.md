@@ -155,3 +155,39 @@ Ter essa possibilidade de troca em sua mente lhe ajuda durante o desenvolvimento
 **Tip 14:** Não existem decisões definitivas
 
 ### Tracer Bullets
+
+Quando você está programando em um ambiente desconhecido uma solução que ainda não possui certeza de como será o resultado, você pode utilizar o conceito de “balas traçantes” para validar o seu caminho. Ao invés de calcular cada detalhe do seu projeto, você pode desenvolver a solução de forma mais simples e rápida para validar o seu caminho.
+
+Desta forma teremos um avanço rápido, visível e com feedbacks constantes.
+
+**Tip 15**: Use balas traçantes para encontrar o alvo
+
+Código desenvolvido neste modelo não necessariamente é um código mal feito, ele apenas está sendo desenvolvido em etapas, porém com todo o controle de qualidade necessário para solucionar o problema. A ideia de desenvolver e analisar de forma rápida segue o conceito de que um projeto nunca está terminado, sempre haverá melhorias e mudanças que precisam ser feitas para alcançar o objetivo.
+
+Algumas vantagens de utilizar este modelo:
+- Usuários conseguem ver algo funcionando rapidamente
+- Desenvolvedores constroem uma estrutura para trabalhar
+- Você tem uma plataforma de integração/teste/validação
+- Você tem algo para mostrar
+- Você tem uma melhor sensação de progresso
+
+"Tracer code" é diferente de protótipo, o protótipo possui o objetivo de ser descartado, o "tracer code" é uma base para o seu projeto.
+
+## 3 - Prototypes and Post-it Notes
+O protótipo deve ser construido com o objetivo de ser descartado, normalmente utilizado para pesquisar e experimentar conceitos desconhecidos do projeto de uma forma mais rápida e barata.
+
+Prototipar é uma experiência de aprendizado. O seu valor não está no código produzido, mas sim no conhecimento adquirido.
+
+**Tip 16:** Prototipe para aprender
+
+Itens que você pode ignorar em um protótipo:
+- Qualidade e validação
+- Funcionalidades completas
+- Robustez
+- Estilo
+
+Diferente do "tracer code" não é necessário se preocupar se o código do protótipo funciona. De fato, alguns protótipos nem código utilizam.
+
+Sempre que for embarcar em um protótipo baseado em código deixe bem claro para todos que se trata de um protótipo e ele será descartado após a validação, isso evita que o código seja utilizado como base para o projeto final. É muito comum durante a apresentação de um protótipo os usuários ficarem animados e pedirem para você "lançar" o protótipo, porém, o protótipo não foi desenvolvido para ser lançado.
+
+Caso esteja em um ambiente que saiba que isso possa acontecer opte pela estratégia de "tracer code".
