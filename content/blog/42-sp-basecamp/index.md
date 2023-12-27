@@ -17,6 +17,7 @@ Neste artigo sobre a 42 sp:
 - [Pós Basecamp](#pos-basecamp)
 - [Como são chamados os alunos da Escola de programação 42?](#como-sao-chamados-os-alunos)
 - [O que são human coders?](#o-que-sao-human-coders)
+- [Finalmente formado na 42](#finalmente-formado-na-42)
 
 <h2 id="como-conheci-a-42">Como conheci a 42?</h2>
 
@@ -105,6 +106,18 @@ Após a conclusão do curso da 42 o aluno se torna um <strong>human coder</stron
 Cada human coder forma um novo cidadão pronto para o mundo digital e analógico, que sabe como aprender a aprender, é capaz de colaborar em ambientes diversos e resolver problemas complexos além de obviamente, saber programar.
 
 [Saiba mais sobre os human coders](https://www.humancoders.com.br?utm_source=post-blog&utm_medium=segredo-dev&utm_campaign=link-post-42-basecamp) e como eles impactam o mundo.
+
+<h2 id="finalmente-formado-na-42">Finalmente formado na 42</h2>
+
+![Human Coder 42 sp](/images/posts/42-human-coder.jpg)
+
+Após longas noites e finais de semana de estudo terminei o common core da 42 São Paulo no dia 09/12/2023 com a entrega do Transcendence o projeto final. Essa é uma conquista que me deixa aliviado, pois representa um grande passo na minha carreira como engenheiro de software.
+
+Durante o common core, passei por diversos projetos, que me ajudaram a aprender sobre programação, algoritmos, estruturas de dados, sistemas operacionais, redes e muito mais. Também tive a oportunidade de trabalhar e aprender com pessoas de todo o mundo, o que me proporcionou uma experiência única.
+
+Termino esta etapa da 42 um engenheiro de software melhor do que quando entrei.
+
+No entanto, sei que o aprendizado nunca termina. Sempre haverá coisas novas para aprender e desafios a serem superados. Estou pronto para essa jornada, e estou ansioso para ver o que o futuro me reserva.
 
 Se quiser saber mais algo sobre a 42 é só falar comigo.
 
