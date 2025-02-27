@@ -156,16 +156,41 @@ Durante seus prompts e retornos sempre fique atento para quando seu modelo come�
 
 Ao estruturar seu prompt você pode definir o tom e forma que ele irá responder para você, isso te ajuda a ter um modelo respondendo da forma que você precisa. Digamos que você queira respostas mais diretas, com mais emojis, como se fosse um personagem de filme, de forma mais amigável... Tudo isso fará com que você defina um tom de retorno.
 
-## Criação interativa de prompt
+## Criação Iterativa de prompt
 
+A criação iterativa de prompt considera que você precisará testar e polir várias vezes seu prompt até chegar a um resultado satisfatório. A probabilidade de você acertar um prompt complexo e com mais etapas de primeira é bem baixa, considere que recriar, testar, mover, analisar são partes essenciais no desenvolvimento de um bom prompt. 
 
+O fluxo normalmente será:
+Ideia -> Escreve prompt -> Experimenta o resultado -> Analisa os erros -> Escreve novamente
+
+Isso faz com que você vá fechando cada vez mais as opções de erros e falhas do seu prompt para que consiga encontrar um fluxo ideal para sua necessiadades.
 
 ## Capacidade dos modelos
 
+Os modelos, principalmente os conversacionais são muito bons em executar as seguintes operações resumir, inferir, transformar e expandir. Combinar e saber a hora de usar cada uma dessas funções ajuda você a solucionar problemas de forma mais eficiente.
+
 ### Resumir
+
+Dezenas de documentos, parágrafos inteiros, textos e mais textos e você precisa apenas saber o nome das pessoas que foram citadas nesses dados. Simples, peça para um modelo analisar seus dados e resumir apenas os nomes que foram citados.
+
+Resumir é muito útil quando você precisa especificamente de uma informação em um conjunto de dados, como por exemplo diversos comentários de uma loja virtual, caso você queira um resumo curto de cada comentário para saber qual deve dar mais atenção você pode solicitar a um modelo que fará essa análise e separação para você.
 
 ### Inferir
 
+O ato de concluir algo com base em um conjunto de informações recebidas, esse tipo de função pode ajudar você a filtrar e separar conjuntos de dados. 
+
+Digamos que você esteja analisando diversas conversas de um aplicativo de mensagens e deseja classificar quais mensagens são em tom positivo e quais são negativos, a inferência trabalha em cima disso, o modelo conclui para você com base no que ele analisou qual é o tom dessa conversa, são conclusões feitas de forma automática para você.
+
 ### Transformar
 
+A forma mais comum de transformar é a tradução, um texto em inglês para português, mas existem outras formas de transformar um conjunto de dados ou texto, por exemplo você quer que sua mensagem fique mais formal antes de enviar um e-mail ou precisa de uma mensagem de aniversário mais calorosa. Um modelo é capaz de transformar uma informação enviada com base em suas necessidades.
+
 ### Expandir
+
+A partir de uma fração de dados o modelo é capaz de estender informações e criar uma resposta nova com base nas instruções recebidas. Um exemplo de expansão é quando você utiliza um modelo para responder a um cliente que fez uma avaliação curta sobre seu produto e você deseja enviar uma respota para ele. O modelo vai a partir desse dado criar uma estrutura totalmente nova para que você possa utilizar.
+
+## Conclusão
+
+Espero que essas anotações possam te ajudar a entender melhor sobre prompts. Um prompt bem feito pode poupar muito tempo e trabalho no seu dia a dia.
+
+Até mais!
