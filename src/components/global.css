@@ -46,6 +46,10 @@ blockquote {
   word-break: break-all;
 }
 
+h4 {
+  text-transform: inherit !important;
+}
+
 button {
   border: none;
   margin: 0;
