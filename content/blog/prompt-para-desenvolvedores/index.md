@@ -25,7 +25,7 @@ Para ajudar a definir as regras de seu prompt e detalhar de forma concisa para o
 
 Por exemplo:
 
-```python
+```javascript
 comentario = "Adorei este produto"
 
 prompt = """
@@ -41,7 +41,7 @@ Com isso você garante que o modelo irá considerar como comentário do cliente 
 
 Para ter um controle e um tratamento melhor da informações e resultados do prompt você pode pedir respostas estruturadas com base na análise do modelo, assim você consegue trabalhar melhor com os resultados.
 
-```python
+```javascript
 
 prompt = """
 Gere uma lista 10 de livros estruturados em json com os campos:
@@ -89,7 +89,7 @@ Se você precisa que seu resultado seja de uma forma específica dê exemplos de
 
 Isso ajuda o modelo a estruturar as informações da forma que você espera e que ele consiga entender melhor o contexto que receberá.
 
-```python
+```javascript
 prompt = """
 Você é responsável por organizar todas as avaliações de nosso site, preciso que retorne cada avaliação de maneira organizada, precisamos apenas das notas para a nossa análise.
 
@@ -109,7 +109,7 @@ Dessa forma o modelo conseguirá entender o que ele receberá e como você esper
 
 Para tarefas que possam ser detalhes em etapas que o modelo precisa seguir a melhor abordagem é criar um processo de como o modelo deve agir em cima do dado, assim ele poderá trabalhar da maneira que você espera, digamos que você queira traduzir um texto para inglês e deseja ter cada frase em uma posição de um array por algum motivo.
 
-```python
+```javascript
 prompt = """
 Com o seguinte parágrafo que está entre <> execute os passos a seguir:
 1 - Traduza o parágrafo para inglês
@@ -124,7 +124,7 @@ O XSS é uma vulnerabilidade que permite que um atacante injete um script malici
 """
 ```
 Resultado:
-```js
+```javascript
 [  
   "What is an XSS vulnerability?",
   "XSS is a vulnerability that allows an attacker to inject a malicious script into a page and interact on that page with all the privileges of the original user.",
@@ -142,7 +142,7 @@ Dependendo do contexto e prompt fornecido pode ser o que modelo se confunda dura
 
 Muito comum de acontecer em modelos, principalmente os conversacionais, por ser um modelo treinado para conversar e criar frases que sejam "reais" esses tipos de modelos são muito bons em inventar coisas de uma forma que pareçam reais, isso quer dizer que o texto retornado por ele parecerá muito correto e real, mas pode ser algo totalmente sem sentido no mundo real. 
 
-```python
+```javascript
 prompt = "Descreva para mim um tchumbirombas em 1 frase, é um animal brasileiro"
 ```
 
