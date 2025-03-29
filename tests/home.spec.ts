@@ -6,16 +6,17 @@ type MetaTag = {
   expected?: string
 }
 
-const homeUrl =
-  process.env.NODE_ENV === 'development'
-    ? 'http://localhost:4321'
-    : `${SITE.href}`
+const homeUrl = `${SITE.href}/`
 
 test('should navigate to the home page and validate content', async ({
   page,
 }) => {
   // Navigate to home page
-  await page.goto(homeUrl)
+  await page.goto(
+    process.env.NODE_ENV === 'development'
+      ? 'http://localhost:4321'
+      : `${SITE.href}`,
+  )
 
   // Check page title
   await expect(page).toHaveTitle('Inicio | segredo.dev')
@@ -55,7 +56,11 @@ test('should navigate to the home page and validate content', async ({
 
 test('should validate SEO best practices on homepage', async ({ page }) => {
   // Navigate to home page
-  await page.goto(homeUrl)
+  await page.goto(
+    process.env.NODE_ENV === 'development'
+      ? 'http://localhost:4321'
+      : `${SITE.href}`,
+  )
 
   // Check meta description
   const metaDescriptions = page.locator('meta[name="description"]')
@@ -72,7 +77,7 @@ test('should validate SEO best practices on homepage', async ({ page }) => {
   const canonicalUrls = page.locator('link[rel="canonical"]')
   const canonicalCount = await canonicalUrls.count()
   expect(canonicalCount).toBe(1)
-  await expect(canonicalUrls.first()).toHaveAttribute('href', homeUrl)
+  await expect(canonicalUrls.first()).toHaveAttribute('href', `${SITE.href}/`)
 
   // Check Open Graph tags
   const ogTags: Record<string, MetaTag> = {

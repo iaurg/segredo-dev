@@ -5,10 +5,7 @@ export const SITE: Site = {
   locale: 'pt-BR',
   description:
     'Aqui reuno meus conhecimentos, projetos e estudos sobre desenvolvimento web e tecnologias.',
-  href:
-    process.env.NODE_ENV === 'development'
-      ? 'http://localhost:4321'
-      : 'https://segredo.dev',
+  href: 'https://segredo.dev',
   featuredPostCount: 2,
   postsPerPage: 12,
   author: 'iaurg',
