@@ -1,0 +1,56 @@
+---
+import AuthorCard from '@/components/AuthorCard.astro'
+import BlogCard from '@/components/BlogCard.astro'
+import Breadcrumbs from '@/components/Breadcrumbs.astro'
+import Layout from '@/layouts/Layout.astro'
+import { getAllAuthors, getPostsByAuthor } from '@/lib/data-utils'
+
+export async function getStaticPaths() {
+  const authors = await getAllAuthors()
+  return authors.map((author) => ({
+    params: { id: author.id },
+    props: { author },
+  }))
+}
+
+const { author } = Astro.props
+const authorPosts = await getPostsByAuthor(author.id)
+---
+
+<Layout
+  title={`${author.data.name} (Autor)`}
+  description={author.data.bio || `Perfil de ${author.data.name}.`}
+  image={author.data.avatar}
+  author={author.data.name}
+>
+  <Breadcrumbs
+    items={[
+      { href: '/autores/', label: 'Autores', icon: 'lucide:users' },
+      { label: author.data.name, icon: 'lucide:user' },
+    ]}
+  />
+
+  <section>
+    <AuthorCard author={author} />
+  </section>
+  <section class="flex flex-col gap-y-4">
+    <h2 class="text-2xl font-medium">Posts de {author.data.name}</h2>
+    {
+      authorPosts.length > 0 ? (
+        <ul class="flex flex-col gap-4">
+          {authorPosts
+            .filter((post) => !post.data.draft)
+            .map((post) => (
+              <li>
+                <BlogCard entry={post} />
+              </li>
+            ))}
+        </ul>
+      ) : (
+        <p class="text-muted-foreground">
+          Nenhum post disponível por este autor.
+        </p>
+      )
+    }
+  </section>
+</Layout>
