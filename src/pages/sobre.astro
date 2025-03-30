@@ -1,0 +1,94 @@
+---
+import Breadcrumbs from '@/components/Breadcrumbs.astro'
+import DegreeCard from '@/components/DegreeCard.astro'
+import ProjectCard from '@/components/ProjectCard.astro'
+import Layout from '@/layouts/Layout.astro'
+import { getAllDegrees, getAllProjects } from '@/lib/data-utils'
+
+const projects = await getAllProjects()
+const degrees = await getAllDegrees()
+---
+
+<Layout title="Sobre" description="Sobre o blog">
+  <Breadcrumbs items={[{ label: 'Sobre', icon: 'lucide:info' }]} />
+
+  <section>
+    <div class="min-w-full">
+      <div class="prose mb-8">
+        <p class="mb-4">
+          Olá! 👋 Sou Italo, um programador especializado em desenvolvimento de
+          software nas áreas de <strong>Software Developer</strong> | <strong
+            >JavaScript</strong
+          >, <strong>React</strong>, <strong>Node.js</strong> | <strong
+            >Software Engineer</strong
+          >.
+        </p>
+
+        <p>
+          🎯 Objetivos Profissionais: Busco constantemente desenvolver projetos
+          de relevância e impacto, contribuindo para a evolução contínua da
+          tecnologia. Meu objetivo é aplicar minhas habilidades em desafios
+          significativos.
+        </p>
+
+        <p>
+          🔧 Habilidades-Chave:
+          <ul>
+            <li>Desenvolvimento de Software:</li>
+            <ul>
+              <li>JavaScript, React.js, Next.js, Node.js</li>
+              <li>Docker, Redes, Linux</li>
+              <li>C, C++, CSS, HTML</li>
+              <li>Shell Scripting</li>
+            </ul>
+          </ul>
+
+          💡 Interesses:
+          <p>
+            Meus interesses incluem o desenvolvimento de software, a criação de
+            produtos inovadores e cibersegurança. Estou sempre em busca de novos
+            desafios que ampliem meus horizontes nesses campos.
+          </p>
+        </p>
+      </div>
+
+      <h2 class="mb-4 text-2xl font-medium">Formação</h2>
+      <div class="mb-8 flex flex-col gap-4">
+        {
+          degrees
+            .sort((a, b) => {
+              // If a is current (no end date) and b is not, a should come first
+              if (!a.data.endDate && b.data.endDate) return -1
+              // If b is current (no end date) and a is not, b should come first
+              if (a.data.endDate && !b.data.endDate) return 1
+              // If both are current or both are past, sort by start date
+              return (
+                new Date(b.data.startDate || 0).getTime() -
+                new Date(a.data.startDate || 0).getTime()
+              )
+            })
+            .map((degree) => <DegreeCard degree={degree} />)
+        }
+      </div>
+
+      <h2 class="mb-4 text-2xl font-medium">Projetos</h2>
+      <div class="flex flex-col gap-4">
+        {
+          projects
+            .sort((a, b) => {
+              // If a is current (no end date) and b is not, a should come first
+              if (!a.data.endDate && b.data.endDate) return -1
+              // If b is current (no end date) and a is not, b should come first
+              if (a.data.endDate && !b.data.endDate) return 1
+              // If both are current or both are past, sort by start date
+              return (
+                new Date(b.data.startDate || 0).getTime() -
+                new Date(a.data.startDate || 0).getTime()
+              )
+            })
+            .map((project) => <ProjectCard project={project} />)
+        }
+      </div>
+    </div>
+  </section>
+</Layout>

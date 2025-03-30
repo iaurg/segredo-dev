@@ -1,0 +1,57 @@
+---
+import Link from '@/components/Link.astro'
+import { Badge } from '@/components/ui/badge'
+import { formatDate } from '@/lib/utils'
+import { Icon } from 'astro-icon/components'
+import { Image } from 'astro:assets'
+import type { CollectionEntry } from 'astro:content'
+
+interface Props {
+  degree: CollectionEntry<'degrees'>
+}
+
+const { degree } = Astro.props
+---
+
+<div
+  class="hover:bg-secondary/50 rounded-xl border p-4 transition-colors duration-300 ease-in-out"
+>
+  <Link
+    href={degree.data.link}
+    class="flex flex-col gap-4 sm:flex-row"
+    external
+  >    
+    <div class="grow">
+      <h3 class="mb-1 text-lg font-medium">
+        {degree.data.name}
+      </h3>
+      <p class="text-muted-foreground mb-2 text-sm">
+        {degree.data.description}
+      </p>
+      {
+        degree.data.startDate && (
+          <p class="text-muted-foreground/70 mb-2 flex items-center gap-x-1.5 text-xs">
+            <span class="flex items-center gap-x-1.5">
+              <Icon name="lucide:calendar" class="size-3" />
+              <span>
+                {formatDate(degree.data.startDate, 'pt-BR')}
+                {degree.data.endDate
+                  ? ` → ${formatDate(degree.data.endDate, 'pt-BR')}`
+                  : ' → Atualmente'}
+              </span>
+            </span>
+          </p>
+        )
+      }
+      {
+        degree.data.tags && (
+          <div class="flex flex-wrap gap-2">
+            {degree.data.tags.map((tag: string) => (
+              <Badge variant="secondary">{tag}</Badge>
+            ))}
+          </div>
+        )
+      }
+    </div>
+  </Link>
+</div>
