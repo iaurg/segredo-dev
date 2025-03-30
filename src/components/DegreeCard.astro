@@ -20,20 +20,7 @@ const { degree } = Astro.props
     href={degree.data.link}
     class="flex flex-col gap-4 sm:flex-row"
     external
-  >
-    {
-      degree.data.image && (
-        <div class="max-w-3xs sm:shrink-0">
-          <Image
-            src={degree.data.image}
-            alt={degree.data.name}
-            width={1200}
-            height={630}
-            class="object-cover"
-          />
-        </div>
-      )
-    }
+  >    
     <div class="grow">
       <h3 class="mb-1 text-lg font-medium">
         {degree.data.name}
