@@ -1,23 +1,16 @@
 ---
 title: Entenda como funciona a internet e como o sinal chega
 slug: como-a-internet-funciona
-description: "A maioria de nós apenas usa a internet, sem entender exatamente como ela funciona. Entenda como tudo se conecta!"
-date: "2022-11-07T10:55:41.000Z"
+description: 'A maioria de nós apenas usa a internet, sem entender exatamente como ela funciona. Entenda como tudo se conecta!'
+date: '2022-11-07T10:55:41.000Z'
 authors: ['iaurg']
 ---
-
-Neste artigo sobre a como a internet funciona:
-
-- [Como os computadores se conectam](#como-os-computadores-se-conectam)
-- [Clientes e Servers](#clients-e-servers)
-- [O que são os pacotes de rede?](#o-que-sao-os-pacotes-de-rede)
-- [Como a internet funciona em vídeo introdutório](#como-a-internet-funciona-video)
 
 A maioria de nós apenas usa a internet, sem entender exatamente como ela funciona.
 
 Hoje vamos ter uma ideia de como tudo se conecta e interage através desta rede.
 
-<h2 id="como-os-computadores-se-conectam">Como os computadores se conectam</h2>
+## Como os computadores se conectam
 
 Normalmente quando pensamos em internet nos vem uma ideia de nuvem ou algo intocável que flutua por ai, porém a visão de nuvem é apenas um termo de marketing, na verdade a internet funciona através de cabos, vários cabos, muitos cabos!
 
@@ -31,7 +24,7 @@ Obviamente este é um caminho simplificado de como tudo isso acontece e essas op
 
 Você deve estar se perguntando, ok, parece simples até aqui, mas como tanta informação trafega através desses cabos, como elas sabem onde chegar?
 
-<h2 id="clients-e-servers">Clients e Servers</h2>
+## Clients e Servers
 
 Na internet os computadores que provém informação são chamados de **servers** e os que consomem essas informações são os **clients.**
 
@@ -41,7 +34,7 @@ Se eu quero me comunicar com um **server** preciso saber o endereço dele, posso
 
 Exatamente como correspondências (mail), ai que surgem os e-mails que seriam correspondências digitais!
 
-<h2 id="o-que-sao-os-pacotes-de-rede">O que são os pacotes de rede?</h2>
+## O que são os pacotes de rede?
 
 <a href="https://pt.wikipedia.org/wiki/Pacote" target="_blank">O papel principal da internet é enviar e receber pacotes</a>, exatamente como um sistema de entregas, ela recebe um pacote, garante que ele está seguro e que chegará até o seu destinatário e envia este pacote. Estes pacotes terão todo o conteúdo que o server ou client precisam trocar e informações extras de identificação para organizar esse pacote durante o tráfego.
 
@@ -51,7 +44,7 @@ Os pacotes de rede são as informações em código binário com camadas de segu
 
 Com diversos pacotes e informações sendo trafegadas de acordo, entre vários clientes e servidores nós temos o que chamamos de internet, uma imensa rede de computadores conectados trocando informações.
 
-<h2 id="como-a-internet-funciona-video">Como a internet funciona em vídeo introdutório:</h2>
+## Como a internet funciona em vídeo introdutório:
 
 Agora que você já sabe um pouco mais sobre como a internet funciona, que tal assistir um vídeo introdutório sobre o assunto?Confira abaixo:
 
@@ -62,29 +55,3 @@ allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
 allowfullscreen></iframe>
 
 Espero que possa ter ajudado você, até mais!
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org/",
-  "@type": "FAQPage",
-  "mainEntity": [{
-    "@type": "Question",
-    "name": "Como os computadores se conectam",
-    "acceptedAnswer": {
-      "@type": "Answer",
-      "text": "Normalmente quando pensamos em internet nos vem uma ideia de nuvem ou algo intocável que flutua por ai, porém a visão de nuvem é apenas um termo de marketing, na verdade a internet funciona através de cabos, vários cabos, muitos cabos!"
-    }
-  },{
-    "@type": "Question",
-    "name": "O que são os pacotes de rede?",
-    "acceptedAnswer": {
-      "@type": "Answer",
-      "text": "O papel principal da internet é enviar e receber pacotes, exatamente como um sistema de entregas, ela recebe um pacote, garante que ele está seguro e que chegará até o seu destinatário e envia este pacote. Estes pacotes terão todo o conteúdo que o server ou client precisam trocar e informações extras de identificação para organizar esse pacote durante o tráfego.
-
-Porém este pacote não é encaminhado todo de uma vez, a forma mais tradicional é dividir este pacote em diversos pacotes menores e encaminhar através de vários caminhos diferentes para que caso alguns desses caminhos “falhe” você não perca toda a mensagem.
-
-Os pacotes de rede são as informações em código binário com camadas de segurança e identificação que são enviados através da internet. Estes pacotes normalmente são enviados utilizando dois principais protoclos de comunicação, o TCP e o UDP, podendo variar em qualidade de entrega e forma de envio de acordo com cada demanda."
-    }
-  }]
-}
-</script>

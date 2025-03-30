@@ -10,19 +10,7 @@ E ai, tudo certo?
 
 Hoje vamos entender o que é HTML, um dos elementos mais presentes na web, você com certeza já deve ter visto ou usado um código HTML, pois a internet é composta em sua grande parte por ele.
 
-Neste artigo sobre o que é o HTML:
-
-- [O que é HTML?](#o-que-e-html)
-- [O que o HTML faz no site?](#o-que-e-o-html-faz-no-site)
-- [Como funciona o HTML](#como-funciona-o-html)
-- [Principais tags do HTML](#principais-tags-do-html)
-- [Estrutura básica de um documento HTML](#estrutura-basica-de-um-documento-html)
-- [Como surgiu o HTML?](#como-surgiu-o-html)
-- [Evolução do HTML](#evolucao-do-html)
-- [A relação entre HTML, CSS e JavaScript](#relacao-html-css-js)
-- [Como entender HTML?](#como-entender-html)
-
-<h2 id="o-que-e-html">O que é HTML?</h2>
+## O que é HTML?
 
 **HTML é a sigla para HyperText Markup Language**, traduzindo é uma linguagem de marcação de texto, onde você definirá em um conteúdo o que cada bloco representa de forma estrutural. É uma das tecnologias básicas para construção de páginas web, está presente na maioria dos sites e é a **linguagem de marcação mais utilizada na internet**.
 
@@ -46,7 +34,7 @@ O HTML define o conteúdo de todas as páginas da internet, marcando um conteúd
 
 Ele está presente na web normalmente em conjunto com o CSS e o JavaScript, que compõem a maioria dos sites que você conhece.
 
-<h2 id="como-funciona-o-html">Como funciona o HTML</h2>
+## Como funciona o HTML
 
 O HTML funciona de maneira muito simples, basicamente você irá definir o que cada elemento representa dentro do seu site, e o navegador irá ler e interpretar essas marcações para que ele possa exibir o conteúdo de forma correta. Cada elemento HTML possui uma função específica, e você irá definir qual função ele irá ter dentro do seu site para que possa atender as suas necessidaes.
 
@@ -58,7 +46,7 @@ De forma técnica o código HTML é interpretado pelo browser como uma árvore d
 
 O parsing do HTML envolve tokenização e construção da árvore, os tokens são os elementos HTML definidos pelas marcações de abertura e fechamento e a árvore é o conjunto desses elementos em hierarquia. O parser do browser irá interpretar cada nó da árvore e se tudo estiver de acordo com as regras do HTML ele irá exibir o conteúdo de forma correta na tela, normalmente este processo é muito rápido.
 
-<h2 id="principais-tags-do-html">Principais tags do HTML</h2>
+## Principais tags do HTML
 
 Abaixo você irá encontrar as principais tags do HTML, que são as tags mais utilizadas na construção de sites, e que você irá utilizar na maioria das vezes. Como no exemplo anterior com o livro, você verá muita semelhança entre as tags e elementos gráficos de formatação de texto.
 
@@ -97,7 +85,7 @@ As tags de lista são utilizadas para definir listas ordenadas e não ordenadas,
 
 Essas são algumas das tags mais utilizadas, mas existem muitas outras tags que você pode e deve utilizar para construir seu site, você pode encontrar todas elas na [documentação do HTML](https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element). Recomendo que analise as tags e entenda o contexto de cada uma delas, para que você possa utilizar da forma correta, isso terá um impacto muito grande na forma como seu site será indexado pelos buscadores. A semântica do HTML é muito importante.
 
-<h2 id="estrutura-basica-de-um-documento-html">Estrutura básica de um documento HTML</h2>
+## Estrutura básica de um documento HTML
 
 Abaixo você irá encontrar a estrutura básica de um documento HTML, que é a estrutura mínima que você precisa para criar um site, e que você irá utilizar na maioria das vezes. A estrutura básica de um documento HTML é composta por 3 partes principais, que são o cabeçalho, o corpo e o documento em sí, e cada uma delas possui uma função específica.
 
@@ -134,7 +122,7 @@ frameborder="0"
 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
 allowfullscreen></iframe>
 
-<h2 id="como-surgiu-o-html">Como surgiu o HTML?</h2>
+## Como surgiu o HTML?
 
 O HTML surgiu em 1991, quando Tim Berners-Lee, um físico britânico, criou a World Wide Web, que é a internet que conhecemos hoje, e que é composta por milhões de sites, e que é utilizada por bilhões de pessoas em todo o mundo. O HTML foi criado para que os documentos da World Wide Web pudessem ser estruturados e organizados, e para que os documentos pudessem ser compartilhados entre os usuários da World Wide Web.
 
@@ -144,13 +132,13 @@ A documentação inicial do HTML foi publicada em 1995, e foi intitulada <a href
 
 O HTML é a base da World Wide Web, e é utilizado para criar todos os sites que você visita.
 
-<h2 id="evolucao-do-html">Evolução do HTML</h2>
+## Evolução do HTML
 
 O HTML evoluiu muito desde a sua criação, e hoje em dia ele é uma linguagem muito poderosa utilizada para criar sites e aplicativos web por milhões de desenvolvedores em todo o mundo.
 
 <h3>1995 – Versão 2.0</h3>
 
-A versão 2.0 do HTML foi publicada em 1995, e foi a primeira versão oficial do HTML, e foi publicada pela W3C, que é a World Wide Web Consortium, que é uma organização sem fins lucrativos que é responsável por manter o HTML e o CSS, e que é responsável por manter a compatibilidade entre os browsers. Esta versão já possuia todos os elementos da versão 1.0, foi a versão utilizada como padrão para desenvolimento de sites até 1997. Refinou diversos conceitos da versão original que continuariam evoluindo.
+A versão 2.0 do HTML foi publicada em 1995, e foi a primeira versão oficial do HTML, e foi publicada pela W3C, que é a World Wide Web Consortium, que é uma organização sem fins lucrativos que é responsável por manter o HTML e o CSS, e que é responsável por manter a compatibilidade entre os browsers. Esta versão já possuia todos os elementos da versão 1.0, foi a versão utilizada como padrão para desenvolvimento de sites até 1997. Refinou diversos conceitos da versão original que continuariam evoluindo.
 
 <h3>1997 – Versão 3.0</h3>
 
@@ -168,7 +156,7 @@ A versão XHTML 1.0 foi publicada em 2000, e foi a primeira versão do XHTML, qu
 
 A versão 5 do HTML foi publicada em 2006, e foi a primeira versão do HTML que foi publicada pela WHATWG, que é a Web Hypertext Application Technology Working Group, que é uma organização sem fins lucrativos que é responsável por manter o HTML e o CSS, constituida por grandes membros da tecnologia como Google, Apple, Microsoft e Mozilla Foundation. É considerada a versão mais avançada do HTML, e é a versão que está sendo utilizada atualmente para desenvolvimento de sites. Nesta versão foram adicionados diversos elementos, porém o principal foi a adição de APIs para a linguagem, que possibilitou a criação de sites mais dinâmicos e interativos.
 
-<h2 id="relacao-html-css-js">A relação entre HTML, CSS e JavaScript</h2>
+## A relação entre HTML, CSS e JavaScript
 
 Vimos aqui que a maioria dos sites da internet utilizam HTML, porém raramente você encontrará um site construido apenas com HTML, o mais comum é termos um conjunto de 3 linguagens na criação de um site, que são o HTML, CSS e JavaScript. Essas linguagens são capazes de criar sites como os que você encontra na internet, e são utilizadas por milhões de desenvolvedores em todo o mundo. A maioria das bibliotecas ou frameworks se baseiam nessa tríade para criar sites e aplicativos web.
 
@@ -180,7 +168,7 @@ O CSS é a linguagem de estilo que é utilizada para estilizar os elementos que 
 
 O JavaScript é a linguagem de programação que é utilizada para criar a interatividade dos sites, e é a linguagem que é responsável por criar a interatividade dos elementos que são exibidos na tela, como animações, efeitos, etc.
 
-<h2 id="como-entender-html">Como entender o HTML?</h2>
+## Como entender o HTML?
 
 A melhor forma de entender o HTML é desenvolvendo em HTML, quanto mais sites e funcionalidades você desenvolver em HTML, mais você irá entender a linguagem, e mais você irá entender como ela funciona. O HTML é uma linguagem muito simples e fácil de aprender, mas requer treino e prática para dominar a linguagem.
 
@@ -192,7 +180,7 @@ Alguns sites que podem te ajudar a entender o HTML:
 - [https://developer.mozilla.org/pt-BR/docs/Web/HTML](https://developer.mozilla.org/pt-BR/docs/Web/HTML)
 - [https://www.w3.org/standards/webdesign/htmlcss](https://www.w3.org/standards/webdesign/htmlcss)
 
-<h2>Conclusão</h2>
+## Conclusão
 
 Espero que você tenha gostado do artigo, e que tenha entendido um pouco mais sobre o HTML, e sobre a sua importância na criação de sites e aplicativos web. Essa é uma linguagem que é muito importante para o desenvolvimento web, e é uma das linguagens mais utilizadas no mundo, entender o HTML é essencial para qualquer desenvolvedor web.
 
