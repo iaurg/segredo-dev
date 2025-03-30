@@ -44,6 +44,15 @@ export async function getAllProjects(): Promise<CollectionEntry<'projects'>[]> {
   })
 }
 
+export async function getAllDegrees(): Promise<CollectionEntry<'degrees'>[]> {
+  const degrees = await getCollection('degrees')
+  return degrees.sort((a, b) => {
+    const dateA = a.data.startDate?.getTime() || 0
+    const dateB = b.data.startDate?.getTime() || 0
+    return dateB - dateA
+  })
+}
+
 export async function getAllTags(): Promise<Map<string, number>> {
   const posts = await getAllPosts()
 

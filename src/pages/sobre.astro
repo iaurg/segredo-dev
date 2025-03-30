@@ -2,9 +2,10 @@
 import Breadcrumbs from '@/components/Breadcrumbs.astro'
 import ProjectCard from '@/components/ProjectCard.astro'
 import Layout from '@/layouts/Layout.astro'
-import { getAllProjects } from '@/lib/data-utils'
+import { getAllDegrees, getAllProjects } from '@/lib/data-utils'
 
 const projects = await getAllProjects()
+const degrees = await getAllDegrees()
 ---
 
 <Layout title="Sobre" description="Sobre o blog">
@@ -50,9 +51,42 @@ const projects = await getAllProjects()
         </p>
       </div>
 
+      <h2 class="mb-4 text-2xl font-medium">Formação</h2>
+      <div class="flex flex-col gap-4 mb-8">
+        {
+          degrees
+            .sort((a, b) => {
+              // If a is current (no end date) and b is not, a should come first
+              if (!a.data.endDate && b.data.endDate) return -1
+              // If b is current (no end date) and a is not, b should come first
+              if (a.data.endDate && !b.data.endDate) return 1
+              // If both are current or both are past, sort by start date
+              return (
+                new Date(b.data.startDate || 0).getTime() -
+                new Date(a.data.startDate || 0).getTime()
+              )
+            })
+            .map((degree) => <ProjectCard project={degree} />)
+        }
+      </div>
+
       <h2 class="mb-4 text-2xl font-medium">Projetos</h2>
       <div class="flex flex-col gap-4">
-        {projects.map((project) => <ProjectCard project={project} />)}
+        {
+          projects
+            .sort((a, b) => {
+              // If a is current (no end date) and b is not, a should come first
+              if (!a.data.endDate && b.data.endDate) return -1
+              // If b is current (no end date) and a is not, b should come first
+              if (a.data.endDate && !b.data.endDate) return 1
+              // If both are current or both are past, sort by start date
+              return (
+                new Date(b.data.startDate || 0).getTime() -
+                new Date(a.data.startDate || 0).getTime()
+              )
+            })
+            .map((project) => <ProjectCard project={project} />)
+        }
       </div>
     </div>
   </section>
