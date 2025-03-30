@@ -1,5 +1,6 @@
 ---
 import Breadcrumbs from '@/components/Breadcrumbs.astro'
+import DegreeCard from '@/components/DegreeCard.astro'
 import ProjectCard from '@/components/ProjectCard.astro'
 import Layout from '@/layouts/Layout.astro'
 import { getAllDegrees, getAllProjects } from '@/lib/data-utils'
@@ -52,7 +53,7 @@ const degrees = await getAllDegrees()
       </div>
 
       <h2 class="mb-4 text-2xl font-medium">Formação</h2>
-      <div class="flex flex-col gap-4 mb-8">
+      <div class="mb-8 flex flex-col gap-4">
         {
           degrees
             .sort((a, b) => {
@@ -66,7 +67,7 @@ const degrees = await getAllDegrees()
                 new Date(a.data.startDate || 0).getTime()
               )
             })
-            .map((degree) => <ProjectCard project={degree} />)
+            .map((degree) => <DegreeCard degree={degree} />)
         }
       </div>
 
