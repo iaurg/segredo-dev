@@ -4,6 +4,7 @@ slug: engenharia-de-prompt-iniciante
 description: 'Como escrever prompts mais eficientes com técnicas simples'
 date: '2025-02-23T12:52:43.000Z'
 authors: ['iaurg']
+image: ./engenharia-de-prompt-para-iniciantes.jpg
 ---
 
 Este material são as anotações e entedimentos do curso [Prompt Engineering for Developers](https://www.deeplearning.ai/short-courses/chatgpt-prompt-engineering-for-developers/). O foco principal deste curso é direcionar para uma criação de prompts mais eficientes para que suas respostas e dados gerados sejam melhores estruturados para resolverem seus problemas.

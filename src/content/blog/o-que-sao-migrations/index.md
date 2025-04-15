@@ -5,6 +5,7 @@ description: 'Entenda o que são migrations e como você pode melhorar o control
 date: '2024-11-03T13:49:21.000Z'
 tags: ['programação', 'conceito', 'backend']
 authors: ['iaurg']
+image: ./o-que-sao-migrations.jpg
 ---
 
 Migrations são uma forma de criar uma "linha do tempo" de modificações feitas em um banco de dados, imagine e migration como se fossem commits em um repositório de código, cada migration tem sua marca no tempo e modifica a estrutura do banco de dados.
