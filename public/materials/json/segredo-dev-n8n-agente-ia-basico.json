@@ -1,0 +1,129 @@
+{
+    "name": "segredo.dev - Agente de IA Básico",
+    "nodes": [
+      {
+        "parameters": {
+          "options": {}
+        },
+        "id": "416f396b-631d-4ff2-b12b-d8d6799bbec3",
+        "name": "When chat message received",
+        "type": "@n8n/n8n-nodes-langchain.chatTrigger",
+        "position": [-160, -200],
+        "webhookId": "53c136fe-3e77-4709-a143-fe82746dd8b6",
+        "typeVersion": 1.1
+      },
+      {
+        "parameters": {},
+        "id": "ae9ac836-eaac-47d6-98de-331612f57435",
+        "name": "Simple Memory",
+        "type": "@n8n/n8n-nodes-langchain.memoryBufferWindow",
+        "position": [180, 20],
+        "typeVersion": 1.3
+      },
+      {
+        "parameters": {
+          "model": {
+            "__rl": true,
+            "mode": "list",
+            "value": "gpt-4o-mini"
+          },
+          "options": {}
+        },
+        "id": "d0cdd621-9653-4e8b-b772-fd15fdcd3403",
+        "name": "OpenAI Chat Model",
+        "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+        "position": [40, 20],
+        "typeVersion": 1.2
+      },
+      {
+        "parameters": {
+          "options": {}
+        },
+        "id": "6e34cb6d-e519-496a-aaaa-24f099626da5",
+        "name": "SerpAPI",
+        "type": "@n8n/n8n-nodes-langchain.toolSerpApi",
+        "position": [320, 20],
+        "typeVersion": 1
+      },
+      {
+        "parameters": {
+          "options": {}
+        },
+        "id": "94e1232c-5ce2-4813-b166-d887ad32664b",
+        "name": "AI Agent",
+        "type": "@n8n/n8n-nodes-langchain.agent",
+        "position": [80, -200],
+        "typeVersion": 1.8
+      },
+      {
+        "parameters": {
+          "content": "## segredo.dev\nEsse template foi criado por Italo A.\n\nAcompanhe meus conteudos:\nBlog: https://segredo.dev/\n\nYouTube: https://www.youtube.com/@segredodev",
+          "height": 180,
+          "width": 380,
+          "color": 7
+        },
+        "type": "n8n-nodes-base.stickyNote",
+        "typeVersion": 1,
+        "position": [-500, -440],
+        "id": "e68234f4-710f-41cf-96a1-b664b45206c3",
+        "name": "Sticky Note"
+      }
+    ],
+    "pinData": {},
+    "connections": {
+      "SerpAPI": {
+        "ai_tool": [
+          [
+            {
+              "node": "AI Agent",
+              "type": "ai_tool",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Simple Memory": {
+        "ai_memory": [
+          [
+            {
+              "node": "AI Agent",
+              "type": "ai_memory",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "OpenAI Chat Model": {
+        "ai_languageModel": [
+          [
+            {
+              "node": "AI Agent",
+              "type": "ai_languageModel",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "When chat message received": {
+        "main": [
+          [
+            {
+              "node": "AI Agent",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      }
+    },
+    "active": false,
+    "settings": {
+      "executionOrder": "v1"
+    },
+    "versionId": "",
+    "meta": {
+      "instanceId": "f5e779ac371328ec2ea3deb5a0cb72d2343dabc70b9a04eed6861d62926d9592"
+    },
+    "tags": []
+  }
+  

@@ -1,0 +1,58 @@
+---
+import LayoutLanding from "@/layouts/LayoutLanding.astro";
+---
+
+<LayoutLanding
+  title="Inscrição Confirmada! 🎉"
+  description="Você será redirecionado para os materiais em instantes."
+>
+  <section class="py-16  min-h-[80vh] flex items-center">
+    <div class="flex flex-col items-center px-6 text-center max-w-2xl mx-auto">
+      <div class="mb-8">
+        <svg
+          class="w-24 h-24 text-green-500 mx-auto mb-6"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+          ></path>
+        </svg>
+      </div>
+
+      <h1 class="text-4xl font-bold mb-4">Inscrição Confirmada!</h1>
+      
+      <p class="text-xl mb-8">
+        Obrigado por se inscrever! Você será redirecionado para a página de materiais em <span id="countdown" class="font-bold text-green-500">5</span> segundos.
+      </p>
+
+      <div class="animate-pulse">
+        Preparando seus materiais...
+      </div>
+    </div>
+  </section>
+</LayoutLanding>
+
+<script>
+  // Countdown timer and redirect
+  let timeLeft = 5;
+  const countdownElement = document.getElementById('countdown');
+  
+  const timer = setInterval(() => {
+    timeLeft--;
+    
+    if (countdownElement) {
+      countdownElement.textContent = timeLeft.toString();
+    }
+    
+    if (timeLeft <= 0) {
+      clearInterval(timer);
+      window.location.href = '/videos/materiais/';
+    }
+  }, 1000);
+</script> 
