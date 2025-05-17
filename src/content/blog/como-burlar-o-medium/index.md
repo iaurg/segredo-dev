@@ -11,19 +11,21 @@ Você já deve ter se deparado com o alerta "You read a lot. We like that." no M
 ![](/images/posts/you-read-a-lot-medium.png)You read a lot. We like that.
 Existem algumas formas de continuar lendo artigos de seu interesse sem essas interrupções no Medium. Irei mostrar 2 formas simples para que você possa ler sem limites.
 
-## Utilizando o Outline
+## Utilizando o 12.ft
 
 A função do Outline é extrair apenas o conteúdo de páginas com textos longos para que você possa ler em um ambiente mais "tranquilo" sem interrupções, porém podemos utilizá-lo para extrair o post do Medium em uma outra página e ler sem os avisos do Medium.
 
-### Como ler artigos bloqueados ou pagos do Medium com o Outline:
+### Como ler artigos bloqueados ou pagos do Medium com o 12.ft:
 
 1. Acesse o artigo que deseja ler
 2. Copie a URL do artigo
-3. Acesse o site [https://outline.com](https://outline.com/)
-4. Cole o link do artigo copiado no campo "Article Link"
-5. Clique em "Create Outline"
+3. Acesse o site [https://12ft.io/](https://12ft.io/)
+4. Cole o link do artigo copiado no campo
+5. Clique em "Clean Web Page"
 
-Pronto, você tem acesso ao artigo completo sem interrupções. Recomendo que utilize o Outline no Chrome ou Firefox.
+Pronto, você tem acesso ao artigo completo sem interrupções. Recomendo que utilize o 12.ft no Chrome ou Firefox.
+
+obs: Antigamente esse post indicava o outline.com, porém este site não existe mais.
 
 ## Limpando Cookies
 
