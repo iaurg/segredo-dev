@@ -77,7 +77,7 @@ test('should validate SEO best practices on homepage', async ({ page }) => {
   const canonicalUrls = page.locator('link[rel="canonical"]')
   const canonicalCount = await canonicalUrls.count()
   expect(canonicalCount).toBe(1)
-  await expect(canonicalUrls.first()).toHaveAttribute('href', `${SITE.href}/`)
+  await expect(canonicalUrls.first()).toHaveAttribute('href', `${SITE.href}`)
 
   // Check Open Graph tags
   const ogTags: Record<string, MetaTag> = {
