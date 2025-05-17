@@ -1,0 +1,77 @@
+---
+import '@/styles/global.css'
+import '@/styles/typography.css'
+
+import Footer from '@/components/Footer.astro'
+import Head from '@/components/Head.astro'
+import { SITE } from '@/consts'
+import { cn } from '@/lib/utils'
+import GoogleAnalytics from '@astro-kits/google-analytics'
+import Link from '@/components/Link.astro'
+import { Image } from 'astro:assets'
+import logo from '../../public/static/logo-segredo-dev.svg'
+import ThemeToggle from '@/components/ThemeToggle.astro'
+
+type Props = {
+  title: string
+  description: string
+  image?: string
+  isWide?: boolean
+  author?: string
+}
+
+const { title, description, image, isWide = false, author } = Astro.props
+---
+
+<!doctype html>
+<html lang={SITE.locale}>
+  <head>
+    <Head
+      title={title}
+      description={description}
+      image={image}
+      author={author}
+    />
+    <GoogleAnalytics id="G-THWXJPW7G0" />
+  </head>
+
+  <body>
+    <div class="flex h-fit min-h-screen flex-col gap-y-6 font-sans">
+      <header
+        class="bg-background/50 sticky top-0 z-10 backdrop-blur-md"
+        transition:persist
+      >
+        <div
+          class="mx-auto flex max-w-3xl flex-wrap items-center justify-between gap-4 p-4"
+        >
+          <Link href="/" class="flex shrink-0 items-center gap-2 text-xl font-medium">
+            <Image src={logo} alt="Logo" class="size-8" />
+            {SITE.title}
+          </Link>
+          <ThemeToggle transition:persist />
+        </div>
+      </header>
+      <main class="grow">
+        <div
+          class={cn(
+            'mx-auto flex grow flex-col gap-y-6 px-4',
+            !isWide && 'max-w-3xl'
+          )}
+        >
+          <slot />
+        </div>
+      </main>
+      <footer class="py-4 ">
+        <div
+          class="mx-auto flex max-w-3xl flex-col items-center justify-center gap-y-2 px-4 sm:flex-row"
+        >
+          <div class="flex flex-wrap items-center justify-center gap-x-2 text-center">
+            <span class="text-muted-foreground text-sm">
+              &copy; {new Date().getFullYear()} segredo.dev
+            </span>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
