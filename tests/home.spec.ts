@@ -6,7 +6,7 @@ type MetaTag = {
   expected?: string
 }
 
-const homeUrl = `${SITE.href}/`
+const homeUrl = `${SITE.href}`
 
 test('should navigate to the home page and validate content', async ({
   page,
