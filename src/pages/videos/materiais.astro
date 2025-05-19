@@ -1,90 +1,94 @@
 ---
-import LayoutLanding from "@/layouts/LayoutLanding.astro";
-import { Button } from "@/components/ui/button";
-import { Icon } from "astro-icon/components";
+import LayoutLanding from '@/layouts/LayoutLanding.astro'
+import { Icon } from 'astro-icon/components'
 
 // This could be moved to a separate data file later
 const materials = [
   {
-    title: "Template agente de IA básico",
-    description: "Template de agente de IA básico para começar a usar a IA no seu N8N.",
-    downloadUrl: "/materials/json/segredo-dev-n8n-agente-ia-basico.json",
-    type: "JSON",
-    videoUrl: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-    videoTitle: "Como usar o agente de IA no N8N",
+    title: 'Template agente de IA básico',
+    description:
+      'Template de agente de IA básico para começar a usar a IA no seu N8N.',
+    downloadUrl: '/materials/json/segredo-dev-n8n-agente-ia-basico.json',
+    type: 'JSON',
   },
-];
+  {
+    title: 'Filtro de Dados',
+    description: 'Filtro de Dados para começar a usar o N8N.',
+    downloadUrl: '/materials/json/1-segredo-dev_ESTUDO-Filtro_de_Dados.json',
+    type: 'JSON',
+    videoUrl: 'https://www.youtube.com/watch?v=uQ_678hzUPg',
+    videoTitle: 'Introdução ao N8N - Crie Seu Primeiro Fluxo de Automação',
+  },
+]
 ---
-
 
 <LayoutLanding
   title="Materiais Exclusivos"
   description="Acesse todos os materiais exclusivos para membros."
 >
   <main class="min-h-screen py-16">
-    <div class="max-w-3xl mx-auto px-4">
+    <div class="mx-auto max-w-3xl px-4">
       <div class="prose mb-8">
-        <h1 class="text-4xl font-bold mb-4">
-          Materiais Exclusivos
-        </h1>
+        <h1 class="mb-4 text-4xl font-bold">Materiais Exclusivos</h1>
         <p class="text-xl">
           Todos os recursos para impulsionar suas automações
         </p>
       </div>
 
       <div class="grid grid-cols-2 gap-4">
-        {materials.map((material) => (
-          <div class="rounded-lg border bg-card p-6">
-            <div class="flex flex-col gap-2">
-              <div class="flex items-center justify-between">
-                <span class="text-sm font-medium">
-                  {material.type}
-                </span>
-              </div>
-              
-              <h3 class="text-xl font-semibold">
-                {material.title}
-              </h3>
+        {
+          materials.map((material) => (
+            <div class="bg-card rounded-lg border p-6">
+              <div class="flex flex-col gap-2">
+                <div class="flex items-center justify-between">
+                  <span class="text-sm font-medium">{material.type}</span>
+                </div>
 
-              {material.videoUrl && (
-                <a href={material.videoUrl} class="text-sm text-muted-foreground flex items-center gap-2">
-                  <Icon name="lucide:youtube" class="w-5 h-5" />
-                  <span class="text-sm font-medium">
-                    {material.videoTitle}
-                  </span>
-                </a>
-              )}
-              
-              <p class="text-sm text-muted-foreground">
-                {material.description}
-              </p>
-              
-              <div class="mt-4">
-                <a
-                  href={material.downloadUrl}
-                  download
-                  class="inline-flex items-center gap-2 rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground shadow hover:bg-primary/90 cursor-pointer"
-                >
-                  <svg
-                    class="w-5 h-5"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
+                <h3 class="text-xl font-semibold">{material.title}</h3>
+
+                {material.videoUrl && (
+                  <a
+                    href={material.videoUrl}
+                    class="text-muted-foreground flex items-center gap-2 text-sm"
                   >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"
-                    ></path>
-                  </svg>
-                  Baixar
-                </a>
+                    <Icon name="lucide:youtube" class="h-5 w-5" />
+                    <span class="text-sm font-medium">
+                      {material.videoTitle}
+                    </span>
+                  </a>
+                )}
+
+                <p class="text-muted-foreground text-sm">
+                  {material.description}
+                </p>
+
+                <div class="mt-4">
+                  <a
+                    href={material.downloadUrl}
+                    download
+                    class="bg-primary text-primary-foreground hover:bg-primary/90 inline-flex cursor-pointer items-center gap-2 rounded-md px-4 py-2 text-sm font-medium shadow"
+                  >
+                    <svg
+                      class="h-5 w-5"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"
+                      />
+                    </svg>
+                    Baixar
+                  </a>
+                </div>
               </div>
             </div>
-          </div>
-        ))}
+          ))
+        }
       </div>
     </div>
   </main>

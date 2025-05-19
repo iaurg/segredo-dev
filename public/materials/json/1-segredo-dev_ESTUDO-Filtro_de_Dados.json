@@ -1,0 +1,244 @@
+{
+  "name": "[ESTUDO] Filtro de Dados",
+  "nodes": [
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        20,
+        20
+      ],
+      "id": "ab092a9f-d43c-409b-ba80-671897f0e250",
+      "name": "Gatilho de inicio"
+    },
+    {
+      "parameters": {
+        "operation": "getAllPeople",
+        "limit": 10
+      },
+      "type": "n8n-nodes-base.n8nTrainingCustomerDatastore",
+      "typeVersion": 1,
+      "position": [
+        280,
+        20
+      ],
+      "id": "2b6f3008-a151-490e-b770-026da3b6a3a0",
+      "name": "Retorna Usuários",
+      "notesInFlow": true,
+      "notes": "Esses dados vem do supabase "
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "91ca5a3b-0e87-4389-951a-3fba4897d9de",
+              "leftValue": "={{ $('Retorna Usuários').item.json.country }}",
+              "rightValue": "BR",
+              "operator": {
+                "type": "string",
+                "operation": "equals",
+                "name": "filter.operator.equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.filter",
+      "typeVersion": 2.2,
+      "position": [
+        520,
+        20
+      ],
+      "id": "f666842e-3600-4f48-b55e-4231a0cb2513",
+      "name": "Filtrar Brasileiros"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "20eb95b7-4309-469e-a189-98dee1453cdf",
+              "name": "email",
+              "value": "={{ $('Filtrar Brasileiros').item.json.email }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        740,
+        20
+      ],
+      "id": "962299fe-5ab0-4b76-a9a0-89052378bb25",
+      "name": "Edit Fields"
+    },
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [
+        960,
+        20
+      ],
+      "id": "282931ab-8541-4a32-b626-e4b992e96503",
+      "name": "No Operation, do nothing"
+    },
+    {
+      "parameters": {
+        "content": "## segredo.dev\nTemplate utilizado no video de N8N do zero.\n\n**Blog**: https://segredo.dev\n**YouTube**: https://www.youtube.com/@segredodev",
+        "height": 140,
+        "width": 380,
+        "color": 7
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        0,
+        -200
+      ],
+      "id": "87af17c3-5f28-45a0-9406-377bb0d367b1",
+      "name": "Sticky Note"
+    }
+  ],
+  "pinData": {
+    "Retorna Usuários": [
+      {
+        "json": {
+          "id": "23423532",
+          "name": "Jay Gatsby",
+          "email": "gatsby@west-egg.com",
+          "notes": "Keeps asking about a green light??",
+          "country": "US",
+          "created": "1925-04-10"
+        }
+      },
+      {
+        "json": {
+          "id": "4192191",
+          "name": "Italo A.",
+          "email": "gatsby@west-egg.com",
+          "notes": "Keeps asking about a green light??",
+          "country": "BR",
+          "created": "1925-04-10"
+        }
+      },
+      {
+        "json": {
+          "id": "23423533",
+          "name": "José Arcadio Buendía",
+          "email": "jab@macondo.co",
+          "notes": "Lots of people named after him. Very confusing",
+          "country": "CO",
+          "created": "1967-05-05"
+        }
+      },
+      {
+        "json": {
+          "id": "23423534",
+          "name": "Max Sendak",
+          "email": "info@in-and-out-of-weeks.org",
+          "notes": "Keeps rolling his terrible eyes",
+          "country": "US",
+          "created": "1963-04-09"
+        }
+      },
+      {
+        "json": {
+          "id": "23423535",
+          "name": "Zaphod Beeblebrox",
+          "email": "captain@heartofgold.com",
+          "notes": "Felt like I was talking to more than one person",
+          "country": null,
+          "created": "1979-10-12"
+        }
+      },
+      {
+        "json": {
+          "id": "23423536",
+          "name": "Edmund Pevensie",
+          "email": "edmund@narnia.gov",
+          "notes": "Passionate sailor",
+          "country": "UK",
+          "created": "1950-10-16"
+        }
+      }
+    ]
+  },
+  "connections": {
+    "Gatilho de inicio": {
+      "main": [
+        [
+          {
+            "node": "Retorna Usuários",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Retorna Usuários": {
+      "main": [
+        [
+          {
+            "node": "Filtrar Brasileiros",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Filtrar Brasileiros": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields": {
+      "main": [
+        [
+          {
+            "node": "No Operation, do nothing",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "89544856-0137-49cb-9c38-b4f7af2547f2",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "60a992e72b9713cbac36ed70fd28317b4b51d2eca885f4bf68a58677c311b139"
+  },
+  "id": "lVC9Xlt5yjUdC5WT",
+  "tags": [
+    {
+      "createdAt": "2025-05-18T23:58:27.268Z",
+      "updatedAt": "2025-05-18T23:58:27.268Z",
+      "id": "pQ6waXYBDQd3lnwF",
+      "name": "estudos"
+    }
+  ]
+}
