@@ -12,6 +12,16 @@ Esse post é um passo a passo rápido para servir de guia futuro para mim e para
 
 Aqui vamos assumir que você já tem o n8n instalado via [one-click app do Digital Ocean](https://marketplace.digitalocean.com/apps/n8n) distribuido pela automaze.me v1.67.1.
 
+## Explicativo em vídeo
+<iframe
+  width="100%"
+  height="315"
+  src="https://www.youtube.com/embed/VqKezRaUukM?si=GSPFWd-XzCA0HcKM"
+  frameborder="0"
+  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+  allowfullscreen
+></iframe>
+
 ## Passo 1: Acessar o servidor via SSH
 
 A forma mais simples de acessar o servidor via SSH no Digital Ocean é acessando seu droplet indo até o menu "Access" e clicando em "Launch Droplet Console". Isso abrirá um terminal no seu navegador logado como root.
