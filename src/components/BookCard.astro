@@ -1,0 +1,104 @@
+---
+import Link from '@/components/Link.astro'
+import { Badge } from '@/components/ui/badge'
+import { Icon } from 'astro-icon/components'
+import { Image } from 'astro:assets'
+import type { CollectionEntry } from 'astro:content'
+
+interface Props {
+  book: CollectionEntry<'books'>
+}
+
+const { book } = Astro.props
+
+const statusLabels = {
+  'lido': 'Lido',
+  'na-lista': 'Na Lista',
+  'lendo': 'Lendo'
+}
+
+const statusVariants = {
+  'lido': 'default' as const,
+  'na-lista': 'secondary' as const,
+  'lendo': 'default' as const
+}
+
+const statusIcons = {
+  'lido': 'lucide:check-circle',
+  'na-lista': 'lucide:bookmark',
+  'lendo': 'lucide:book-open'
+}
+---
+
+<div
+  class="hover:bg-secondary/50 rounded-xl border p-4 transition-colors duration-300 ease-in-out"
+>
+  <div class="flex flex-col gap-4">
+    <!-- Book Image -->
+    <div class="flex justify-center">
+      <div class="w-32 h-48 shrink-0">
+        <Image
+          src={book.data.image}
+          alt={book.data.title}
+          width={200}
+          height={300}
+          class="object-cover rounded-md shadow-md w-full h-full"
+        />
+      </div>
+    </div>
+
+    <!-- Book Content -->
+    <div class="text-center space-y-3">
+      <!-- Status Badge -->
+      <div class="flex justify-center">
+        <Badge 
+          variant={statusVariants[book.data.status]}
+          className="flex items-center gap-x-1"
+        >
+          <Icon name={statusIcons[book.data.status]} class="size-3" />
+          {statusLabels[book.data.status]}
+        </Badge>
+      </div>
+
+      <!-- Title -->
+      <h3 class="text-lg font-medium leading-tight">{book.data.title}</h3>
+
+      <!-- Author and Year -->
+      {book.data.author && (
+        <p class="text-muted-foreground text-sm">
+          {book.data.author}
+          {book.data.year && ` • ${book.data.year}`}
+        </p>
+      )}
+
+      <!-- Rating (only for read books) -->
+      {book.data.rating && book.data.status === 'lido' && (
+        <div class="flex justify-center items-center gap-1">
+          {Array.from({ length: 5 }, (_, i) => (
+            <Icon 
+              name={i < book.data.rating! ? 'lucide:star' : 'lucide:star'}
+              class={`size-4 ${i < book.data.rating! ? 'text-yellow-400 fill-current' : 'text-muted-foreground/30'}`}
+            />
+          ))}
+        </div>
+      )}
+
+      <!-- Description -->
+      <p class="text-muted-foreground text-sm leading-relaxed">
+        {book.data.description}
+      </p>
+
+      <!-- Amazon Link -->
+      <div class="pt-2">
+        <Link
+          href={book.data.amazonLink}
+          external
+          class="inline-flex items-center gap-x-1.5 text-sm font-medium text-primary hover:text-primary/80 transition-colors"
+        >
+          <Icon name="lucide:external-link" class="size-4" />
+          Ver na Amazon
+        </Link>
+      </div>
+    </div>
+  </div>
+</div>

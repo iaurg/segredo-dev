@@ -56,4 +56,19 @@ const degrees = defineCollection({
   }),
 })
 
-export const collections = { blog, authors, projects, degrees }
+const books = defineCollection({
+  loader: glob({ pattern: '**/*.{md,mdx}', base: './src/content/books' }),
+  schema: ({ image }) =>
+    z.object({
+      title: z.string(),
+      description: z.string(),
+      image: image(),
+      status: z.enum(['lido', 'na-lista', 'lendo']),
+      amazonLink: z.string().url(),
+      author: z.string().optional(),
+      year: z.number().optional(),
+      rating: z.number().min(1).max(5).optional(),
+    }),
+})
+
+export const collections = { blog, authors, projects, degrees, books }

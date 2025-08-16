@@ -1,0 +1,147 @@
+---
+import BookCard from '@/components/BookCard.astro'
+import { Badge } from '@/components/ui/badge'
+import Layout from '@/layouts/Layout.astro'
+import { Icon } from 'astro-icon/components'
+import { getCollection } from 'astro:content'
+
+const books = await getCollection('books')
+
+// Separate books by status
+const readBooks = books.filter(book => book.data.status === 'lido')
+const toReadBooks = books.filter(book => book.data.status === 'na-lista')
+const readingBooks = books.filter(book => book.data.status === 'lendo')
+
+// Sort read books by rating (highest first), then by title
+readBooks.sort((a, b) => {
+  if (a.data.rating && b.data.rating) {
+    return b.data.rating - a.data.rating
+  }
+  if (a.data.rating && !b.data.rating) return -1
+  if (!a.data.rating && b.data.rating) return 1
+  return a.data.title.localeCompare(b.data.title)
+})
+
+// Sort to-read books by title
+toReadBooks.sort((a, b) => a.data.title.localeCompare(b.data.title))
+
+// Sort reading books by title
+readingBooks.sort((a, b) => a.data.title.localeCompare(b.data.title))
+---
+
+<Layout
+  title="Livros | segredo.dev"
+  description="Livros que li e recomendo, além da minha lista de leitura atual. Uma coleção de conhecimento sobre desenvolvimento, tecnologia e crescimento pessoal."
+>
+  <div class="space-y-8">
+    <!-- Header -->
+    <section>
+      <div class="rounded-lg border">
+        <div class="flex flex-col space-y-1.5 p-6">
+          <h1 class="flex items-center gap-x-2 text-3xl leading-none font-medium">
+            <Icon name="lucide:book-open" class="size-8" />
+            Livros
+          </h1>
+          <p class="text-muted-foreground text-sm">
+            Livros que li e recomendo, além da minha lista de leitura atual
+          </p>
+        </div>
+        <div class="p-6 pt-0">
+          <div class="flex flex-wrap gap-4 text-sm">
+            <div class="flex items-center gap-x-2">
+              <Badge variant="default" className="flex items-center gap-x-1">
+                <Icon name="lucide:book-open" class="size-3" />
+                Lendo
+              </Badge>
+              <span class="text-muted-foreground">{readingBooks.length} livros</span>
+            </div>
+            <div class="flex items-center gap-x-2">
+              <Badge variant="default" className="flex items-center gap-x-1">
+                <Icon name="lucide:check-circle" class="size-3" />
+                Lido
+              </Badge>
+              <span class="text-muted-foreground">{readBooks.length} livros</span>
+            </div>
+            <div class="flex items-center gap-x-2">
+              <Badge variant="secondary" className="flex items-center gap-x-1">
+                <Icon name="lucide:bookmark" class="size-3" />
+                Na Lista
+              </Badge>
+              <span class="text-muted-foreground">{toReadBooks.length} livros</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Reading Books Section -->
+    {readingBooks.length > 0 && (
+       <section class="space-y-6">
+        <div class="flex items-center gap-x-2">
+          <h2 class="text-2xl font-medium">Livros Lendo</h2>
+          <Badge variant="default" className="flex items-center gap-x-1">
+            <Icon name="lucide:book-open" class="size-3" />
+            {readingBooks.length}
+          </Badge>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {readingBooks.map((book) => (
+            <BookCard book={book} />
+          ))}
+        </div>
+      </section>
+    )}
+
+
+    <!-- To Read Books Section -->
+    {toReadBooks.length > 0 && (
+      <section class="space-y-6">
+        <div class="flex items-center gap-x-2">
+          <h2 class="text-2xl font-medium">Lista de Leitura</h2>
+          <Badge variant="secondary" className="flex items-center gap-x-1">
+            <Icon name="lucide:bookmark" class="size-3" />
+            {toReadBooks.length}
+          </Badge>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {toReadBooks.map((book) => (
+            <BookCard book={book} />
+          ))}
+        </div>
+      </section>
+    )}
+
+    <!-- Read Books Section -->
+    {readBooks.length > 0 && (
+      <section class="space-y-6">
+        <div class="flex items-center gap-x-2">
+          <h2 class="text-2xl font-medium">Livros Lidos</h2>
+          <Badge variant="default" className="flex items-center gap-x-1">
+            <Icon name="lucide:check-circle" class="size-3" />
+            {readBooks.length}
+          </Badge>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {readBooks.map((book) => (
+            <BookCard book={book} />
+          ))}
+        </div>
+      </section>
+    )}
+
+
+    <!-- Empty State -->
+    {books.length === 0 && (
+      <section class="text-center py-12">
+        <Icon name="lucide:book-open" class="size-16 mx-auto mb-4 text-muted-foreground" />
+        <h2 class="text-xl font-medium mb-2">Nenhum livro encontrado</h2>
+        <p class="text-muted-foreground">
+          A coleção de livros ainda está sendo organizada.
+        </p>
+      </section>
+    )}
+  </div>
+</Layout>
