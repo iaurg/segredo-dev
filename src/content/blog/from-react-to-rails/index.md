@@ -64,6 +64,8 @@ Estava aprendendo rails e ruby ao mesmo tempo, ter que aprender estrutura do hot
 
 - https://rbui.dev/
 
+- https://railsblocks.com/
+
 - https://essenceui.com/
 
 - http://csszero.lazaronixon.com/
