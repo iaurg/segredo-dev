@@ -46,29 +46,42 @@ readingBooks.sort((a, b) => a.data.title.localeCompare(b.data.title))
             Livros que li e recomendo, além da minha lista de leitura atual
           </p>
         </div>
+        
+        <!-- Filter Buttons -->
         <div class="p-6 pt-0">
-          <div class="flex flex-wrap gap-4 text-sm">
-            <div class="flex items-center gap-x-2">
-              <Badge variant="default" className="flex items-center gap-x-1">
-                <Icon name="lucide:book-open" class="size-3" />
-                Lendo
-              </Badge>
-              <span class="text-muted-foreground">{readingBooks.length} livros</span>
-            </div>
-            <div class="flex items-center gap-x-2">
-              <Badge variant="default" className="flex items-center gap-x-1">
-                <Icon name="lucide:check-circle" class="size-3" />
-                Lido
-              </Badge>
-              <span class="text-muted-foreground">{readBooks.length} livros</span>
-            </div>
-            <div class="flex items-center gap-x-2">
-              <Badge variant="secondary" className="flex items-center gap-x-1">
-                <Icon name="lucide:bookmark" class="size-3" />
-                Na Lista
-              </Badge>
-              <span class="text-muted-foreground">{toReadBooks.length} livros</span>
-            </div>
+          <div class="flex flex-wrap gap-2" id="filter-buttons">
+            <button 
+              data-filter="all"
+              class="filter-btn active inline-flex items-center gap-x-1.5 px-3 py-1.5 text-sm font-medium rounded-full transition-all bg-primary text-primary-foreground"
+            >
+              <Icon name="lucide:layout-grid" class="size-3.5" />
+              Todos
+              <span class="ml-1 text-xs opacity-80">{books.length}</span>
+            </button>
+            <button 
+              data-filter="lendo"
+              class="filter-btn inline-flex items-center gap-x-1.5 px-3 py-1.5 text-sm font-medium rounded-full transition-all bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-400 hover:ring-2 hover:ring-blue-400/50"
+            >
+              <Icon name="lucide:book-open" class="size-3.5" />
+              Lendo
+              <span class="ml-1 text-xs opacity-80">{readingBooks.length}</span>
+            </button>
+            <button 
+              data-filter="na-lista"
+              class="filter-btn inline-flex items-center gap-x-1.5 px-3 py-1.5 text-sm font-medium rounded-full transition-all bg-amber-100 text-amber-700 dark:bg-amber-900/30 dark:text-amber-400 hover:ring-2 hover:ring-amber-400/50"
+            >
+              <Icon name="lucide:bookmark" class="size-3.5" />
+              Na Lista
+              <span class="ml-1 text-xs opacity-80">{toReadBooks.length}</span>
+            </button>
+            <button 
+              data-filter="lido"
+              class="filter-btn inline-flex items-center gap-x-1.5 px-3 py-1.5 text-sm font-medium rounded-full transition-all bg-emerald-100 text-emerald-700 dark:bg-emerald-900/30 dark:text-emerald-400 hover:ring-2 hover:ring-emerald-400/50"
+            >
+              <Icon name="lucide:check-circle" class="size-3.5" />
+              Lidos
+              <span class="ml-1 text-xs opacity-80">{readBooks.length}</span>
+            </button>
           </div>
         </div>
       </div>
@@ -76,16 +89,16 @@ readingBooks.sort((a, b) => a.data.title.localeCompare(b.data.title))
 
     <!-- Reading Books Section -->
     {readingBooks.length > 0 && (
-       <section class="space-y-6">
+       <section class="space-y-6 book-section" data-status="lendo">
         <div class="flex items-center gap-x-2">
           <h2 class="text-2xl font-medium">Livros Lendo</h2>
-          <Badge variant="default" className="flex items-center gap-x-1">
+          <span class="inline-flex items-center gap-x-1.5 px-2.5 py-1 text-xs font-medium rounded-full bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-400">
             <Icon name="lucide:book-open" class="size-3" />
             {readingBooks.length}
-          </Badge>
+          </span>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
           {readingBooks.map((book) => (
             <BookCard book={book} />
           ))}
@@ -96,16 +109,16 @@ readingBooks.sort((a, b) => a.data.title.localeCompare(b.data.title))
 
     <!-- To Read Books Section -->
     {toReadBooks.length > 0 && (
-      <section class="space-y-6">
+      <section class="space-y-6 book-section" data-status="na-lista">
         <div class="flex items-center gap-x-2">
           <h2 class="text-2xl font-medium">Lista de Leitura</h2>
-          <Badge variant="secondary" className="flex items-center gap-x-1">
+          <span class="inline-flex items-center gap-x-1.5 px-2.5 py-1 text-xs font-medium rounded-full bg-amber-100 text-amber-700 dark:bg-amber-900/30 dark:text-amber-400">
             <Icon name="lucide:bookmark" class="size-3" />
             {toReadBooks.length}
-          </Badge>
+          </span>
         </div>
         
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
           {toReadBooks.map((book) => (
             <BookCard book={book} />
           ))}
@@ -115,16 +128,16 @@ readingBooks.sort((a, b) => a.data.title.localeCompare(b.data.title))
 
     <!-- Read Books Section -->
     {readBooks.length > 0 && (
-      <section class="space-y-6">
+      <section class="space-y-6 book-section" data-status="lido">
         <div class="flex items-center gap-x-2">
           <h2 class="text-2xl font-medium">Livros Lidos</h2>
-          <Badge variant="default" className="flex items-center gap-x-1">
+          <span class="inline-flex items-center gap-x-1.5 px-2.5 py-1 text-xs font-medium rounded-full bg-emerald-100 text-emerald-700 dark:bg-emerald-900/30 dark:text-emerald-400">
             <Icon name="lucide:check-circle" class="size-3" />
             {readBooks.length}
-          </Badge>
+          </span>
         </div>
         
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
           {readBooks.map((book) => (
             <BookCard book={book} />
           ))}
@@ -145,3 +158,104 @@ readingBooks.sort((a, b) => a.data.title.localeCompare(b.data.title))
     )}
   </div>
 </Layout>
+
+<style>
+  .filter-btn {
+    cursor: pointer;
+    border: none;
+  }
+  
+  .filter-btn.active {
+    ring: 2px;
+    ring-offset: 2px;
+  }
+  
+  .filter-btn:focus {
+    outline: none;
+    ring: 2px;
+  }
+  
+  .book-section {
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+  
+  .book-section.hidden {
+    display: none;
+  }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const bookSections = document.querySelectorAll('.book-section');
+    
+    // Button style mappings for active state
+    const activeStyles = {
+      'all': 'bg-primary text-primary-foreground',
+      'lendo': 'bg-blue-600 text-white dark:bg-blue-500',
+      'na-lista': 'bg-amber-600 text-white dark:bg-amber-500',
+      'lido': 'bg-emerald-600 text-white dark:bg-emerald-500'
+    };
+    
+    const inactiveStyles = {
+      'all': 'bg-secondary text-secondary-foreground hover:bg-secondary/80',
+      'lendo': 'bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-400',
+      'na-lista': 'bg-amber-100 text-amber-700 dark:bg-amber-900/30 dark:text-amber-400',
+      'lido': 'bg-emerald-100 text-emerald-700 dark:bg-emerald-900/30 dark:text-emerald-400'
+    };
+    
+    function setActiveFilter(filter: string) {
+      // Update button styles
+      filterButtons.forEach(btn => {
+        const btnFilter = btn.getAttribute('data-filter') || 'all';
+        btn.classList.remove('active');
+        
+        // Remove all style classes and add appropriate ones
+        Object.values(activeStyles).forEach(style => {
+          style.split(' ').forEach(cls => btn.classList.remove(cls));
+        });
+        Object.values(inactiveStyles).forEach(style => {
+          style.split(' ').forEach(cls => btn.classList.remove(cls));
+        });
+        
+        if (btnFilter === filter) {
+          btn.classList.add('active');
+          activeStyles[btnFilter as keyof typeof activeStyles]?.split(' ').forEach(cls => btn.classList.add(cls));
+        } else {
+          inactiveStyles[btnFilter as keyof typeof inactiveStyles]?.split(' ').forEach(cls => btn.classList.add(cls));
+        }
+      });
+      
+      // Show/hide sections
+      bookSections.forEach(section => {
+        const sectionStatus = section.getAttribute('data-status');
+        if (filter === 'all' || sectionStatus === filter) {
+          section.classList.remove('hidden');
+        } else {
+          section.classList.add('hidden');
+        }
+      });
+      
+      // Update URL hash for bookmarkable filters
+      if (filter !== 'all') {
+        history.replaceState(null, '', `#${filter}`);
+      } else {
+        history.replaceState(null, '', window.location.pathname);
+      }
+    }
+    
+    // Add click handlers
+    filterButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const filter = btn.getAttribute('data-filter') || 'all';
+        setActiveFilter(filter);
+      });
+    });
+    
+    // Check for hash on page load
+    const hash = window.location.hash.slice(1);
+    if (hash && ['lendo', 'na-lista', 'lido'].includes(hash)) {
+      setActiveFilter(hash);
+    }
+  });
+</script>
