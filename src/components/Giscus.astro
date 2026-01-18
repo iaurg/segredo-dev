@@ -25,10 +25,11 @@
 
 <script is:inline data-astro-rerun>
   // Initialize Giscus with the correct theme based on current state
-  // This script runs after the Giscus script element is in the DOM
   ;(() => {
     const isDark = document.documentElement.classList.contains('dark')
-    const giscusScript = document.querySelector('script[src*="giscus.app/client.js"]')
+    // Find the Giscus script in the preceding section
+    const section = document.currentScript?.previousElementSibling
+    const giscusScript = section?.querySelector('script[src*="giscus.app"]')
     if (giscusScript) {
       giscusScript.setAttribute('data-theme', isDark ? 'dark' : 'light')
     }
