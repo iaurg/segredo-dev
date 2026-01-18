@@ -1,6 +1,5 @@
 ---
 import BookCard from '@/components/BookCard.astro'
-import { Badge } from '@/components/ui/badge'
 import Layout from '@/layouts/Layout.astro'
 import { Icon } from 'astro-icon/components'
 import { getCollection } from 'astro:content'
@@ -185,7 +184,7 @@ readingBooks.sort((a, b) => a.data.title.localeCompare(b.data.title))
 </style>
 
 <script>
-  document.addEventListener('DOMContentLoaded', () => {
+  document.addEventListener('astro:page-load', () => {
     const filterButtons = document.querySelectorAll('.filter-btn');
     const bookSections = document.querySelectorAll('.book-section');
     
