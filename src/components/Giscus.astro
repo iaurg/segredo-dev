@@ -4,28 +4,59 @@
 ---
 
 <section class="giscus-container mt-12">
-  <script
-    src="https://giscus.app/client.js"
-    data-repo="iaurg/segredo-dev"
-    data-repo-id="MDEwOlJlcG9zaXRvcnkzODAzOTE4ODA="
-    data-category="Announcements"
-    data-category-id="DIC_kwDOFqxRyM4C1G4P"
-    data-mapping="title"
-    data-strict="0"
-    data-reactions-enabled="1"
-    data-emit-metadata="0"
-    data-input-position="bottom"
-    data-theme="preferred_color_scheme"
-    data-lang="en"
-    data-loading="lazy"
-    crossorigin="anonymous"
-    async
-  ></script>
+  <div class="giscus"></div>
 </section>
 
 <script>
-  // Update giscus theme when the page theme changes
-  document.addEventListener('astro:page-load', () => {
+  function loadGiscus() {
+    const container = document.querySelector('.giscus-container .giscus')
+    if (!container) return
+
+    // Clear any existing giscus content
+    container.innerHTML = ''
+
+    // Remove any existing giscus script and iframe to allow reinitialization
+    const existingScript = document.querySelector(
+      'script[src*="giscus.app/client.js"]'
+    )
+    if (existingScript) {
+      existingScript.remove()
+    }
+    const existingIframe = document.querySelector('iframe.giscus-frame')
+    if (existingIframe) {
+      existingIframe.remove()
+    }
+
+    // Determine current theme
+    const theme = document.documentElement.classList.contains('dark')
+      ? 'dark'
+      : 'light'
+
+    // Create and append the giscus script
+    const script = document.createElement('script')
+    script.src = 'https://giscus.app/client.js'
+    script.setAttribute('data-repo', 'iaurg/segredo-dev')
+    script.setAttribute('data-repo-id', 'MDEwOlJlcG9zaXRvcnkzODAzOTE4ODA=')
+    script.setAttribute('data-category', 'Announcements')
+    script.setAttribute('data-category-id', 'DIC_kwDOFqxRyM4C1G4P')
+    script.setAttribute('data-mapping', 'title')
+    script.setAttribute('data-strict', '0')
+    script.setAttribute('data-reactions-enabled', '1')
+    script.setAttribute('data-emit-metadata', '0')
+    script.setAttribute('data-input-position', 'bottom')
+    script.setAttribute('data-theme', theme)
+    script.setAttribute('data-lang', 'en')
+    script.setAttribute('data-loading', 'lazy')
+    script.crossOrigin = 'anonymous'
+    script.async = true
+
+    container.appendChild(script)
+
+    // Setup theme observer for dynamic theme changes
+    setupThemeObserver()
+  }
+
+  function setupThemeObserver() {
     const updateGiscusTheme = () => {
       const theme = document.documentElement.classList.contains('dark')
         ? 'dark'
@@ -42,7 +73,7 @@
       }
     }
 
-    // Observe theme changes
+    // Observe theme changes on the document element
     const observer = new MutationObserver((mutations) => {
       mutations.forEach((mutation) => {
         if (mutation.attributeName === 'class') {
@@ -56,6 +87,7 @@
       attributeFilter: ['class'],
     })
 
+    // Clean up observer on page swap
     document.addEventListener(
       'astro:before-swap',
       () => {
@@ -63,8 +95,7 @@
       },
       { once: true }
     )
+  }
 
-    // Ensure the initial theme state is synchronized with Giscus on page load
-    updateGiscusTheme()
-  })
+  document.addEventListener('astro:page-load', loadGiscus)
 </script>
