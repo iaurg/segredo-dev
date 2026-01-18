@@ -1,5 +1,6 @@
 ---
 import Breadcrumbs from '@/components/Breadcrumbs.astro'
+import Giscus from '@/components/Giscus.astro'
 import Link from '@/components/Link.astro'
 import PostNavigation from '@/components/PostNavigation.astro'
 import TableOfContents from '@/components/TableOfContents.astro'
@@ -136,6 +137,10 @@ const authors = await parseAuthors(post.data.authors ?? [])
     </article>
 
     <PostNavigation prevPost={prev} nextPost={next} />
+
+    <div class="col-start-2">
+      <Giscus />
+    </div>
   </section>
 
   <Button
