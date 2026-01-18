@@ -27,9 +27,7 @@
   // Initialize Giscus with the correct theme based on current state
   ;(() => {
     const isDark = document.documentElement.classList.contains('dark')
-    // Find the Giscus script in the preceding section
-    const section = document.currentScript?.previousElementSibling
-    const giscusScript = section?.querySelector('script[src*="giscus.app"]')
+    const giscusScript = document.querySelector('script[src*="giscus.app/client.js"]')
     if (giscusScript) {
       giscusScript.setAttribute('data-theme', isDark ? 'dark' : 'light')
     }
