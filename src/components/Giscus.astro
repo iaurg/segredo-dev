@@ -15,13 +15,22 @@
     data-reactions-enabled="1"
     data-emit-metadata="0"
     data-input-position="bottom"
-    data-theme="preferred_color_scheme"
+    data-theme="light"
     data-lang="en"
     data-loading="lazy"
     crossorigin="anonymous"
     async
   ></script>
 </section>
+
+<script is:inline data-astro-rerun>
+  // Initialize Giscus with the correct theme based on current state
+  const isDark = document.documentElement.classList.contains('dark')
+  const giscusScript = document.querySelector('script[src*="giscus.app/client.js"]')
+  if (giscusScript) {
+    giscusScript.setAttribute('data-theme', isDark ? 'dark' : 'light')
+  }
+</script>
 
 <script>
   // Update giscus theme when the page theme changes
