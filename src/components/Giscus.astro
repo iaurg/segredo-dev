@@ -56,6 +56,14 @@
       attributeFilter: ['class'],
     })
 
+    document.addEventListener(
+      'astro:before-swap',
+      () => {
+        observer.disconnect()
+      },
+      { once: true }
+    )
+
     // Ensure the initial theme state is synchronized with Giscus on page load
     updateGiscusTheme()
   })
