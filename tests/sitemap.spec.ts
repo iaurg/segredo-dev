@@ -26,7 +26,9 @@ test.describe('Crawl surface', () => {
   test('robots.txt allows everything and points at the sitemap', async ({
     request,
   }) => {
-    const body = await (await request.get('/robots.txt')).text()
+    const response = await request.get('/robots.txt')
+    expect(response.status()).toBe(200)
+    const body = await response.text()
     expect(body).not.toContain('Disallow')
     expect(body).toContain('Sitemap: https://segredo.dev/sitemap-index.xml')
   })
