@@ -16,20 +16,20 @@ type Props = {
   image?: string
   isWide?: boolean
   author?: string
+  type?: 'website' | 'article'
+  publishedTime?: Date
+  modifiedTime?: Date
+  noindex?: boolean
+  jsonLd?: Record<string, unknown>[]
 }
 
-const { title, description, image, isWide = false, author } = Astro.props
+const { isWide = false, ...headProps } = Astro.props
 ---
 
 <!doctype html>
 <html lang={SITE.locale}>
   <head>
-    <Head
-      title={title}
-      description={description}
-      image={image}
-      author={author}
-    />
+    <Head {...headProps} />
     <Analytics />
     <SpeedInsights />
   </head>

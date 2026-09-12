@@ -15,7 +15,7 @@ test('should navigate to the home page and validate content', async ({
   await page.goto('/')
 
   // Check page title
-  await expect(page).toHaveTitle('Inicio | segredo.dev')
+  await expect(page).toHaveTitle('Início | segredo.dev')
 
   // Validate main heading and subtitle
   const heading = page.getByRole('heading', { name: 'segredo.dev' })
@@ -73,7 +73,7 @@ test('should validate SEO best practices on homepage', async ({ page }) => {
 
   // Check Open Graph tags
   const ogTags: Record<string, MetaTag> = {
-    title: { property: 'og:title', expected: 'Inicio | segredo.dev' },
+    title: { property: 'og:title', expected: 'Início | segredo.dev' },
     description: { property: 'og:description' },
     url: { property: 'og:url', expected: homeUrl },
     type: { property: 'og:type', expected: 'website' },
@@ -99,7 +99,7 @@ test('should validate SEO best practices on homepage', async ({ page }) => {
   // Check Twitter Card tags
   const twitterTags: Record<string, MetaTag> = {
     card: { name: 'twitter:card', expected: 'summary_large_image' },
-    title: { name: 'twitter:title', expected: 'Inicio | segredo.dev' },
+    title: { name: 'twitter:title', expected: 'Início | segredo.dev' },
     description: { name: 'twitter:description' },
   }
 

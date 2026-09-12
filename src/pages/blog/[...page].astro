@@ -20,9 +20,16 @@ const { page } = Astro.props
 
 const postsByYear = groupPostsByYear(page.data)
 const years = Object.keys(postsByYear).sort((a, b) => parseInt(b) - parseInt(a))
+
+const title =
+  page.currentPage === 1 ? 'Blog' : `Blog – página ${page.currentPage}`
+const description =
+  page.currentPage === 1
+    ? 'Todos os posts do segredo.dev sobre desenvolvimento, fundamentos da computação e carreira.'
+    : `Posts do segredo.dev sobre desenvolvimento, fundamentos da computação e carreira (página ${page.currentPage} de ${page.lastPage}).`
 ---
 
-<Layout title="Blog" description="Blog de tecnologia e estudos">
+<Layout title={title} description={description}>
   <Breadcrumbs
     items={[
       { label: 'Blog', href: '/blog/', icon: 'lucide:archive' },

@@ -8,23 +8,64 @@ type Props = {
   description: string
   image?: string
   author?: string
+  type?: 'website' | 'article'
+  publishedTime?: Date
+  modifiedTime?: Date
+  noindex?: boolean
+  jsonLd?: Record<string, unknown>[]
 }
 
-const { title, description, image, author } = Astro.props
+const {
+  title,
+  description,
+  image,
+  author,
+  type = 'website',
+  publishedTime,
+  modifiedTime,
+  noindex = false,
+  jsonLd = [],
+} = Astro.props
+
+// "{title} | segredo.dev", unless the suffix is already there or would push
+// the title past what search results display.
+const MAX_TITLE_LENGTH = 60
+const suffixed = `${title} | ${SITE.title}`
+const fullTitle =
+  !title || title === SITE.title
+    ? SITE.title
+    : title.endsWith(`| ${SITE.title}`) || suffixed.length > MAX_TITLE_LENGTH
+      ? title
+      : suffixed
+
+const metaDescription = description || SITE.description
+const imageUrl = new URL(image || SITE.image, Astro.site).href
+const canonicalUrl = new URL(Astro.url.pathname, Astro.site).href
+
+const structuredData = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: SITE.title,
+    url: SITE.href,
+    description: SITE.description,
+    inLanguage: SITE.locale,
+  },
+  ...jsonLd,
+]
 ---
 
 <meta charset="utf-8" />
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <meta
   name="viewport"
   content="width=device-width, initial-scale=1.0, user-scalable=yes"
 />
 <meta name="generator" content={Astro.generator} />
 
-<title>{title || SITE.title}</title>
-<meta name="description" content={description || SITE.description} />
-<meta name="author" content={author || SITE.title} />
-<meta name="robots" content="index, follow" />
+<title>{fullTitle}</title>
+<meta name="description" content={metaDescription} />
+<meta name="author" content={author || SITE.author} />
+{noindex && <meta name="robots" content="noindex, follow" />}
 
 <meta name="HandheldFriendly" content="True" />
 <meta name="mobile-web-app-capable" content="yes" />
@@ -37,18 +78,17 @@ const { title, description, image, author } = Astro.props
 
 <meta
   name="theme-color"
-  content="#121212"
+  content="#0a0a0a"
   media="(prefers-color-scheme: dark)"
 />
 <meta
   name="theme-color"
-  content="#121212"
+  content="#ffffff"
   media="(prefers-color-scheme: light)"
 />
 
-<link rel="canonical" href={Astro.url} />
+<link rel="canonical" href={canonicalUrl} />
 <link rel="sitemap" href="/sitemap-index.xml" />
-<link rel="manifest" href="/site.webmanifest" />
 <link
   rel="alternate"
   type="application/rss+xml"
@@ -56,40 +96,42 @@ const { title, description, image, author } = Astro.props
   href={new URL('rss.xml', Astro.site)}
 />
 
-<meta property="og:title" content={title || SITE.title} />
-<meta property="og:description" content={description || SITE.description} />
-<meta property="og:image" content={image || SITE.image} />
+<meta property="og:title" content={fullTitle} />
+<meta property="og:description" content={metaDescription} />
+<meta property="og:image" content={imageUrl} />
 <meta property="og:image:alt" content={title || SITE.title} />
-<meta property="og:type" content="website" />
-<meta property="og:locale" content={SITE.locale} />
+<meta property="og:type" content={type} />
+<meta property="og:locale" content={SITE.locale.replace('-', '_')} />
 <meta property="og:site_name" content={SITE.title} />
-<meta property="og:url" content={Astro.url} />
+<meta property="og:url" content={canonicalUrl} />
+{
+  type === 'article' && publishedTime && (
+    <meta
+      property="article:published_time"
+      content={publishedTime.toISOString()}
+    />
+  )
+}
+{
+  type === 'article' && modifiedTime && (
+    <meta
+      property="article:modified_time"
+      content={modifiedTime.toISOString()}
+    />
+  )
+}
 
-<meta name="twitter:title" content={title || SITE.title} />
-<meta name="twitter:description" content={description || SITE.description} />
-<meta name="twitter:image" content={image || SITE.image} />
+<meta name="twitter:title" content={fullTitle} />
+<meta name="twitter:description" content={metaDescription} />
+<meta name="twitter:image" content={imageUrl} />
 <meta name="twitter:image:alt" content={title || SITE.title} />
 <meta name="twitter:card" content="summary_large_image" />
 
 <script
   is:inline
   type="application/ld+json"
-  set:html={JSON.stringify({
-    '@context': 'https://schema.org',
-    '@type': 'WebSite',
-    name: SITE.title,
-    url: Astro.site,
-    description: SITE.description,
-  })}
+  set:html={JSON.stringify(structuredData)}
 />
-
-<meta
-  http-equiv="Content-Security-Policy"
-  content="upgrade-insecure-requests"
-/>
-<meta http-equiv="X-Content-Type-Options" content="nosniff" />
-<meta http-equiv="X-Frame-Options" content="SAMEORIGIN" />
-<meta http-equiv="X-XSS-Protection" content="1; mode=block" />
 
 <Favicons />
 <ClientRouter />
