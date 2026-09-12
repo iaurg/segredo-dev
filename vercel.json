@@ -40,7 +40,9 @@
     { "source": "/como-burlar-o-medium/", "destination": "/blog/como-burlar-o-medium/", "permanent": true },
     { "source": "/como-a-internet-funciona/", "destination": "/blog/como-a-internet-funciona/", "permanent": true },
     { "source": "/aprenda-em-publico/", "destination": "/blog/aprenda-em-publico/", "permanent": true },
-    { "source": "/42-libft/", "destination": "/blog/42-libft/", "permanent": true }
+    { "source": "/42-libft/", "destination": "/blog/42-libft/", "permanent": true },
+    { "source": "/autores/", "destination": "/sobre/", "permanent": true },
+    { "source": "/autores/iaurg/", "destination": "/sobre/", "permanent": true }
   ],
   "headers": [
     {
