@@ -19,7 +19,6 @@ import { pluginCollapsibleSections } from '@expressive-code/plugin-collapsible-s
 import { pluginLineNumbers } from '@expressive-code/plugin-line-numbers'
 
 import tailwindcss from '@tailwindcss/vite'
-import partytown from '@astrojs/partytown'
 
 const blogSlugs = [
   'prompt-para-desenvolvedores',
@@ -122,11 +121,6 @@ export default defineConfig({
     react(),
     sitemap(),
     icon(),
-    partytown({
-      config: {
-        forward: ['dataLayer.push', 'gtag'],
-      },
-    }),
   ],
   vite: {
     plugins: [tailwindcss()],

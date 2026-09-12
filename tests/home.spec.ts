@@ -12,11 +12,7 @@ test('should navigate to the home page and validate content', async ({
   page,
 }) => {
   // Navigate to home page
-  await page.goto(
-    process.env.NODE_ENV === 'development'
-      ? 'http://localhost:4321'
-      : `${SITE.href}`,
-  )
+  await page.goto('/')
 
   // Check page title
   await expect(page).toHaveTitle('Inicio | segredo.dev')
@@ -56,11 +52,7 @@ test('should navigate to the home page and validate content', async ({
 
 test('should validate SEO best practices on homepage', async ({ page }) => {
   // Navigate to home page
-  await page.goto(
-    process.env.NODE_ENV === 'development'
-      ? 'http://localhost:4321'
-      : `${SITE.href}`,
-  )
+  await page.goto('/')
 
   // Check meta description
   const metaDescriptions = page.locator('meta[name="description"]')

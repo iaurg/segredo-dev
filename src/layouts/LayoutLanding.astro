@@ -6,7 +6,6 @@ import Footer from '@/components/Footer.astro'
 import Head from '@/components/Head.astro'
 import { SITE } from '@/consts'
 import { cn } from '@/lib/utils'
-import GoogleAnalytics from '@astro-kits/google-analytics'
 import Link from '@/components/Link.astro'
 import { Image } from 'astro:assets'
 import logo from '../../public/static/logo-segredo-dev.svg'
@@ -32,7 +31,6 @@ const { title, description, image, isWide = false, author } = Astro.props
       image={image}
       author={author}
     />
-    <GoogleAnalytics id="G-THWXJPW7G0" />
   </head>
 
   <body>
