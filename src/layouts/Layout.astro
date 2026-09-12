@@ -7,7 +7,8 @@ import Head from '@/components/Head.astro'
 import Header from '@/components/Header.astro'
 import { SITE } from '@/consts'
 import { cn } from '@/lib/utils'
-import GoogleAnalytics from '@astro-kits/google-analytics'
+import Analytics from '@vercel/analytics/astro'
+import SpeedInsights from '@vercel/speed-insights/astro'
 
 type Props = {
   title: string
@@ -29,7 +30,8 @@ const { title, description, image, isWide = false, author } = Astro.props
       image={image}
       author={author}
     />
-    <GoogleAnalytics id="G-THWXJPW7G0" />
+    <Analytics />
+    <SpeedInsights />
   </head>
 
   <body>
