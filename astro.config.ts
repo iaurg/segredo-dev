@@ -20,61 +20,11 @@ import { pluginLineNumbers } from '@expressive-code/plugin-line-numbers'
 
 import tailwindcss from '@tailwindcss/vite'
 
-const blogSlugs = [
-  'prompt-para-desenvolvedores',
-  'o-que-sao-migrations',
-  '42-sp-basecamp',
-  'o-que-e-xss',
-  '42-get-next-line',
-  'saas',
-  'qual-sera-o-proximo-salto',
-  'programador-apaixonado',
-  'problemas-np',
-  'para-que-serve-o-create-react-app',
-  'o-que-e-um-componente-reutilizavel',
-  'o-que-e-single-page-application',
-  'o-que-e-shell',
-  'o-que-e-o-gatsbyjs',
-  'o-que-e-next-js',
-  'o-que-e-kernel',
-  'o-que-e-imutabilidade',
-  'o-mitico-homem-mes',
-  'nextjs-analise-de-bundle',
-  'next-js-styled-components',
-  'maestria',
-  'introducao-web-hacking',
-  'introducao-inteligencia-artificial',
-  'html',
-  'hormozi-como-fazer-dinheiro',
-  'habilidades-programador',
-  'extreme-programming',
-  'erro-test-jest-antd',
-  'conselho-de-steve-wozniak',
-  'configurar-testes-no-nextjs',
-  'como-saber-o-que-testar',
-  'como-participar-do-hacktoberfest',
-  'como-otimizar-imagem-para-site',
-  'como-criar-descricao-github',
-  'como-burlar-o-medium',
-  'como-a-internet-funciona',
-  'aprenda-em-publico',
-  '42-libft',
-]
-
-const blogRedirects = Object.fromEntries(
-  blogSlugs.map((slug) => [
-    `/${slug}/`,
-    {
-      status: 301 as const,
-      destination: `/blog/${slug}/`,
-    },
-  ]),
-)
-
+// Redirects live in vercel.json so Vercel answers with real 301/308s.
+// Astro's static `redirects` build meta-refresh pages that Google reports as noindex.
 export default defineConfig({
   site: 'https://segredo.dev',
   trailingSlash: 'always',
-  redirects: blogRedirects,
   integrations: [
     expressiveCode({
       themes: ['github-light', 'github-dark'],
