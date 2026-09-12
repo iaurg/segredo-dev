@@ -1,13 +1,21 @@
 import { test, expect } from '@playwright/test'
-import { SITE } from '@/consts'
 import fs from 'fs'
 import path from 'path'
 
-// Get all blog post slugs from the content directory
+// Get all blog post slugs from the content directory.
+// A `slug` in frontmatter overrides the folder name, as in Astro's glob loader.
 const blogDir = path.join(process.cwd(), 'src/content/blog')
 const postSlugs = fs
   .readdirSync(blogDir)
   .filter((file) => fs.statSync(path.join(blogDir, file)).isDirectory())
+  .map((folder) => {
+    const entry = ['index.md', 'index.mdx']
+      .map((file) => path.join(blogDir, folder, file))
+      .find((file) => fs.existsSync(file))
+    const source = entry ? fs.readFileSync(entry, 'utf-8') : ''
+    const slug = source.match(/^slug:\s*['"]?([^'"\n]+?)['"]?\s*$/m)?.[1]
+    return slug ?? folder
+  })
 
 test.describe('Blog Posts', () => {
   // Setup before each test
@@ -20,11 +28,7 @@ test.describe('Blog Posts', () => {
   for (const slug of postSlugs) {
     test(`should validate post: ${slug}`, async ({ page }) => {
       // Navigate to the post
-      await page.goto(
-        process.env.NODE_ENV === 'development'
-          ? `http://localhost:4321/blog/${slug}/`
-          : `${SITE.href}/blog/${slug}/`,
-      )
+      await page.goto(`/blog/${slug}/`)
 
       // Check page title exists and matches the expected format
       const title = await page.title()
