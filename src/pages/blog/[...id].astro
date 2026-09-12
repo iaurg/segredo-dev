@@ -6,6 +6,7 @@ import TableOfContents from '@/components/TableOfContents.astro'
 import { badgeVariants } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { Separator } from '@/components/ui/separator'
+import { SITE } from '@/consts'
 import Layout from '@/layouts/Layout.astro'
 import { getAdjacentPosts, getAllPosts, parseAuthors } from '@/lib/data-utils'
 import { formatDate, readingTime } from '@/lib/utils'
@@ -26,13 +27,57 @@ const currentPostId = Astro.params.id
 const { Content, headings } = await render(post)
 const { next, prev } = await getAdjacentPosts(currentPostId)
 const authors = await parseAuthors(post.data.authors ?? [])
+
+const postUrl = new URL(`/blog/${post.id}/`, Astro.site).href
+// Posts without `authors` are still written by the site author: use their
+// display name, not the `SITE.author` id.
+const [siteAuthor] = await parseAuthors([SITE.author])
+const authorName = authors[0]?.name ?? siteAuthor.name
+const modifiedTime = post.data.updated ?? post.data.date
+const aboutUrl = new URL('/sobre/', Astro.site).href
+
+const jsonLd = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BlogPosting',
+    headline: post.data.title,
+    description: post.data.description,
+    ...(post.data.image && {
+      image: new URL(post.data.image.src, Astro.site).href,
+    }),
+    datePublished: post.data.date.toISOString(),
+    dateModified: modifiedTime.toISOString(),
+    inLanguage: SITE.locale,
+    mainEntityOfPage: postUrl,
+    author: { '@type': 'Person', name: authorName, url: aboutUrl },
+    publisher: { '@type': 'Person', name: authorName, url: aboutUrl },
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Início', item: SITE.href },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'Blog',
+        item: new URL('/blog/', Astro.site).href,
+      },
+      { '@type': 'ListItem', position: 3, name: post.data.title, item: postUrl },
+    ],
+  },
+]
 ---
 
 <Layout
   title={post.data.title}
   description={post.data.description}
   image={post.data.image?.src}
-  author={post.data.authors?.[0]}
+  author={authorName}
+  type="article"
+  publishedTime={post.data.date}
+  modifiedTime={modifiedTime}
+  jsonLd={jsonLd}
   isWide
 >
   <section

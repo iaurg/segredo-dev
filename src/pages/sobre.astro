@@ -4,12 +4,34 @@ import DegreeCard from '@/components/DegreeCard.astro'
 import ProjectCard from '@/components/ProjectCard.astro'
 import Layout from '@/layouts/Layout.astro'
 import { getAllDegrees, getAllProjects } from '@/lib/data-utils'
+import { getEntry } from 'astro:content'
 
 const projects = await getAllProjects()
 const degrees = await getAllDegrees()
+const author = await getEntry('authors', 'iaurg')
+
+const jsonLd = author
+  ? [
+      {
+        '@context': 'https://schema.org',
+        '@type': 'Person',
+        name: author.data.name,
+        url: new URL('/sobre/', Astro.site).href,
+        sameAs: [
+          author.data.github,
+          author.data.linkedin,
+          author.data.twitter,
+        ].filter(Boolean),
+      },
+    ]
+  : []
 ---
 
-<Layout title="Sobre" description="Sobre o blog">
+<Layout
+  title="Sobre"
+  description="Sobre Italo Aurélio, autor do segredo.dev: projetos, formação e o que escrevo sobre desenvolvimento e tecnologia."
+  jsonLd={jsonLd}
+>
   <Breadcrumbs items={[{ label: 'Sobre', icon: 'lucide:info' }]} />
 
   <section>
