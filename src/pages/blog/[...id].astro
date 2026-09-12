@@ -29,7 +29,10 @@ const { next, prev } = await getAdjacentPosts(currentPostId)
 const authors = await parseAuthors(post.data.authors ?? [])
 
 const postUrl = new URL(`/blog/${post.id}/`, Astro.site).href
-const authorName = authors[0]?.name ?? SITE.author
+// Posts without `authors` are still written by the site author: use their
+// display name, not the `SITE.author` id.
+const [siteAuthor] = await parseAuthors([SITE.author])
+const authorName = authors[0]?.name ?? siteAuthor.name
 const modifiedTime = post.data.updated ?? post.data.date
 const aboutUrl = new URL('/sobre/', Astro.site).href
 

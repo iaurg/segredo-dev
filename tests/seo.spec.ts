@@ -60,6 +60,25 @@ test.describe('SEO metadata', () => {
     )
   })
 
+  test('posts without authors credit the site author by name', async ({
+    page,
+  }) => {
+    await page.goto('/blog/o-que-e-um-componente-reutilizavel/')
+
+    const blocks = await page
+      .locator('script[type="application/ld+json"]')
+      .allTextContents()
+    const posting = blocks
+      .flatMap((block) => JSON.parse(block))
+      .find((entry) => entry['@type'] === 'BlogPosting')
+
+    expect(posting?.author?.name).toBe('Italo Aurélio')
+    await expect(page.locator('meta[name="author"]')).toHaveAttribute(
+      'content',
+      'Italo Aurélio',
+    )
+  })
+
   test('about page describes the author as a Person', async ({ page }) => {
     await page.goto('/sobre/')
     await expect(page).toHaveTitle('Sobre | segredo.dev')

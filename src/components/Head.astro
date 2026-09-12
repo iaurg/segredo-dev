@@ -1,5 +1,6 @@
 ---
 import { SITE } from '@/consts'
+import { getEntry } from 'astro:content'
 import { ClientRouter } from 'astro:transitions'
 import Favicons from './Favicons.astro'
 
@@ -38,6 +39,8 @@ const fullTitle =
       ? title
       : suffixed
 
+const siteAuthor = await getEntry('authors', SITE.author)
+const metaAuthor = author || siteAuthor?.data.name || SITE.title
 const metaDescription = description || SITE.description
 const imageUrl = new URL(image || SITE.image, Astro.site).href
 const canonicalUrl = new URL(Astro.url.pathname, Astro.site).href
@@ -64,7 +67,7 @@ const structuredData = [
 
 <title>{fullTitle}</title>
 <meta name="description" content={metaDescription} />
-<meta name="author" content={author || SITE.author} />
+<meta name="author" content={metaAuthor} />
 {noindex && <meta name="robots" content="noindex, follow" />}
 
 <meta name="HandheldFriendly" content="True" />
