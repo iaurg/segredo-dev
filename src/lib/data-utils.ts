@@ -108,13 +108,6 @@ export async function parseAuthors(authorIds: string[] = []) {
   })
 }
 
-export async function getPostsByAuthor(
-  authorId: string,
-): Promise<CollectionEntry<'blog'>[]> {
-  const posts = await getAllPosts()
-  return posts.filter((post) => post.data.authors?.includes(authorId))
-}
-
 export async function getPostsByTag(
   tag: string,
 ): Promise<CollectionEntry<'blog'>[]> {

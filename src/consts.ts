@@ -22,10 +22,6 @@ export const NAV_LINKS: SocialLink[] = [
     label: 'livros',
   },
   {
-    href: '/autores/',
-    label: 'autores',
-  },
-  {
     href: '/sobre/',
     label: 'sobre',
   },
