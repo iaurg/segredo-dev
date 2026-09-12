@@ -34,7 +34,11 @@ test.describe('Crawl surface', () => {
   })
 
   test('removed landing pages return 404', async ({ request }) => {
-    for (const url of ['/videos/v1/', '/videos/materiais/', '/videos/sucesso/']) {
+    for (const url of [
+      '/videos/v1/',
+      '/videos/materiais/',
+      '/videos/sucesso/',
+    ]) {
       expect((await request.get(url)).status(), url).toBe(404)
     }
   })
