@@ -10,6 +10,8 @@ const blog = defineCollection({
       date: z.coerce.date(),
       updated: z.coerce.date().optional(),
       topico: reference('topicos'),
+      /** Hand-picked entry point for new readers ("Comece por aqui"). */
+      destaque: z.boolean().default(false),
       image: image().optional(),
       authors: z.array(z.string()).optional(),
       draft: z.boolean().optional(),

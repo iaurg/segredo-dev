@@ -4,6 +4,7 @@ slug: zen-da-programacao-com-ia
 description: 'Reflexões sobre como a programação com agentes de IA muda a forma como desenvolvemos software.' 
 date: '2026-03-28T13:00:00.000Z' 
 topico: inteligencia-artificial
+destaque: true
 authors: ['iaurg'] 
 image: ./zen-da-programacao-com-ia.jpg
 ---
