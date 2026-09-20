@@ -1,4 +1,6 @@
 import { test, expect, type Page } from '@playwright/test'
+import fs from 'fs'
+import path from 'path'
 
 const blockedPattern = /cdn\.jsdelivr\.net|katex/i
 
@@ -31,6 +33,23 @@ test.describe('KaTeX removal and LCP fixes', () => {
     const cover = page.locator('main img.max-w-5xl').first()
     await expect(cover).toHaveAttribute('fetchpriority', 'high')
     await expect(cover).not.toHaveAttribute('loading', 'lazy')
+  })
+
+  test('no built page ships a raw YouTube iframe', () => {
+    // MDX turns raw HTML into JSX, so the facade plugin cannot reach it.
+    const knownExceptions = ['blog/42-sp-basecamp/index.html']
+    const dist = path.join(process.cwd(), 'dist')
+    const withIframes = fs
+      .readdirSync(dist, { recursive: true, encoding: 'utf-8' })
+      .filter((file) => file.endsWith('.html'))
+      .filter((file) =>
+        /<iframe[^>]*youtube/i.test(
+          fs.readFileSync(path.join(dist, file), 'utf-8'),
+        ),
+      )
+      .map((file) => file.split(path.sep).join('/'))
+
+    expect(withIframes).toEqual(knownExceptions)
   })
 
   test('YouTube videos render as a facade, not an iframe', async ({ page }) => {
