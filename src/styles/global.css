@@ -1,5 +1,11 @@
 @import 'tailwindcss';
 
+/* Native cross-document view transitions: same fade the ClientRouter gave us,
+   without shipping its JavaScript. */
+@view-transition {
+  navigation: auto;
+}
+
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {

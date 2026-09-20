@@ -1,0 +1,34 @@
+---
+import { buttonVariants } from '@/components/ui/button'
+import { NAV_LINKS } from '@/consts'
+import { cn } from '@/lib/utils'
+import { Icon } from 'astro-icon/components'
+---
+
+{/* <details> gives a dropdown with no JavaScript; navigating closes it. */}
+<details class="relative md:hidden">
+  <summary
+    class={cn(
+      buttonVariants({ variant: 'outline', size: 'icon' }),
+      'cursor-pointer list-none [&::-webkit-details-marker]:hidden',
+    )}
+    title="Menu"
+    aria-label="Abrir menu"
+  >
+    <Icon name="lucide:menu" class="size-5" />
+  </summary>
+  <nav
+    class="bg-background absolute right-0 z-20 mt-2 flex min-w-40 flex-col gap-1 rounded-md border p-2 shadow-md"
+  >
+    {
+      NAV_LINKS.map((item) => (
+        <a
+          href={item.href}
+          class="hover:bg-secondary rounded-sm px-3 py-2 text-base font-medium capitalize"
+        >
+          {item.label}
+        </a>
+      ))
+    }
+  </nav>
+</details>

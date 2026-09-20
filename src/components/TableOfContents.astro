@@ -1,5 +1,4 @@
 ---
-import { ScrollArea } from '@/components/ui/scroll-area'
 import { cn } from '@/lib/utils'
 import type { MarkdownHeading } from 'astro'
 import { Icon } from 'astro-icon/components'
@@ -36,10 +35,8 @@ function getHeadingMargin(depth: number): string {
     />
   </summary>
 
-  <ScrollArea
-    client:load
-    className="flex max-h-64 flex-col overflow-y-auto xl:max-h-[calc(100vh-8rem)]"
-    type="always"
+  <div
+    class="flex max-h-64 flex-col overflow-y-auto xl:max-h-[calc(100vh-8rem)]"
   >
     <ul
       class="flex list-none flex-col gap-y-2 px-4 xl:mr-8"
@@ -51,7 +48,7 @@ function getHeadingMargin(depth: number): string {
           <li
             class={cn(
               'text-foreground/60 px-4 text-sm xl:p-0',
-              getHeadingMargin(heading.depth)
+              getHeadingMargin(heading.depth),
             )}
           >
             <a
@@ -64,7 +61,7 @@ function getHeadingMargin(depth: number): string {
         ))
       }
     </ul>
-  </ScrollArea>
+  </div>
 </details>
 
 <script>
@@ -80,7 +77,7 @@ function getHeadingMargin(depth: number): string {
 
           const id = heading.getAttribute('id')
           const link = document.querySelector(
-            `#table-of-contents li a[href="#${id}"]`
+            `#table-of-contents li a[href="#${id}"]`,
           )
           if (!link) return
 
@@ -90,7 +87,7 @@ function getHeadingMargin(depth: number): string {
       },
       {
         rootMargin: `-${headerHeight}px 0px 0px 0px`,
-      }
+      },
     )
 
     const sections = document.querySelectorAll('.prose section')
@@ -99,6 +96,5 @@ function getHeadingMargin(depth: number): string {
     })
   }
 
-  document.addEventListener('astro:page-load', setupToc)
-  document.addEventListener('astro:after-swap', setupToc)
+  setupToc()
 </script>
