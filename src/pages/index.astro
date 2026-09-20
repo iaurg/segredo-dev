@@ -7,6 +7,8 @@ import Layout from '@/layouts/Layout.astro'
 import { getRecentPosts } from '@/lib/data-utils'
 
 const blog = await getRecentPosts(SITE.featuredPostCount)
+// The first card that actually renders a cover is the LCP candidate.
+const lcpCardId = blog.find((post) => post.data.image)?.id
 ---
 
 <Layout
@@ -40,7 +42,7 @@ const blog = await getRecentPosts(SITE.featuredPostCount)
       {
         blog.map((post) => (
           <li>
-            <BlogCard entry={post} />
+            <BlogCard entry={post} priority={post.id === lcpCardId} />
           </li>
         ))
       }

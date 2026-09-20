@@ -11,9 +11,11 @@ import Link from './Link.astro'
 
 interface Props {
   entry: CollectionEntry<'blog'>
+  /** First card in a list: its image is the LCP candidate, so load it eagerly. */
+  priority?: boolean
 }
 
-const { entry } = Astro.props
+const { entry, priority = false } = Astro.props
 const formattedDate = formatDate(entry.data.date, 'pt-BR')
 const readTime = readingTime(entry.body!)
 const authors = await parseAuthors(entry.data.authors ?? [])
@@ -32,8 +34,12 @@ const authors = await parseAuthors(entry.data.authors ?? [])
           <Image
             src={entry.data.image}
             alt={entry.data.title}
-            width={1200}
-            height={630}
+            width={512}
+            height={269}
+            widths={[256, 512]}
+            sizes="256px"
+            loading={priority ? 'eager' : 'lazy'}
+            fetchpriority={priority ? 'high' : 'auto'}
             class="object-cover"
           />
         </div>
