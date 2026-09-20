@@ -1,0 +1,87 @@
+---
+import { buttonVariants } from '@/components/ui/button'
+import { cn } from '@/lib/utils'
+import { Icon } from 'astro-icon/components'
+
+type Props = {
+  currentPage: number
+  totalPages: number
+  baseUrl: string
+}
+
+const { currentPage, totalPages, baseUrl } = Astro.props
+const pageHref = (page: number) => (page === 1 ? baseUrl : `${baseUrl}${page}/`)
+const pages = Array.from({ length: totalPages }, (_, index) => index + 1)
+// Out-of-range controls render as <span>: aria-disabled and pointer-events
+// still leave an anchor keyboard-activatable.
+const arrow = 'pointer-events-none opacity-50'
+const isFirst = currentPage <= 1
+const isLast = currentPage >= totalPages
+---
+
+{
+  totalPages > 1 && (
+    <nav class="mx-auto flex w-full justify-center" aria-label="Paginação">
+      <ul class="flex flex-row items-center gap-1">
+        <li>
+          {isFirst ? (
+            <span
+              aria-hidden="true"
+              class={cn(
+                buttonVariants({ variant: 'ghost', size: 'icon' }),
+                arrow,
+              )}
+            >
+              <Icon name="lucide:chevron-left" class="size-4" />
+            </span>
+          ) : (
+            <a
+              href={pageHref(currentPage - 1)}
+              rel="prev"
+              aria-label="Página anterior"
+              class={buttonVariants({ variant: 'ghost', size: 'icon' })}
+            >
+              <Icon name="lucide:chevron-left" class="size-4" />
+            </a>
+          )}
+        </li>
+        {pages.map((page) => (
+          <li>
+            <a
+              href={pageHref(page)}
+              aria-current={page === currentPage ? 'page' : undefined}
+              class={buttonVariants({
+                variant: page === currentPage ? 'outline' : 'ghost',
+                size: 'icon',
+              })}
+            >
+              {page}
+            </a>
+          </li>
+        ))}
+        <li>
+          {isLast ? (
+            <span
+              aria-hidden="true"
+              class={cn(
+                buttonVariants({ variant: 'ghost', size: 'icon' }),
+                arrow,
+              )}
+            >
+              <Icon name="lucide:chevron-right" class="size-4" />
+            </span>
+          ) : (
+            <a
+              href={pageHref(currentPage + 1)}
+              rel="next"
+              aria-label="Próxima página"
+              class={buttonVariants({ variant: 'ghost', size: 'icon' })}
+            >
+              <Icon name="lucide:chevron-right" class="size-4" />
+            </a>
+          )}
+        </li>
+      </ul>
+    </nav>
+  )
+}

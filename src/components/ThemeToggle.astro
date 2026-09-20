@@ -15,27 +15,6 @@ import { Icon } from 'astro-icon/components'
   <span class="sr-only">Toggle theme</span>
 </Button>
 
-<script is:inline data-astro-rerun>
-  const theme = (() => {
-    const localStorageTheme = localStorage?.getItem('theme') ?? ''
-    if (['dark', 'light'].includes(localStorageTheme)) {
-      return localStorageTheme
-    }
-    if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-      return 'dark'
-    }
-    return 'light'
-  })()
-
-  if (theme === 'light') {
-    document.documentElement.classList.remove('dark')
-  } else {
-    document.documentElement.classList.add('dark')
-  }
-
-  window.localStorage.setItem('theme', theme)
-</script>
-
 <script>
   function handleToggleClick() {
     const element = document.documentElement
@@ -61,25 +40,4 @@ import { Icon } from 'astro-icon/components'
   }
 
   initThemeToggle()
-
-  document.addEventListener('astro:after-swap', () => {
-    const storedTheme = localStorage.getItem('theme')
-    const element = document.documentElement
-
-    element.classList.add('disable-transitions')
-
-    window.getComputedStyle(element).getPropertyValue('opacity')
-
-    if (storedTheme === 'dark') {
-      element.classList.add('dark')
-    } else {
-      element.classList.remove('dark')
-    }
-
-    requestAnimationFrame(() => {
-      element.classList.remove('disable-transitions')
-    })
-
-    initThemeToggle()
-  })
 </script>

@@ -1,16 +1,13 @@
 ---
 import Link from '@/components/Link.astro'
+import MobileMenu from '@/components/MobileMenu.astro'
 import ThemeToggle from '@/components/ThemeToggle.astro'
-import MobileMenu from '@/components/ui/mobile-menu'
 import { NAV_LINKS, SITE } from '@/consts'
 import { Image } from 'astro:assets'
 import logo from '../../public/static/logo-segredo-dev.svg'
 ---
 
-<header
-  class="bg-background/50 sticky top-0 z-10 backdrop-blur-md"
-  transition:persist
->
+<header class="bg-background/50 sticky top-0 z-10 backdrop-blur-md">
   <div
     class="mx-auto flex max-w-3xl flex-wrap items-center justify-between gap-4 p-4"
   >
@@ -31,8 +28,8 @@ import logo from '../../public/static/logo-segredo-dev.svg'
           ))
         }
       </nav>
-      <MobileMenu client:load transition:persist />
-      <ThemeToggle transition:persist />
+      <MobileMenu />
+      <ThemeToggle />
     </div>
   </div>
 </header>

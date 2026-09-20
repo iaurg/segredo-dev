@@ -1,5 +1,4 @@
 ---
-import AvatarComponent from '@/components/ui/avatar'
 import { Badge } from '@/components/ui/badge'
 import { Separator } from '@/components/ui/separator'
 import { parseAuthors } from '@/lib/data-utils'
@@ -58,12 +57,14 @@ const authors = await parseAuthors(entry.data.authors ?? [])
             <>
               {authors.map((author) => (
                 <div class="flex items-center gap-x-1.5">
-                  <AvatarComponent
-                    client:load
+                  <img
                     src={author.avatar}
                     alt={author.name}
-                    fallback={author.name[0]}
-                    className="size-5 rounded-full"
+                    width={20}
+                    height={20}
+                    loading="lazy"
+                    decoding="async"
+                    class="size-5 rounded-full"
                   />
                   <span>{author.name}</span>
                 </div>
