@@ -33,6 +33,22 @@ test.describe('Crawl surface', () => {
     expect(body).toContain('Sitemap: https://segredo.dev/sitemap-index.xml')
   })
 
+  test('every static image referenced by a page exists', async () => {
+    const dist = path.join(process.cwd(), 'dist')
+    const missing = new Set<string>()
+
+    for (const file of fs
+      .readdirSync(dist, { recursive: true, encoding: 'utf-8' })
+      .filter((name) => name.endsWith('.html'))) {
+      const html = fs.readFileSync(path.join(dist, file), 'utf-8')
+      for (const [, src] of html.matchAll(/<img[^>]+src="(\/[^"]+)"/g)) {
+        if (!fs.existsSync(path.join(dist, src.slice(1)))) missing.add(src)
+      }
+    }
+
+    expect([...missing]).toEqual([])
+  })
+
   test('removed landing pages return 404', async ({ request }) => {
     for (const url of [
       '/videos/v1/',

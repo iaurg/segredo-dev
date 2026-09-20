@@ -116,8 +116,7 @@ E no arquivo de Header.js:
       return <p>Header</p>;
     }
 
-Salve os dois arquivo e no terminal rode o comando `yarn test` ou `npm run test`, se tudo deu certo você terá um tela como essa:
-![nextjs-jest-tested](/content/images/2019/12/nextjs-jest-tested.png)
+Salve os dois arquivo e no terminal rode o comando `yarn test` ou `npm run test`. Se tudo deu certo, os dois testes devem passar.
 
 Esse post faz parte do conceito [Learn in Public](https://www.swyx.io/writing/learn-in-public/), estou ensinando enquanto aprendo. Então caso você veja algum erro ou saiba como fazer de uma maneira mais eficiente me chama no [Twitter](https://twitter.com/iaurg) ou comenta aqui embaixo.
 

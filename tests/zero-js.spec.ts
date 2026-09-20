@@ -69,6 +69,19 @@ test.describe('Zero-JS by default', () => {
     )
   })
 
+  test('disabled pagination controls are not links', async ({ page }) => {
+    await page.goto('/blog/')
+    const nav = page.getByRole('navigation', { name: 'Paginação' })
+
+    await expect(nav.locator('a[rel="prev"]')).toHaveCount(0)
+    await expect(nav.locator('a[rel="next"]')).toHaveCount(1)
+    for (const href of await nav
+      .locator('a')
+      .evaluateAll((links) => links.map((link) => link.getAttribute('href')))) {
+      expect(href).not.toMatch(/\/blog\/0\/$/)
+    }
+  })
+
   test('table of contents scrolls with CSS and highlights on scroll', async ({
     page,
   }) => {
