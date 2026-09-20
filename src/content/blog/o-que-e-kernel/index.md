@@ -1,7 +1,7 @@
 ---
-title: O que é Kernel e qual sua função?
+title: 'O que é kernel e para que serve'
 slug: o-que-e-kernel
-description: "O kernel é quem gerencia todas as comunicações entre software e hardware, uma das principais partes do computador, literalmente o cérebro do computador."
+description: 'Kernel é o núcleo do sistema operacional: a ponte entre os programas e o hardware. Entenda o que ele faz e por que todo sistema depende dele.'
 date: "2021-11-28T03:20:50.000Z"
 topico: fundamentos
 destaque: true

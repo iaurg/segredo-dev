@@ -1,6 +1,6 @@
 ---
 title: O que é Single Page Application (SPA)?
-description: 'Single Page Application é uma aplicação ou web site que interage com o usuário de forma dinâmica sem que precise recarregar novos arquivos.'
+description: 'SPA é uma aplicação web que troca de tela sem recarregar a página. Entenda o conceito, de onde ele veio e os pontos de atenção de usar uma no seu projeto.'
 slug: o-que-e-single-page-application
 date: '2019-05-06T10:14:05.000Z'
 topico: front-end

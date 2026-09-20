@@ -1,7 +1,7 @@
 ---
-title: O que é Gatsby.js?
+title: 'O que é Gatsby.js e para que serve'
 slug: o-que-e-o-gatsbyjs
-description: 'Para que serve e qual é a vantagem em utilizar Gatsby em seu projeto React. Velocidade de carregamento e SEO 👌'
+description: 'Gatsby.js é um gerador de sites estáticos baseado em React. Entenda como ele funciona, para que serve e que tipo de projeto se beneficia dele.'
 date: '2019-06-28T21:43:28.000Z'
 topico: front-end
 authors: ['iaurg']
