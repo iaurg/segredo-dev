@@ -2,23 +2,29 @@
 
 @layer components {
   .prose {
-    @apply text-foreground text-base leading-8;
+    @apply text-foreground font-serif text-[1.1875rem] leading-[1.75];
     @apply [&>*]:first:mt-0 [&>*]:last:mb-0 [&>section:first-child>*]:mt-0 [&>section:last-child>*]:mb-0;
 
     p {
-      @apply text-foreground/80 my-5 leading-7 not-first:mt-5;
+      @apply text-foreground/85 my-6 leading-[1.75] not-first:mt-6;
+    }
+
+    /* The opening paragraph answers the search query: give it weight. */
+    > p:first-of-type,
+    > section:first-of-type > p:first-of-type {
+      @apply text-foreground text-[1.3125rem] leading-[1.6];
     }
 
     h1 {
-      @apply text-foreground mt-0 mb-6 scroll-m-20 text-4xl leading-tight font-medium;
+      @apply text-foreground mt-0 mb-6 scroll-m-20 font-serif text-[2.5rem] leading-[1.12] font-semibold tracking-[-0.015em];
     }
 
     h2 {
-      @apply text-foreground mt-8 mb-4 scroll-m-20 text-2xl leading-tight font-medium;
+      @apply text-foreground mt-12 mb-4 scroll-m-20 font-serif text-[1.75rem] leading-[1.2] font-semibold;
     }
 
     h3 {
-      @apply text-foreground mt-6 mb-4 scroll-m-20 text-xl leading-snug font-medium;
+      @apply text-foreground mt-9 mb-3 scroll-m-20 font-serif text-[1.375rem] leading-[1.25] font-semibold;
     }
 
     h4 {
@@ -34,7 +40,7 @@
     }
 
     a {
-      @apply text-foreground decoration-muted-foreground hover:decoration-foreground font-medium break-words underline underline-offset-[3px] transition-colors;
+      @apply grifo-link text-foreground decoration-foreground/35 break-words underline underline-offset-[4px] hover:decoration-transparent;
     }
 
     strong {

@@ -36,6 +36,14 @@ export async function getDestaques(): Promise<CollectionEntry<'blog'>[]> {
   return posts.filter((post) => post.data.destaque)
 }
 
+export async function getRelatedPosts(
+  post: CollectionEntry<'blog'>,
+  limit = 3,
+): Promise<CollectionEntry<'blog'>[]> {
+  const posts = await getPostsByTopico(post.data.topico.id)
+  return posts.filter((entry) => entry.id !== post.id).slice(0, limit)
+}
+
 export async function getAllTopicos(): Promise<CollectionEntry<'topicos'>[]> {
   const topicos = await getCollection('topicos')
   return topicos.sort((a, b) => a.data.order - b.data.order)
