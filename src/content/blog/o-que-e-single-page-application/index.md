@@ -4,7 +4,6 @@ description: 'Single Page Application é uma aplicação ou web site que interag
 slug: o-que-e-single-page-application
 date: '2019-05-06T10:14:05.000Z'
 topico: front-end
-tags: ['front-end']
 image: ./o-que-e-single-page-application.png
 authors: ['iaurg']
 ---

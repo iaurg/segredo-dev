@@ -4,7 +4,6 @@ slug: o-que-e-xss
 description: Uma das vulnerabilidades mais comuns e que mais teve recompensas em programas de bug bounty nos últimos anos, o XSS.
 date: '2023-09-09T00:01:08.000Z'
 topico: fundamentos
-tags: ['hacking', 'conceito']
 authors: ['iaurg']
 ---
 

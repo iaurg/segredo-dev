@@ -4,7 +4,6 @@ slug: o-que-e-imutabilidade
 description: 'Entenda o que é imutabilidade em programação e como este recurso pode auxiliar no seu dia-a-dia desenvolvendo.'
 date: '2019-05-15T22:49:21.000Z'
 topico: fundamentos
-tags: ['programação', 'conceito']
 image: ./o-que-e-imutabilidade.png
 authors: ['iaurg']
 ---

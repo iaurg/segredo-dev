@@ -4,7 +4,6 @@ slug: erro-test-jest-antd
 description: 'Erro SyntaxError: Invalid or unexpected token ao tentar utilizar Ant Design ao realizar testes no Next Js'
 date: '2020-01-17T14:45:32.000Z'
 topico: front-end
-tags: ['javascript']
 authors: ['iaurg']
 image: ./test-nextjs-antd.png
 ---

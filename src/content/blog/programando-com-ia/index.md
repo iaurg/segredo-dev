@@ -4,7 +4,6 @@ slug: programando-com-ia
 description: 'Como eu vejo a programação utilizando IA como ferramenta.'
 date: '2026-01-18T13:06:00.000Z'
 topico: inteligencia-artificial
-tags: ['ia', 'programação']
 authors: ['iaurg']
 image: ./programando-com-ia.jpg
 ---
