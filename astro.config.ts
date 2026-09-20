@@ -8,6 +8,7 @@ import icon from 'astro-icon'
 import expressiveCode from 'astro-expressive-code'
 import { rehypeHeadingIds } from '@astrojs/markdown-remark'
 import rehypeExternalLinks from 'rehype-external-links'
+import { rehypeYoutubeFacade } from './src/lib/rehype-youtube-facade'
 import rehypePrettyCode from 'rehype-pretty-code'
 import remarkEmoji from 'remark-emoji'
 import remarkSectionize from 'remark-sectionize'
@@ -70,6 +71,10 @@ export default defineConfig({
     sitemap(),
     icon(),
   ],
+  image: {
+    // Book covers come from Amazon; optimize them at build time.
+    domains: ['m.media-amazon.com'],
+  },
   vite: {
     plugins: [tailwindcss()],
   },
@@ -91,6 +96,7 @@ export default defineConfig({
         },
       ],
       rehypeHeadingIds,
+      rehypeYoutubeFacade,
       [
         rehypePrettyCode,
         {

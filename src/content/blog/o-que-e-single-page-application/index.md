@@ -8,7 +8,7 @@ image: ./o-que-e-single-page-application.png
 authors: ['iaurg']
 ---
 
-![](/images/posts/single-page-application-spa-1.png)Single Page Application SPA
+![](./single-page-application-spa-1.png)Single Page Application SPA
 **Single Page Application** é uma aplicação ou web site que interage com o usuário de forma dinâmica sem que precise recarregar novos arquivos. Todos os arquivos necessários para o site ou aplicação funcionar são baixados apenas uma vez e depois são iterados sem afetar a experiência do usuário, deixando uma navegação mais fluída e natural. Essa navegação mais fluida de sites trás para a web a mesma experiência que temos em aplicativos desktop.
 
 Como todos os arquivos são baixados de uma vez direto do servidor as mudanças no site ocorrem conforme o usuário interage com os recursos presentes no front-end. Grande parte dessas mudanças são feitas utilizando Javascript que faz requisições de dados para o servidor, essas dados normalmente são retornados em JSON e "alimentam" o site com as informações retornadas.

@@ -49,7 +49,7 @@ Esse comportamento é estranho?
 Qual opção devo escolher?
 
 Experimento criado para prever o preço de um veículo:
-![Experiments](/images/posts/Screenshot_2020-01-06-Experiments.png)
+![Experiments](./Screenshot_2020-01-06-Experiments.png)
 
 Foi fornecido uma base de dados padrão para o aprendizado da Azure, com esses dados selecionei as colunas de interesse para treinar, os campos de preço que estivessem vazios foram excluidos do treinamento para não influenciar o resultado. Com os dados tratados o treino foi feito utilizado o algoritmo de regressão linear e gerou um resultado final com 0.89 de acertividade. Ao final foi inserida um input e output para consulta web, que permite a utilização e forma de API.
 
@@ -67,7 +67,7 @@ A intenção é identificar o interesse do usuário se ele deseja alugar/comprar
 - Separar entidades importantes para que possa ser analisado e considerado como definidores da frase.
 
 Caso já possua uma base de dados para alimentar o bot é excelente, faça uma curadoria desses dados e forneça como input, com isso o treinamento fica muito mais eficiente.
-![LUIS](/images/posts/Screenshot_2020-01-06-LUIS.png)
+![LUIS](./Screenshot_2020-01-06-LUIS.png)
 
 Neste exemplo o bot criado utilizando o Luis da Microsoft com um pouco de treino é capaz de identificar as palavras-chave de uma frase e separá-las em variáveis que podem ser utilizadas para algum filtro posterior. Talvez o direcionamento para o setor de acordo, apontamento para uma página... Enfim, diversas possibilidades.
 

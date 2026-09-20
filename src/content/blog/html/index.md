@@ -42,7 +42,7 @@ Imagine como se fosse um livro, onde cada palavra representa um elemento HTML, e
 
 De forma técnica o código HTML é interpretado pelo browser como uma árvore de elementos HTML chamada de DOM (Document Object Model), onde cada elemento HTML é um nó da árvore, e cada nó possui um pai e filhos, onde o pai é o elemento pai do nó e os filhos são os elementos filhos do nó, esses elementos filhos podem ser outros elementos HTML ou texto, assim como na imagem abaixo:
 
-![Árvore HTML](/images/posts/arvore-html.jpg)
+![Árvore HTML](./arvore-html.jpg)
 
 O parsing do HTML envolve tokenização e construção da árvore, os tokens são os elementos HTML definidos pelas marcações de abertura e fechamento e a árvore é o conjunto desses elementos em hierarquia. O parser do browser irá interpretar cada nó da árvore e se tudo estiver de acordo com as regras do HTML ele irá exibir o conteúdo de forma correta na tela, normalmente este processo é muito rápido.
 

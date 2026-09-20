@@ -33,6 +33,21 @@ test.describe('KaTeX removal and LCP fixes', () => {
     await expect(cover).not.toHaveAttribute('loading', 'lazy')
   })
 
+  test('YouTube videos render as a facade, not an iframe', async ({ page }) => {
+    const requests: string[] = []
+    page.on('request', (request) => requests.push(request.url()))
+    await page.goto('/blog/como-a-internet-funciona/')
+
+    await expect(page.locator('.yt-facade')).toHaveCount(1)
+    await expect(page.locator('iframe')).toHaveCount(0)
+    expect(
+      requests.filter((url) => /youtube\.com|ytimg\.com\/.*player/.test(url)),
+    ).toEqual([])
+
+    const link = page.locator('.yt-facade a')
+    await expect(link).toHaveAttribute('href', /youtube\.com\/watch\?v=/)
+  })
+
   test('home loads the first card image eagerly and the rest lazily', async ({
     page,
   }) => {

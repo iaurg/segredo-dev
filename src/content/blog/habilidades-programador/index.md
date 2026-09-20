@@ -14,7 +14,7 @@ Existem muitos pontos que podem fazer você ser melhor e vai muito além de fina
 
 ### Entendimento
 
-![](/images/posts/habilidades-programador-1.png)
+![](./habilidades-programador-1.png)
 Antes de começar a programar qualquer coisa você precisa entender o que irá resolver.  Um bom entendimento trará clareza para você e suas ideias e soluções surgirão a partir de uma base de conhecimento boa e estruturada, invista um tempo para entender o que e porque você precisa resolver.
 
 A maioria dos problemas difíceis só são difíceis por dificuldade de entendimento.
@@ -29,7 +29,7 @@ Enfim, entenda e problema e depois comece a encontrar maneiras de resolvê-lo.
 
 ### Comunicação
 
-![](/images/posts/habilidades-programador-5.png)
+![](./habilidades-programador-5.png)
 Pois é, os dias de programador com telas verdes trancado em um quarto fazendo o que quer estão contados, principalmente se você atua em equipe e não é um cracker. Provavelmente você precisará conversar com outras pessoas, explicar ideias, conceitos, os porquês das decisões e tudo isso envolve comunicação.
 
 Como tudo, comunicação é uma habilidade e se você assim como eu possui uma dificuldade neste fator entenda que é necessário treino, estudo e aprendizado para conseguir se comunicar de forma eficiente. A percepção e entendimento de outras pessoas nunca serão os mesmos que o seu e isso muda totalmente como ela entende e recebe qualquer palavra sua, entender isso pode ser um ponto de partida, cada pessoa possui suas experiências e emoções que afetarão diretamente no entendimento de qualquer assunto, tente de forma sutil entender o "tipo" de pessoa que você está conversando e isso será muito bom.
@@ -56,7 +56,7 @@ Comunicar é um fator essencial, você é o que você consegue explicar.
 
 ### Resolução de problemas
 
-![](/images/posts/habilidades-programador-2.png)
+![](./habilidades-programador-2.png)
 Esta habilidade não é uma novidade, afinal essa é a função de um programador, abstrair problemas em soluções com tecnologia. O segredo está em resolver os problemas certos. Foque em problemas que tragam um maior impacto para a solução que deseja apresentar e um valor real para o negócio.
 
 Se você atua em uma empresa, tente entender os problemas de cada setor e ver como pode ajudá-los e entregar uma solução eficiente, trabalhar em conjunto para um benefício comum. Vá além do código, busque entender sobre a área do negócio que você atua. Dominar e entender as necessidades do projeto ou empresa que você está trabalhando será um grande diferencial e trará novas soluções eficientes para suas ideias. Provalvelmente você saberá onde "atacar" com maior retorno.
@@ -78,7 +78,7 @@ Lembre-se que esses passos podem ser repetidos diversas vezes.
 
 ### Conhecimento constante
 
-![](/images/posts/habilidades-programador-3.png)
+![](./habilidades-programador-3.png)
 O mundo tecnológico evolui rapidamente, e ninguém consegue estar sempre atualizado nas últimas novidades do mercado, mas o interessante é que você tenha a habilidade de se adaptar quando necessário.
 
 Foque em entender os conceitos básicos da ciência da computação e independente da linguagem de programação que escolher você poderá partir de um mesmo princípio. Teoricamente todas as linguagens derivam de um mesmo local e entender esses conceitos "core" lhe garantem uma vantagem.
@@ -101,7 +101,7 @@ Dica de alguns sites para praticar: [Code Wars](https://www.codewars.com/), [Hac
 
 ### Saber filtrar
 
-![](/images/posts/habilidades-programador-4.png)
+![](./habilidades-programador-4.png)
 Na área de desenvolvimento existe uma gama imensa de materiais gratuitos e pagos para que você possa estudar sem limites, você realmente pode fazer o a faculdade de ciência da computação do MIT em casa! ([Ele fez isso](https://www.scotthyoung.com/blog/myprojects/mit-challenge-2/)). Em um primeiro momento esse conteúdo quase infinito pode parecer algo muito bom, afinal você tem a resposta para quase tudo na palma de sua mão, porém ao iniciar seus estudos você acaba ficando "perdido" com tantas informações, conceitos divergentes, várias soluções para um mesmo problema e outros diversos problemas pelo excesso de informação.
 
 Nesse caso eu recomendo que você escolha uma fonte única, porém não fixa, de absorção de conteúdo. Encontre um professor, blog, livro, compilado, ou qualquer outra forma de estudo que agrade você e foque nela até que tenha extraido o máximo de informação útil, depois inicie novamente o fluxo de busca de novos conhecimentos.

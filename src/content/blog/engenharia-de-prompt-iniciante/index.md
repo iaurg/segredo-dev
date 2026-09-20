@@ -83,7 +83,7 @@ vs
 
 "Mulher elegante"
 
-![Imagem de mulheres elegantes geradas por IA](/images/posts/exemplo-prompt-image.jpg)
+![Imagem de mulheres elegantes geradas por IA](./exemplo-prompt-image.jpg)
 
 ### Dê exemplos para o modelo
 

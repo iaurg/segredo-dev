@@ -54,4 +54,4 @@ Valeu 🖖
 ## Atualização 01/2020
 
 E claro que após participar as suas recompensas chegam:
-![](/images/posts/premios-hacktoberfest-2019.jpeg)Itens que ganhei da Digital Ocean e da Dev.to no Hacktoberfest de 2019![](/images/posts/premios-hacktoberfest-twilio-2019.jpeg)Itens que ganhe da Twilio no Hacktoberfest de 2019
+![](./premios-hacktoberfest-2019.jpeg)Itens que ganhei da Digital Ocean e da Dev.to no Hacktoberfest de 2019![](./premios-hacktoberfest-twilio-2019.jpeg)Itens que ganhe da Twilio no Hacktoberfest de 2019

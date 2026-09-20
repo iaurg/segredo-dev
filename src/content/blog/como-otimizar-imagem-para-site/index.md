@@ -11,7 +11,7 @@ image: ./como-otimizar-imagens-para-site.png
 Saiba como **otimizar imagens** de seu site e aumente a velocidade de carregamento de sua página.
 
 Em algum momento você precisará **otimizar as imagens** de seu site ou aplicação web, afinal este é um dos itens que mais consomem recursos quando o usuário acessa seu site. Imagens se não forem configuradas corretamente, otimizadas e dispostas em formatos corretos podem consumir muito da banda de seu usuário, caso ele esteja usando um 3G/4G isso será uma tragédia!
-![](/images/posts/otimizar-imagem-para-site.png)
+![](./otimizar-imagem-para-site.png)
 
 Explicação em vídeo sobre métodos de otimizar imagens para seu site carregar mais rápido e utilizar recursos de forma eficiente:
 
@@ -27,7 +27,7 @@ As formas de otimização de imagem são:
 
 <h3 id="otimizar-imagem-compressor">Otimizar imagem com compressor de imagem</h3>
 
-![imagem-otimizada-para-site-comprimida](/images/posts/imagem-otimizada-para-site-comprimida.png)
+![imagem-otimizada-para-site-comprimida](./imagem-otimizada-para-site-comprimida.png)
 
 Uma das formas para otimizar imagens para seu site é utilizando compressores que podem ser instalados diretamente no editor de imagem ou com ferramenas online de otimização.
 
