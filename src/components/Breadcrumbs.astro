@@ -26,7 +26,8 @@ const { items } = Astro.props
   <BreadcrumbList>
     <BreadcrumbItem>
       <BreadcrumbLink href="/">
-        <Icon name="lucide:home" class="size-4" />
+        <Icon name="lucide:home" class="size-4" aria-hidden="true" />
+        <span class="sr-only">Início</span>
       </BreadcrumbLink>
     </BreadcrumbItem>
     {
