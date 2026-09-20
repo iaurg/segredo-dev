@@ -114,9 +114,5 @@
     kbd {
       @apply text-foreground bg-muted border-border rounded-md border px-2 py-1 text-xs font-medium shadow-sm;
     }
-
-    .katex-display {
-      @apply my-6 overflow-x-auto overflow-y-hidden py-2 tracking-normal;
-    }
   }
 }

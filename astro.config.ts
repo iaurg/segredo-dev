@@ -8,10 +8,8 @@ import icon from 'astro-icon'
 import expressiveCode from 'astro-expressive-code'
 import { rehypeHeadingIds } from '@astrojs/markdown-remark'
 import rehypeExternalLinks from 'rehype-external-links'
-import rehypeKatex from 'rehype-katex'
 import rehypePrettyCode from 'rehype-pretty-code'
 import remarkEmoji from 'remark-emoji'
-import remarkMath from 'remark-math'
 import remarkSectionize from 'remark-sectionize'
 import remarkToc from 'remark-toc'
 
@@ -93,7 +91,6 @@ export default defineConfig({
         },
       ],
       rehypeHeadingIds,
-      rehypeKatex,
       [
         rehypePrettyCode,
         {
@@ -104,6 +101,6 @@ export default defineConfig({
         },
       ],
     ],
-    remarkPlugins: [remarkToc, remarkMath, remarkEmoji, remarkSectionize],
+    remarkPlugins: [remarkToc, remarkEmoji, remarkSectionize],
   },
 })

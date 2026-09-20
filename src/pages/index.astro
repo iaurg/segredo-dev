@@ -38,9 +38,9 @@ const blog = await getRecentPosts(SITE.featuredPostCount)
     <h2 class="text-2xl font-medium">Últimos posts</h2>
     <ul class="flex flex-col gap-y-4">
       {
-        blog.map((post) => (
+        blog.map((post, index) => (
           <li>
-            <BlogCard entry={post} />
+            <BlogCard entry={post} priority={index === 0} />
           </li>
         ))
       }

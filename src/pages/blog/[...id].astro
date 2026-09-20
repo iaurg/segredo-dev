@@ -63,7 +63,12 @@ const jsonLd = [
         name: 'Blog',
         item: new URL('/blog/', Astro.site).href,
       },
-      { '@type': 'ListItem', position: 3, name: post.data.title, item: postUrl },
+      {
+        '@type': 'ListItem',
+        position: 3,
+        name: post.data.title,
+        item: postUrl,
+      },
     ],
   },
 ]
@@ -98,6 +103,8 @@ const jsonLd = [
           alt={post.data.title}
           width={1200}
           height={630}
+          loading="eager"
+          fetchpriority="high"
           class="col-span-full mx-auto w-full max-w-5xl object-cover"
         />
       )
@@ -127,11 +134,7 @@ const jsonLd = [
                         class="rounded-full"
                       />
                       {author.isRegistered ? (
-                        <Link
-                          href="/sobre/"
-                          underline
-                          class="text-foreground"
-                        >
+                        <Link href="/sobre/" underline class="text-foreground">
                           <span>{author.name}</span>
                         </Link>
                       ) : (
@@ -174,7 +177,9 @@ const jsonLd = [
       <PostNavigation prevPost={prev} nextPost={next} />
 
       <div class="flex flex-wrap items-center justify-center gap-3">
-        <span class="text-muted-foreground text-sm">Explore este post com IA:</span>
+        <span class="text-muted-foreground text-sm"
+          >Explore este post com IA:</span
+        >
         <div class="flex flex-wrap justify-center gap-2">
           <Button variant="outline" size="sm" className="gap-1.5" asChild>
             <a
@@ -263,7 +268,7 @@ const jsonLd = [
 
           scrollToTopButton.classList.toggle(
             'hidden',
-            window.scrollY <= 300 || isFooterVisible
+            window.scrollY <= 300 || isFooterVisible,
           )
         })
       }
