@@ -9,10 +9,16 @@ const INTERACTIVE = /<(a|button|summary)\b([^>]*)>(.*?)<\/\1>/gis
  * aria-label, a title, or visually hidden text. Icon-only controls are the
  * usual offenders, and screen readers and AI agents both depend on this.
  */
+const namedByAttribute = (attrs: string, name: string) => {
+  const value = attrs.match(new RegExp(`\\b${name}="([^"]*)"`))?.[1] ?? ''
+  return value.trim().length > 0
+}
+
 const hasAccessibleName = (attrs: string, inner: string) => {
-  if (/\baria-label=/.test(attrs) || /\btitle=/.test(attrs)) return true
   if (/aria-hidden="true"/.test(attrs)) return true
-  if (/sr-only/.test(inner)) return true
+  if (namedByAttribute(attrs, 'aria-label')) return true
+  if (namedByAttribute(attrs, 'title')) return true
+  // Stripping tags also picks up visually hidden (sr-only) label text.
   const text = inner
     .replace(/<[^>]+>/g, ' ')
     .replace(/&[a-z]+;/gi, ' ')
