@@ -10,7 +10,7 @@ import {
 } from '@/lib/data-utils'
 
 const destaques = await getDestaques()
-const recent = await getRecentPosts(6)
+const recent = await getRecentPosts(4)
 const topicos = await getAllTopicos()
 const topicoCounts = await Promise.all(
   topicos.map(async (topico) => ({
@@ -28,7 +28,7 @@ const topicoCounts = await Promise.all(
     <h1 class="font-serif text-5xl leading-none font-semibold tracking-tight">
       <span class="grifo">segredo.dev</span>
     </h1>
-    <p class="text-muted-foreground font-serif text-xl leading-snug italic">
+    <p class="text-muted-foreground font-serif text-xl leading-snug">
       s.m. aquilo que ainda não te explicaram direito.
     </p>
     <p
@@ -49,7 +49,7 @@ const topicoCounts = await Promise.all(
       <section class="flex flex-col gap-y-4">
         <h2 class="font-serif text-2xl font-semibold">Comece por aqui</h2>
         <ul class="flex flex-col gap-y-4">
-          {destaques.slice(0, 4).map((post, index) => (
+          {destaques.slice(0, 3).map((post, index) => (
             <li>
               <BlogCard entry={post} priority={index === 0} />
             </li>

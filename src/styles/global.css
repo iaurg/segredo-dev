@@ -10,8 +10,8 @@
 
 @theme inline {
   --font-sans:
-    Geist, ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji',
-    'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+    ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif,
+    'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   --font-serif:
     Newsreader, ui-serif, Georgia, Cambria, 'Times New Roman', serif;
   --font-mono:
@@ -56,14 +56,6 @@
   src: url('/fonts/NewsreaderItalic.woff2') format('woff2');
   font-weight: 400;
   font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Geist';
-  src: url('/fonts/GeistVF.woff2') format('woff2-variations');
-  font-weight: 100 900;
-  font-style: normal;
   font-display: swap;
 }
 

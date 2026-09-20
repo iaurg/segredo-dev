@@ -23,7 +23,7 @@ test.describe('KaTeX removal and LCP fixes', () => {
     test(`${path} preloads the Geist variable font`, async ({ page }) => {
       await page.goto(path)
       await expect(
-        page.locator('link[rel="preload"][href="/fonts/GeistVF.woff2"]'),
+        page.locator('link[rel="preload"][href="/fonts/NewsreaderVF.woff2"]'),
       ).toHaveAttribute('as', 'font')
     })
   }
