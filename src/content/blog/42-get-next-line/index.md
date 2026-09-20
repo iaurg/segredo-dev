@@ -3,6 +3,7 @@ title: Get Next Line
 slug: 42-get-next-line
 description: 'Neste projeto você vai aprender a analisar leaks de memória.'
 date: '2024-05-06T03:09:39.000Z'
+topico: escola-42
 authors: ['iaurg']
 ---
 

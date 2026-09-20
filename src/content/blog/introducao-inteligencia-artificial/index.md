@@ -3,6 +3,7 @@ title: Introdução Inteligência Artificial
 slug: introducao-inteligencia-artificial
 description: 'A Inteligência Artificial (IA) é uma forma de ampliar a capacidade humana e permitir que possamos nos concentrar em atividades de nossa mente.'
 date: '2020-01-16T05:16:36.000Z'
+topico: inteligencia-artificial
 tags: ['conceito', 'inteligencia-artificial']
 image: ./introducao-inteligencia-artificial.png
 authors: ['iaurg']

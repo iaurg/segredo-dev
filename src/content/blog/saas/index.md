@@ -3,6 +3,7 @@ title: Software como serviço (SaaS)
 slug: saas
 description: 'Software vendido como serviço (Software as a Service). Em sua grande maioria são aplicativos online com funcionalidades que atendem as suas necessidades.'
 date: '2019-11-23T01:55:50.000Z'
+topico: back-end-e-arquitetura
 tags: ['conceito']
 image: ./saas-software-as-a-service.png
 authors: ['iaurg']

@@ -3,6 +3,7 @@ title: Como atualizar n8n via Docker na Digital Ocean
 slug: como-atualizar-n8n-via-docker-digital-ocean
 description: 'Como atualizar o n8n instalado via marketplace (canny) no Digital Ocean.'
 date: '2025-06-10T01:55:50.000Z'
+topico: ferramentas-e-automacao
 tags: ['n8n', 'docker', 'digital ocean']
 image: ./como-atualizar-n8n-docker.jpg
 authors: ['iaurg']

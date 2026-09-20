@@ -3,6 +3,7 @@ title: O que é Gatsby.js?
 slug: o-que-e-o-gatsbyjs
 description: 'Para que serve e qual é a vantagem em utilizar Gatsby em seu projeto React. Velocidade de carregamento e SEO 👌'
 date: '2019-06-28T21:43:28.000Z'
+topico: front-end
 tags: ['front-end', 'conceito']
 authors: ['iaurg']
 image: ./o-que-e-gatsby.png

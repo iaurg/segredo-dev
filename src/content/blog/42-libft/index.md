@@ -3,6 +3,7 @@ title: O primeiro projeto na 42, o libft!
 slug: 42-libft
 description: 'O processo de desenvolvimento do primeiro projeto na 42, uma biblioteca completa em C'
 date: '2021-07-22T03:09:39.000Z'
+topico: escola-42
 authors: ['iaurg']
 ---
 

@@ -3,6 +3,7 @@ title: Programador Apaixonado
 slug: programador-apaixonado
 description: 'Análise, interpretação e resumo do livro Programador Apaixonado.'
 date: '2020-11-04T16:11:22.000Z'
+topico: carreira
 tags: ['filosofia', 'programação']
 authors: ['iaurg']
 image: ./programador-apaixonado.jpg

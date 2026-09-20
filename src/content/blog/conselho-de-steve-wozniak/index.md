@@ -3,6 +3,7 @@ title: Conselho de Steve Wozniak
 slug: conselho-de-steve-wozniak
 description: 'Primeiro, tente ser o mais ético possível, aberto e confiável. Procure sempre a excelência e faça o seu produto melhor do que uma pessoa média faria.'
 date: '2019-11-11T18:26:27.000Z'
+topico: carreira
 tags: ['filosofia']
 authors: ['iaurg']
 image: ./conselho-steve-wozniak.png

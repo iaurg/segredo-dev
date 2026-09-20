@@ -3,6 +3,7 @@ title: Como otimizar imagens para site
 slug: como-otimizar-imagem-para-site
 description: 'Saiba como Otimizar Imagens de seu site, um dos fatores que mais influenciam na velocidade e tempo de carregamento de uma página web.'
 date: '2019-09-07T18:25:00.000Z'
+topico: front-end
 tags: ['front-end', 'otimização']
 authors: ['iaurg']
 image: ./como-otimizar-imagens-para-site.png

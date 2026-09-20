@@ -3,6 +3,7 @@ title: Engenharia de Prompt para Iniciantes
 slug: engenharia-de-prompt-iniciante
 description: 'Como escrever prompts mais eficientes com técnicas simples'
 date: '2025-02-23T12:52:43.000Z'
+topico: inteligencia-artificial
 authors: ['iaurg']
 image: ./engenharia-de-prompt-para-iniciantes.jpg
 ---

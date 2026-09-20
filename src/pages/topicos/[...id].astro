@@ -1,0 +1,99 @@
+---
+import BlogCard from '@/components/BlogCard.astro'
+import Breadcrumbs from '@/components/Breadcrumbs.astro'
+import { SITE } from '@/consts'
+import Layout from '@/layouts/Layout.astro'
+import { getAllTopicos, getPostsByTopico } from '@/lib/data-utils'
+import { render } from 'astro:content'
+
+export async function getStaticPaths() {
+  const topicos = await getAllTopicos()
+  return topicos.map((topico) => ({
+    params: { id: topico.id },
+    props: topico,
+  }))
+}
+
+const topico = Astro.props
+const { Content } = await render(topico)
+const posts = await getPostsByTopico(topico.id)
+const topicoUrl = new URL(`/topicos/${topico.id}/`, Astro.site).href
+
+const jsonLd = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'CollectionPage',
+    name: topico.data.name,
+    description: topico.data.description,
+    url: topicoUrl,
+    inLanguage: SITE.locale,
+    hasPart: posts.map((post) => ({
+      '@type': 'BlogPosting',
+      headline: post.data.title,
+      url: new URL(`/blog/${post.id}/`, Astro.site).href,
+    })),
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Início', item: SITE.href },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'Tópicos',
+        item: new URL('/topicos/', Astro.site).href,
+      },
+      {
+        '@type': 'ListItem',
+        position: 3,
+        name: topico.data.name,
+        item: topicoUrl,
+      },
+    ],
+  },
+]
+---
+
+<Layout
+  title={topico.data.name}
+  description={topico.data.description}
+  jsonLd={jsonLd}
+>
+  <Breadcrumbs
+    items={[
+      { label: 'Tópicos', href: '/topicos/', icon: 'lucide:library' },
+      { label: topico.data.name, icon: 'lucide:folder-open' },
+    ]}
+  />
+
+  <section class="flex flex-col gap-y-4">
+    <div
+      class="flex flex-col gap-y-2 border-l-4 pl-4"
+      style={`border-left-color: ${topico.data.tint}`}
+    >
+      <h1 class="text-3xl leading-none font-medium">{topico.data.name}</h1>
+      <span class="text-muted-foreground text-sm">
+        {posts.length}
+        {posts.length === 1 ? 'post' : 'posts'}
+      </span>
+    </div>
+
+    <div class="prose max-w-none">
+      <Content />
+    </div>
+  </section>
+
+  <section class="flex flex-col gap-y-4">
+    <h2 class="sr-only">Posts de {topico.data.name}</h2>
+    <ul class="flex flex-col gap-y-4">
+      {
+        posts.map((post, index) => (
+          <li>
+            <BlogCard entry={post} priority={index === 0} />
+          </li>
+        ))
+      }
+    </ul>
+  </section>
+</Layout>

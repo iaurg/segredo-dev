@@ -3,6 +3,7 @@ title: Problemas NP-Completo
 slug: problemas-np
 description: 'Os problemas que ainda não possuem uma solução e os computadores não conseguem resolver.'
 date: '2020-09-17T01:52:43.000Z'
+topico: fundamentos
 image: ./problemas-np.png
 authors: ['iaurg']
 ---

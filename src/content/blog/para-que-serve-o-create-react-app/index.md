@@ -2,6 +2,7 @@
 title: Para que serve o create-react-app (CRA)
 slug: para-que-serve-o-create-react-app
 date: '2019-06-21T03:15:39.000Z'
+topico: front-end
 description: 'Qual a função e como funciona o create react app'
 authors: ['iaurg']
 ---

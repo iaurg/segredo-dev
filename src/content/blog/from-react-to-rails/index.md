@@ -3,6 +3,7 @@ title: Meu processo de migração do React para o Rails
 slug: from-react-to-rails
 description: 'Apresentação do meu processo de migração do React para Rails, utilizando Inertia.js.'
 date: '2025-07-12T18:00:50.000Z'
+topico: back-end-e-arquitetura
 tags: ['rails', 'react', 'inertia']
 image: ./from-react-to-rails.jpg
 authors: ['iaurg']
