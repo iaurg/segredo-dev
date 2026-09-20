@@ -138,6 +138,8 @@
   .grifo {
     position: relative;
     display: inline-block;
+    /* The mark is always light, so the text on it is always dark ink. */
+    color: var(--grifo-ink);
   }
 
   .grifo::before {
@@ -148,8 +150,6 @@
     transform: rotate(-0.6deg);
     z-index: -1;
   }
-
-
 }
 
 /* A utility, not a component class, so `@apply grifo-link` works in prose. */

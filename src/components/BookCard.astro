@@ -10,149 +10,77 @@ interface Props {
 
 const { book } = Astro.props
 
-const statusLabels = {
-  'lido': 'Lido',
-  'na-lista': 'Na Lista',
-  'lendo': 'Lendo'
-}
-
-const statusIcons = {
-  'lido': 'lucide:check-circle',
-  'na-lista': 'lucide:bookmark',
-  'lendo': 'lucide:book-open'
-}
-
-// Custom badge styles for each status with distinct colors
-const statusStyles = {
-  'lido': 'bg-emerald-100 text-emerald-700 dark:bg-emerald-900/30 dark:text-emerald-400',
-  'na-lista': 'bg-amber-100 text-amber-700 dark:bg-amber-900/30 dark:text-amber-400',
-  'lendo': 'bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-400'
-}
+const status = {
+  lido: { label: 'Lido', tint: '#22c55e' },
+  lendo: { label: 'Lendo', tint: '#0ea5e9' },
+  'na-lista': { label: 'Na lista', tint: '#f59e0b' },
+}[book.data.status]
 ---
 
-<article class="book-card group relative overflow-hidden rounded-2xl border bg-card p-5 transition-all duration-300 ease-out hover:shadow-xl hover:shadow-primary/5 hover:-translate-y-1">
-  <div class="flex gap-6">
-    <!-- 3D Book Cover -->
-    <div class="book-cover-wrapper shrink-0">
-      <div class="book-cover relative">
-        <div class="book-front">
-          <Image
-            src={book.data.image}
-            alt={book.data.title}
-            width={140}
-            height={200}
-            class="h-44 w-28 object-fill rounded-r-sm"
-          />
-        </div>
-        <div class="book-shadow"></div>
-      </div>
+<article
+  class="hover:bg-secondary/40 flex h-full gap-x-5 rounded-lg border p-4 transition-colors"
+>
+  <Image
+    src={book.data.image}
+    alt={`Capa de ${book.data.title}`}
+    width={112}
+    height={168}
+    widths={[112, 224]}
+    sizes="112px"
+    loading="lazy"
+    decoding="async"
+    class="h-30 w-20 shrink-0 self-start rounded-sm object-cover shadow-sm sm:h-42 sm:w-28"
+  />
+
+  <div class="flex min-w-0 flex-1 flex-col gap-y-2">
+    <div>
+      <h3 class="line-clamp-2 font-serif text-xl leading-snug font-semibold">
+        {book.data.title}
+      </h3>
+      {
+        book.data.author && (
+          <p class="text-muted-foreground text-sm">
+            {book.data.author}
+            {book.data.year && <span> · {book.data.year}</span>}
+          </p>
+        )
+      }
     </div>
 
-    <!-- Book Content -->
-    <div class="flex flex-col justify-between flex-1 min-w-0 py-1">
-      <div class="space-y-3">
-        <!-- Status Badge & Rating -->
-        <div class="flex flex-wrap items-center gap-3">
-          <span 
-            class={`inline-flex items-center gap-x-1.5 px-2.5 py-1 text-xs font-medium rounded-full transition-all ${statusStyles[book.data.status]} ${book.data.status === 'lendo' ? 'animate-pulse' : ''}`}
-          >
-            <Icon name={statusIcons[book.data.status]} class="size-3.5" />
-            {statusLabels[book.data.status]}
+    <p class="text-foreground/80 line-clamp-3 font-serif leading-relaxed">
+      {book.data.description}
+    </p>
+
+    <div
+      class="text-muted-foreground mt-auto flex flex-wrap items-center gap-x-3 gap-y-1 pt-1 text-sm"
+    >
+      <span class="inline-flex items-center gap-x-1.5">
+        <span
+          class="size-2 shrink-0 rounded-full"
+          style={`background-color: ${status.tint}`}
+          aria-hidden="true"></span>
+        {status.label}
+      </span>
+
+      {
+        book.data.rating && book.data.status === 'lido' && (
+          <span aria-label={`Nota ${book.data.rating} de 5`}>
+            {'★'.repeat(book.data.rating)}
+            <span class="text-muted-foreground/30">
+              {'★'.repeat(5 - book.data.rating)}
+            </span>
           </span>
-          
-          <!-- Rating (only for read books) -->
-          {book.data.rating && book.data.status === 'lido' && (
-            <div class="flex items-center gap-0.5" title={`${book.data.rating} de 5 estrelas`}>
-              {Array.from({ length: 5 }, (_, i) => (
-                <Icon 
-                  name="lucide:star"
-                  class={`size-4 transition-colors ${i < book.data.rating! ? 'text-amber-400 fill-amber-400' : 'text-muted-foreground/20'}`}
-                />
-              ))}
-            </div>
-          )}
-        </div>
+        )
+      }
 
-        <!-- Title -->
-        <h3 class="text-xl font-semibold leading-tight tracking-tight line-clamp-2 group-hover:text-primary transition-colors">
-          {book.data.title}
-        </h3>
-
-        <!-- Author and Year -->
-        {book.data.author && (
-          <p class="text-muted-foreground text-sm flex items-center gap-2">
-            <Icon name="lucide:user" class="size-4 shrink-0" />
-            <span class="truncate">{book.data.author}</span>
-            {book.data.year && (
-              <>
-                <span class="text-muted-foreground/40">•</span>
-                <span class="shrink-0">{book.data.year}</span>
-              </>
-            )}
-          </p>
-        )}
-
-        <!-- Description -->
-        <p class="text-muted-foreground text-sm leading-relaxed line-clamp-3">
-          {book.data.description}
-        </p>
-      </div>
-
-      <!-- Amazon Link -->
-      <div class="pt-4">
-        <Link
-          href={book.data.amazonLink}
-          external
-          class="inline-flex items-center gap-x-2 px-4 py-2 text-sm font-medium rounded-lg bg-primary/10 text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-200 group/link"
-        >
-          <Icon name="lucide:shopping-cart" class="size-4" />
-          <span>Ver na Amazon</span>
-          <Icon name="lucide:arrow-right" class="size-4 transition-transform group-hover/link:translate-x-1" />
-        </Link>
-      </div>
+      <Link
+        href={book.data.amazonLink}
+        external
+        class="grifo-link text-foreground inline-flex items-center gap-x-1"
+      >
+        Ver na Amazon
+        <Icon name="lucide:external-link" class="size-3" />
+      </Link>
     </div>
   </div>
 </article>
-
-<style>
-
-  .book-cover {
-    position: relative;
-  }
-
-  .book-card:hover .book-cover {
-    transform: rotateY(-5deg) scale(1.02);
-  }
-
-  .book-front {
-    position: relative;
-    z-index: 2;
-    box-shadow: 
-      2px 2px 8px rgba(0, 0, 0, 0.15),
-      6px 6px 16px rgba(0, 0, 0, 0.1);
-    border-radius: 0 4px 4px 0;
-    overflow: hidden;
-  }
-
-  .book-shadow {
-    position: absolute;
-    bottom: -10px;
-    left: 10px;
-    right: 10px;
-    height: 20px;
-    background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.2) 0%, transparent 70%);
-    transform: rotateX(60deg);
-    z-index: 0;
-  }
-
-  /* Dark mode adjustments */
-  :global(.dark) .book-front {
-    box-shadow: 
-      2px 2px 12px rgba(0, 0, 0, 0.4),
-      6px 6px 24px rgba(0, 0, 0, 0.3);
-  }
-
-  :global(.dark) .book-shadow {
-    background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.4) 0%, transparent 70%);
-  }
-</style>
