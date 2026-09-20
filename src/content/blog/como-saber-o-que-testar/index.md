@@ -4,7 +4,6 @@ slug: como-saber-o-que-testar
 description: 'Como saber o que testar no Front-end? Teste é importante e ótimo. Testes precisam lhe trazer confiança. Confira o que diz Kent C Dodds.'
 date: '2020-02-12T10:50:36.000Z'
 topico: back-end-e-arquitetura
-tags: ['front-end', 'teste']
 authors: ['iaurg']
 image: ./como-saber-o-que-testar.png
 ---

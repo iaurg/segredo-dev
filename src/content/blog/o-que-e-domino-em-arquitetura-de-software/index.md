@@ -4,7 +4,6 @@ slug: o-que-e-dominio-em-arquitetura-de-software
 description: 'Entenda o conceito de dominio em arquitetura de software e o que ele representa em seu código'
 date: '2026-01-03T13:49:21.000Z'
 topico: back-end-e-arquitetura
-tags: ['arquitetura de software', 'conceito']
 authors: ['iaurg']
 image: ./o-que-e-dominio-em-arquitetura-de-software.jpg
 ---

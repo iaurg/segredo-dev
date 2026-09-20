@@ -4,7 +4,6 @@ slug: rd-station-popup-elementor
 description: 'O RD Station não envia leads corretamente dentro de formulário no popup do Elementor, veja como resolver.'
 date: '2025-07-29T11:55:50.000Z'
 topico: ferramentas-e-automacao
-tags: ['rdstation', 'elementor', 'wordpress']
 image: ./rdstation-popup-elementor.jpg
 authors: ['iaurg']
 ---

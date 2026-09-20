@@ -169,23 +169,13 @@ const jsonLd = [
           </div>
         </div>
         <div class="flex flex-wrap justify-center gap-2">
-          {
-            post.data.tags && post.data.tags.length > 0 ? (
-              post.data.tags.map((tag) => (
-                <a
-                  href={`/tags/${tag}/`}
-                  class={badgeVariants({ variant: 'secondary' })}
-                >
-                  <Icon name="lucide:hash" class="size-3" />
-                  {tag}
-                </a>
-              ))
-            ) : (
-              <span class="text-muted-foreground text-sm">
-                Nenhuma tag disponível
-              </span>
-            )
-          }
+          <a
+            href={`/topicos/${topico.id}/`}
+            class={badgeVariants({ variant: 'secondary' })}
+          >
+            <Icon name="lucide:library" class="size-3" />
+            {topico.data.name}
+          </a>
         </div>
       </div>
 

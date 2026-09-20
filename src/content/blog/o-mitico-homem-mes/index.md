@@ -4,7 +4,6 @@ slug: o-mitico-homem-mes
 date: '2023-10-19T02:27:06.000Z'
 topico: carreira
 description: 'Uma abordagem completa sobre desenvolvimento e gerenciamento de projetos de software, Brooks detalha a sua experiência e aprendizados com projetos de software.'
-tags: ['estudos', 'tecnologia', 'livro']
 authors: ['iaurg']
 ---
 
