@@ -1,7 +1,7 @@
 ---
 title: O que é Shell e qual sua função?
 slug: o-que-e-shell
-description: 'Shell é um programa que permite o usuário acessar e enviar informações ao sistema operacional através de um terminal ou interface gráfica.'
+description: 'Shell é o programa que interpreta seus comandos e os entrega ao kernel. Entenda o que ele faz, os tipos de shell mais usados e para que serve no dia a dia.'
 date: '2021-11-28T03:21:50.000Z'
 topico: fundamentos
 authors: ['iaurg']

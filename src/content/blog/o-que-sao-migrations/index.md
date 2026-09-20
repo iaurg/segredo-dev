@@ -1,7 +1,7 @@
 ---
-title: O que são migrations?
+title: 'Migrations: o que são, como funcionam e rollback'
 slug: o-que-sao-migrations
-description: 'Entenda o que são migrations e como você pode melhorar o controle de seu banco de dados'
+description: 'Migrations são o controle de versão do banco de dados. Entenda o que são, por que usar e como versionar alterações, com exemplo prático em Rails.'
 date: '2024-11-03T13:49:21.000Z'
 topico: back-end-e-arquitetura
 destaque: true

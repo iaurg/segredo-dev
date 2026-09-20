@@ -1,7 +1,7 @@
 ---
-title: O que é HTML, como funciona e para que serve
+title: 'O que é HTML e para que serve (com exemplos)'
 slug: html
-description: 'O HTML define o conteúdo das páginas da internet, marcando o conteúdo com tags HTML para informar ao navegador como diferentes elementos devem se comportar.'
+description: 'HTML é a linguagem de marcação que estrutura as páginas da web. Veja o que significa a sigla, para que serve e como é a estrutura básica de uma página.'
 date: '2022-11-14T10:55:41.000Z'
 topico: fundamentos
 authors: ['iaurg']
