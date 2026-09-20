@@ -48,7 +48,8 @@
   src: url('/fonts/NewsreaderVF.woff2') format('woff2-variations');
   font-weight: 200 800;
   font-style: normal;
-  font-display: swap;
+  /* Preloaded, so `optional` gets the real font without ever reflowing. */
+  font-display: optional;
 }
 
 @font-face {
