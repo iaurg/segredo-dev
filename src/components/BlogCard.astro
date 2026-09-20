@@ -84,6 +84,14 @@ const topico = await getEntry(entry.data.topico)
           <Icon name="lucide:library" class="size-3" />
           {topico.data.name}
         </Badge>
+        {
+          entry.data.destaque && (
+            <Badge variant="outline" className="flex items-center gap-x-1">
+              <Icon name="lucide:sparkles" class="size-3" />
+              Comece por aqui
+            </Badge>
+          )
+        }
       </div>
     </div>
   </Link>

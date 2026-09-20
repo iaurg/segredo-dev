@@ -4,6 +4,7 @@ slug: o-que-sao-migrations
 description: 'Entenda o que são migrations e como você pode melhorar o controle de seu banco de dados'
 date: '2024-11-03T13:49:21.000Z'
 topico: back-end-e-arquitetura
+destaque: true
 authors: ['iaurg']
 image: ./o-que-sao-migrations.jpg
 ---
