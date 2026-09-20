@@ -48,11 +48,17 @@ const jsonLd = [
           <li>
             <a
               href={`/topicos/${topico.id}/`}
-              class="hover:bg-secondary/50 flex h-full flex-col gap-y-2 rounded-xl border border-l-4 p-4 transition-colors"
-              style={`border-left-color: ${topico.data.tint}`}
+              class="hover:bg-secondary/50 flex h-full flex-col gap-y-2 rounded-xl border p-4 transition-colors"
             >
               <div class="flex items-baseline justify-between gap-x-2">
-                <h2 class="text-lg font-medium">{topico.data.name}</h2>
+                <h2 class="flex items-baseline gap-x-2 text-lg font-medium">
+                  <span
+                    class="size-2 shrink-0 rounded-full"
+                    style={`background-color: ${topico.data.tint}`}
+                    aria-hidden="true"
+                  />
+                  {topico.data.name}
+                </h2>
                 <span class="text-muted-foreground text-xs">
                   {count} {count === 1 ? 'post' : 'posts'}
                 </span>
