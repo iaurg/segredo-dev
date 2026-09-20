@@ -57,7 +57,9 @@ test.describe('Blog Posts', () => {
       await expect(breadcrumbs.getByText('Blog')).toBeVisible()
 
       // Validate reading time
-      const readingTimeElement = page.getByText(/min de leitura/)
+      const readingTimeElement = page
+        .locator('main header')
+        .getByText(/min de leitura/)
       await expect(readingTimeElement).toBeVisible()
 
       // Validate table of contents if headings exist

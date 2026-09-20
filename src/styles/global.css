@@ -10,8 +10,10 @@
 
 @theme inline {
   --font-sans:
-    Geist, ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji',
-    'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+    ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif,
+    'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  --font-serif:
+    Newsreader, ui-serif, Georgia, Cambria, 'Times New Roman', serif;
   --font-mono:
     Geist Mono, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
     'Liberation Mono', 'Courier New', monospace;
@@ -31,21 +33,29 @@
   --color-accent: var(--accent);
   --color-accent-foreground: var(--accent-foreground);
 
-  --color-additive: var(--additive);
-  --color-additive-foreground: var(--additive-foreground);
-
   --color-destructive: var(--destructive);
   --color-destructive-foreground: var(--destructive-foreground);
 
   --color-border: var(--border);
   --color-ring: var(--ring);
+
+  --color-grifo: var(--grifo);
+  --color-grifo-ink: var(--grifo-ink);
 }
 
 @font-face {
-  font-family: 'Geist';
-  src: url('/fonts/GeistVF.woff2') format('woff2-variations');
-  font-weight: 100 900;
+  font-family: 'Newsreader';
+  src: url('/fonts/NewsreaderVF.woff2') format('woff2-variations');
+  font-weight: 200 800;
   font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Newsreader';
+  src: url('/fonts/NewsreaderItalic.woff2') format('woff2');
+  font-weight: 400;
+  font-style: italic;
   font-display: swap;
 }
 
@@ -58,35 +68,40 @@
 }
 
 :root {
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.145 0 0);
-  --primary: oklch(0.205 0 0);
-  --primary-foreground: oklch(0.985 0 0);
-  --secondary: oklch(0.97 0 0);
-  --secondary-foreground: oklch(0.205 0 0);
-  --muted: oklch(0.97 0 0);
-  --muted-foreground: oklch(0.556 0 0);
-  --accent: oklch(0.97 0 0);
-  --accent-foreground: oklch(0.205 0 0);
+  --background: oklch(0.985 0.004 85);
+  --foreground: oklch(0.205 0.008 75);
+  --primary: oklch(0.255 0.01 75);
+  --primary-foreground: oklch(0.985 0.004 85);
+  --secondary: oklch(0.955 0.006 85);
+  --secondary-foreground: oklch(0.255 0.01 75);
+  --muted: oklch(0.955 0.006 85);
+  --muted-foreground: oklch(0.52 0.012 75);
+  --accent: oklch(0.955 0.006 85);
+  --accent-foreground: oklch(0.255 0.01 75);
   --destructive: oklch(0.577 0.245 27.325);
-  --border: oklch(0.922 0 0);
-  --ring: oklch(0.708 0 0);
+  --border: oklch(0.905 0.008 80);
+  --ring: oklch(0.68 0.02 80);
+  /* The highlighter mark: used behind text, never as text. */
+  --grifo: oklch(0.93 0.19 118);
+  --grifo-ink: oklch(0.25 0.03 118);
 }
 
 .dark {
-  --background: oklch(0.145 0 0);
-  --foreground: oklch(0.985 0 0);
-  --primary: oklch(0.922 0 0);
-  --primary-foreground: oklch(0.205 0 0);
-  --secondary: oklch(0.269 0 0);
-  --secondary-foreground: oklch(0.985 0 0);
-  --muted: oklch(0.269 0 0);
-  --muted-foreground: oklch(0.708 0 0);
-  --accent: oklch(0.269 0 0);
-  --accent-foreground: oklch(0.985 0 0);
+  --background: oklch(0.17 0.008 75);
+  --foreground: oklch(0.93 0.006 85);
+  --primary: oklch(0.93 0.006 85);
+  --primary-foreground: oklch(0.2 0.008 75);
+  --secondary: oklch(0.245 0.009 75);
+  --secondary-foreground: oklch(0.93 0.006 85);
+  --muted: oklch(0.245 0.009 75);
+  --muted-foreground: oklch(0.68 0.012 80);
+  --accent: oklch(0.245 0.009 75);
+  --accent-foreground: oklch(0.93 0.006 85);
   --destructive: oklch(0.704 0.191 22.216);
-  --border: oklch(1 0 0 / 10%);
-  --ring: oklch(0.556 0 0);
+  --border: oklch(0.3 0.01 75);
+  --ring: oklch(0.45 0.015 80);
+  --grifo: oklch(0.84 0.2 118);
+  --grifo-ink: oklch(0.2 0.03 118);
 }
 
 @layer base {
@@ -112,5 +127,45 @@
 
   .disable-transitions * {
     @apply transition-none!;
+  }
+}
+
+@layer components {
+  /*
+   * "Grifo": one highlighter stroke, the site's only decorative flourish.
+   * Sits behind text, slightly rotated so it reads as hand-made.
+   */
+  .grifo {
+    position: relative;
+    display: inline-block;
+    /* The mark is always light, so the text on it is always dark ink. */
+    color: var(--grifo-ink);
+  }
+
+  .grifo::before {
+    content: '';
+    position: absolute;
+    inset: 0.18em -0.22em 0.04em -0.22em;
+    background: var(--grifo);
+    transform: rotate(-0.6deg);
+    z-index: -1;
+  }
+}
+
+/* A utility, not a component class, so `@apply grifo-link` works in prose. */
+@utility grifo-link {
+  background-image: linear-gradient(var(--grifo), var(--grifo));
+  background-repeat: no-repeat;
+  background-position: 0 88%;
+  background-size: 0 0.34em;
+  transition: background-size 180ms ease-out;
+
+  &:hover,
+  &:focus-visible {
+    background-size: 100% 0.34em;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    transition: none;
   }
 }

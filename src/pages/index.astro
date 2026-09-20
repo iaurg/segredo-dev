@@ -1,62 +1,106 @@
 ---
 import BlogCard from '@/components/BlogCard.astro'
 import Link from '@/components/Link.astro'
-import { buttonVariants } from '@/components/ui/button'
-import { SITE } from '@/consts'
 import Layout from '@/layouts/Layout.astro'
-import { getRecentPosts } from '@/lib/data-utils'
+import {
+  getAllTopicos,
+  getDestaques,
+  getPostsByTopico,
+  getRecentPosts,
+} from '@/lib/data-utils'
 
-const blog = await getRecentPosts(SITE.featuredPostCount)
-// The first card that actually renders a cover is the LCP candidate.
-const lcpCardId = blog.find((post) => post.data.image)?.id
+const destaques = await getDestaques()
+const recent = await getRecentPosts(4)
+const topicos = await getAllTopicos()
+const topicoCounts = await Promise.all(
+  topicos.map(async (topico) => ({
+    topico,
+    count: (await getPostsByTopico(topico.id)).length,
+  })),
+)
 ---
 
 <Layout
   title="Início"
-  description="Aqui reuno meus conhecimentos, projetos e estudos sobre desenvolvimento web e tecnologias."
+  description="Explicações de tecnologia em português: kernel, shell, front-end, back-end e carreira. Escrito enquanto eu aprendo, por Italo Aurélio."
 >
-  <section>
-    <div class="rounded-lg border">
-      <div class="flex flex-col space-y-1.5 p-6">
-        <h1 class="text-3xl leading-none font-medium">segredo.dev</h1>
-        <p class="text-muted-foreground text-sm">
-          tecnologia e estudos &bull; <span class="font-medium">@iaurg</span>
-        </p>
-      </div>
-      <div class="p-6 pt-0">
-        <p class="text-muted-foreground mb-2 text-sm">
-          Meu objetivo com esse blog é compartilhar meus estudos e experiências
-          seguindo o conceito de <Link
-            href="/blog/aprenda-em-publico/"
-            target="_blank"
-            class="text-foreground"
-            >learn in public
-          </Link>
-        </p>
-      </div>
-    </div>
+  <section class="flex flex-col gap-y-5 pt-2 pb-4">
+    <h1 class="font-serif text-5xl leading-none font-semibold tracking-tight">
+      <span class="grifo">segredo.dev</span>
+    </h1>
+    <p class="text-muted-foreground font-serif text-xl leading-snug">
+      s.m. aquilo que ainda não te explicaram direito.
+    </p>
+    <p
+      class="text-foreground/80 max-w-[58ch] font-serif text-lg leading-relaxed"
+    >
+      Escrevo explicações de tecnologia em português — as que eu queria ter
+      achado quando estava estudando. Sou o Italo, programador, e publico aqui
+      enquanto aprendo, seguindo o <Link
+        href="/blog/aprenda-em-publico/"
+        class="grifo-link decoration-foreground/35 underline underline-offset-4"
+        >learn in public</Link
+      >.
+    </p>
   </section>
+
+  {
+    destaques.length > 0 && (
+      <section class="flex flex-col gap-y-4">
+        <h2 class="font-serif text-2xl font-semibold">Comece por aqui</h2>
+        <ul class="flex flex-col gap-y-4">
+          {destaques.slice(0, 3).map((post, index) => (
+            <li>
+              <BlogCard entry={post} priority={index === 0} />
+            </li>
+          ))}
+        </ul>
+      </section>
+    )
+  }
+
   <section class="flex flex-col gap-y-4">
-    <h2 class="text-2xl font-medium">Últimos posts</h2>
-    <ul class="flex flex-col gap-y-4">
+    <h2 class="font-serif text-2xl font-semibold">Tópicos</h2>
+    <ul class="grid gap-x-6 gap-y-3 sm:grid-cols-2">
       {
-        blog.map((post) => (
+        topicoCounts.map(({ topico, count }) => (
           <li>
-            <BlogCard entry={post} priority={post.id === lcpCardId} />
+            <a
+              href={`/topicos/${topico.id}/`}
+              class="group flex items-baseline gap-x-2 py-1"
+            >
+              <span
+                class="size-2 shrink-0 rounded-full"
+                style={`background-color: ${topico.data.tint}`}
+                aria-hidden="true"
+              />
+              <span class="grifo-link font-medium">{topico.data.name}</span>
+              <span class="text-muted-foreground text-xs">{count}</span>
+            </a>
           </li>
         ))
       }
     </ul>
-    <div class="flex justify-center">
+  </section>
+
+  <section class="flex flex-col gap-y-4">
+    <div class="flex items-baseline justify-between gap-x-4">
+      <h2 class="font-serif text-2xl font-semibold">Últimos posts</h2>
       <Link
         href="/blog/"
-        class={buttonVariants({ variant: 'ghost' }) + ' group'}
+        class="grifo-link text-muted-foreground hover:text-foreground text-sm"
       >
-        Ver todos os posts <span
-          class="ml-1.5 transition-transform group-hover:translate-x-1"
-          >&rarr;</span
-        >
+        ver todos
       </Link>
     </div>
+    <ul class="flex flex-col gap-y-4">
+      {
+        recent.map((post) => (
+          <li>
+            <BlogCard entry={post} />
+          </li>
+        ))
+      }
+    </ul>
   </section>
 </Layout>

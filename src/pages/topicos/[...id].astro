@@ -68,11 +68,16 @@ const jsonLd = [
   />
 
   <section class="flex flex-col gap-y-4">
-    <div
-      class="flex flex-col gap-y-2 border-l-4 pl-4"
-      style={`border-left-color: ${topico.data.tint}`}
-    >
-      <h1 class="text-3xl leading-none font-medium">{topico.data.name}</h1>
+    <div class="flex flex-col gap-y-2">
+      <h1
+        class="flex items-baseline gap-x-3 font-serif text-4xl leading-none font-semibold tracking-tight"
+      >
+        <span
+          class="size-3 shrink-0 rounded-full"
+          style={`background-color: ${topico.data.tint}`}
+          aria-hidden="true"></span>
+        {topico.data.name}
+      </h1>
       <span class="text-muted-foreground text-sm">
         {posts.length}
         {posts.length === 1 ? 'post' : 'posts'}

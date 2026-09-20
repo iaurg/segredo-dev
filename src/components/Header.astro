@@ -1,19 +1,18 @@
 ---
 import Link from '@/components/Link.astro'
+import Logo from '@/components/Logo.astro'
 import MobileMenu from '@/components/MobileMenu.astro'
 import ThemeToggle from '@/components/ThemeToggle.astro'
 import { NAV_LINKS, SITE } from '@/consts'
-import { Image } from 'astro:assets'
-import logo from '../../public/static/logo-segredo-dev.svg'
 ---
 
 <header class="bg-background/50 sticky top-0 z-10 backdrop-blur-md">
   <div
     class="mx-auto flex max-w-3xl flex-wrap items-center justify-between gap-4 p-4"
   >
-    <Link href="/" class="flex shrink-0 items-center gap-2 text-xl font-medium">
-      <Image src={logo} alt="Logo" class="size-8" />
-      {SITE.title}
+    <Link href="/" class="flex shrink-0 items-center gap-2">
+      <Logo class="size-8" />
+      <span class="grifo font-serif text-xl font-semibold">{SITE.title}</span>
     </Link>
     <div class="flex items-center gap-2 md:gap-4">
       <nav class="hidden items-center gap-4 text-sm sm:gap-6 md:flex">

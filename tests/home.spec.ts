@@ -18,13 +18,12 @@ test('should navigate to the home page and validate content', async ({
   await expect(page).toHaveTitle('Início | segredo.dev')
 
   // Validate main heading and subtitle
-  const heading = page.getByRole('heading', { name: 'segredo.dev' })
+  const heading = page.getByRole('heading', { name: 'segredo.dev', level: 1 })
   await expect(heading).toBeVisible()
-  await expect(heading).toHaveClass(/text-3xl/)
 
-  const subtitle = page.getByText('tecnologia e estudos')
-  await expect(subtitle).toBeVisible()
-  await expect(page.getByText('@iaurg')).toBeVisible()
+  await expect(
+    page.getByText('aquilo que ainda não te explicaram direito'),
+  ).toBeVisible()
 
   // Validate learn in public link
   const learnInPublicLink = page.getByRole('link', { name: 'learn in public' })
@@ -36,18 +35,15 @@ test('should navigate to the home page and validate content', async ({
   await expect(learnInPublicLink).toHaveAttribute('target', '_self')
 
   // Validate "Últimos posts" section
-  const latestPostsHeading = page.getByRole('heading', {
-    name: 'Últimos posts',
-  })
-  await expect(latestPostsHeading).toBeVisible()
-  await expect(latestPostsHeading).toHaveClass(/text-2xl/)
+  for (const name of ['Comece por aqui', 'Tópicos', 'Últimos posts']) {
+    await expect(page.getByRole('heading', { name, level: 2 })).toBeVisible()
+  }
 
-  // Validate "Ver todos os posts" button
-  const viewAllPostsButton = page.getByRole('link', {
-    name: 'Ver todos os posts',
-  })
-  await expect(viewAllPostsButton).toBeVisible()
-  await expect(viewAllPostsButton).toHaveAttribute('href', '/blog/')
+  // Every tópico is reachable from the home page
+  await expect(page.locator('main a[href^="/topicos/"]')).toHaveCount(7)
+
+  const viewAllPostsLink = page.getByRole('link', { name: 'ver todos' })
+  await expect(viewAllPostsLink).toHaveAttribute('href', '/blog/')
 })
 
 test('should validate SEO best practices on homepage', async ({ page }) => {
@@ -135,9 +131,8 @@ test('should validate SEO best practices on homepage', async ({ page }) => {
   expect(h1Count).toBe(1)
 
   const h2 = page.locator('h2')
-  const h2Count = await h2.count()
-  expect(h2Count).toBe(1)
-  await expect(h2.first()).toHaveText('Últimos posts')
+  expect(await h2.count()).toBe(3)
+  await expect(h2.last()).toHaveText('Últimos posts')
 
   // Check image alt texts
   const images = page.locator('img')
