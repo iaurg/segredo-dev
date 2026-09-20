@@ -111,6 +111,36 @@
       @apply text-muted-foreground mt-3 text-sm;
     }
 
+    .yt-facade {
+      @apply relative my-8 overflow-hidden rounded-lg;
+      aspect-ratio: 16 / 9;
+    }
+
+    .yt-facade a {
+      @apply block h-full w-full no-underline;
+    }
+
+    .yt-facade img {
+      @apply m-0 h-full w-full object-cover;
+    }
+
+    .yt-facade-play {
+      @apply absolute top-1/2 left-1/2 flex size-16 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-black/70 transition-colors;
+    }
+
+    .yt-facade-play::before {
+      content: '';
+      @apply ml-1 border-y-[10px] border-l-[16px] border-y-transparent border-l-white;
+    }
+
+    .yt-facade a:hover .yt-facade-play {
+      @apply bg-red-600;
+    }
+
+    .yt-facade iframe {
+      @apply absolute inset-0 h-full w-full border-0;
+    }
+
     kbd {
       @apply text-foreground bg-muted border-border rounded-md border px-2 py-1 text-xs font-medium shadow-sm;
     }

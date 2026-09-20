@@ -37,7 +37,7 @@ Por ser empreendedor normalmente você tende a querer aceitar diversas possívei
 
 Toda ideia terá um ciclo inicial muito bom, onde tudo parece dar certo mas o resultado que você realmente quer vai demorar, esses estágios são muito bem exemplificados:
 
-![](/images/posts/estagios-de-mudanca-hormozi.png)
+![](./estagios-de-mudanca-hormozi.png)
 
 **Otimismo desinformado:** É o estágio inicial clássico, tudo dá certo, todas as suas ideias estão prontas para serem executadas, os seus planos perfeitos todos desenhados. Você começa.
 
@@ -93,7 +93,7 @@ Você inicia vários negócios não focando 100% em algum deles, com o pensament
 
 Quão arrogante precisamos ser para acreditar que podemos fazer múltiplas coisas de uma vez e competir com alguém que investe todo o tempo dele em apenas uma coisa?
 
-![](/images/posts/sem-tempo-irmao-hormozi.png)
+![](./sem-tempo-irmao-hormozi.png)
 
 Alex até comenta no vídeo que uma de suas preferências é competir com pessoas que fazem várias coisas ao mesmo tempo, é muito mais fácil vencê-las.
 
@@ -101,7 +101,7 @@ Com isso você deve direcionar todos os seus esforços em apenas um negócio, pa
 
 **One thing, all in**
 
-![](/images/posts/decolando-um-projeto-hormozi.png)
+![](./decolando-um-projeto-hormozi.png)
 
 E infelizmente para você decidir seguir com apenas um projeto você precisará ter algumas conversas difíceis, talvez você precise demitir pessoas, fechar empresas, destruir algo que foi construído… Mas é isso, o ajuste precisa ser feito para que você possa evoluir.
 
@@ -115,7 +115,7 @@ Após definir um foco obviamente as novas oportunidades não deixarão de surgir
 
 Se você fizer algo melhor, você terá mais resultados, seu retorno será maior. Isso é alavancagem.
 
-![](/images/posts/better-is-the-secret.png)
+![](./better-is-the-secret.png)
 
 Quaisquer que sejam as atividades, se você focar em melhorar elas o seu resultado será elevado, e normalmente o melhor vem de tarefas "chatas”. Nesta etapa quando as coisas começam a se tornar chatas, você precisa manter sua consistência para evitar entrar no ciclo que vimos anteriormente sobre começar coisas novas, o novo sempre será excitante e animador, você está fazendo apenas a parte que “parece” legal.
 
@@ -129,7 +129,7 @@ Você já sabe o que precisa ser feito, apenas ignora e fica buscando novas cois
 
 > **Você está apenas se convencendo de que é mais inteligente do que é e dando a si mesmo razões pelas quais a realidade não se aplica a você.**
 
-![](/images/posts/better-hormozi.png)
+![](./better-hormozi.png)
 
 > A maioria perde a oportunidade porque ela está vestida de macacão e parece trabalho.
 

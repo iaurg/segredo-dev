@@ -8,7 +8,7 @@ image: ./como-ler-artigos-bloqueados-medium.png
 ---
 
 Você já deve ter se deparado com o alerta "You read a lot. We like that." no Medium e pensou: "Leio mesmo e quero continuar lendo...".
-![](/images/posts/you-read-a-lot-medium.png)You read a lot. We like that.
+![](./you-read-a-lot-medium.png)You read a lot. We like that.
 Existem algumas formas de continuar lendo artigos de seu interesse sem essas interrupções no Medium. Irei mostrar 2 formas simples para que você possa ler sem limites.
 
 ## Utilizando o 12.ft

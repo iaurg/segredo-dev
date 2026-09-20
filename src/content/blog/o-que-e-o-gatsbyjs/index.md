@@ -17,7 +17,7 @@ Caso queira iniciar seu desenvolvimento em **Gatsby** recomendo o [curso complet
 ## Como o Gatsby funciona
 
 Encontrei essa ilustração da [Maggie Appleton](https://illustrated.dev/contentful-gatsby) que resume um pouco o funcionamento do Gatsby e o conceito de [JAMStack](https://jamstack.org/), creio que dê para aproveitar no contexto desse conteúdo.
-![](/images/posts/como-gatsby-funciona.png)JAMStack, Gatsby & Contentful
+![](./como-gatsby-funciona.png)JAMStack, Gatsby & Contentful
 
 ## Porque precisei usar Gatsby?
 

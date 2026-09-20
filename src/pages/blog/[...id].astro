@@ -103,6 +103,8 @@ const jsonLd = [
           alt={post.data.title}
           width={1200}
           height={630}
+          widths={[640, 960, 1200]}
+          sizes="(min-width: 1024px) 1024px, 100vw"
           loading="eager"
           fetchpriority="high"
           class="col-span-full mx-auto w-full max-w-5xl object-cover"
@@ -275,3 +277,24 @@ const jsonLd = [
     })
   </script>
 </Layout>
+
+<script>
+  // Swap a YouTube facade for the real player on click. Without this the
+  // facade is still a plain link to YouTube.
+  document.addEventListener('click', (event) => {
+    const facade = (event.target as HTMLElement)?.closest?.('.yt-facade')
+    if (!facade) return
+
+    const src = facade.getAttribute('data-yt-src')
+    if (!src) return
+
+    event.preventDefault()
+    const iframe = document.createElement('iframe')
+    iframe.src = src
+    iframe.title = 'YouTube video player'
+    iframe.allow =
+      'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
+    iframe.allowFullscreen = true
+    facade.replaceChildren(iframe)
+  })
+</script>

@@ -1,6 +1,6 @@
 ---
 name: 'Italo Aurélio'
-avatar: 'https://github.com/iaurg.png'
+avatar: '/static/avatar-iaurg.jpg'
 bio: 'Im Italo, and my focus is to be a programmer that can code complex systems and beat good challenges.'
 website: 'https://segredo.dev'
 twitter: 'https://twitter.com/iaurg'

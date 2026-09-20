@@ -61,6 +61,6 @@ ou caso esteja usando yarn
         });
         ```
     Agora rode o comando `npm run analyze` ou `yarn analyze` e o Next.js irá gerar uma build com o bundler. No final do processo o mapa do bundle será mostrado em seu navegador e no terminal.
-    ![](/images/posts/bundle-nextjs.png)Bundle server Next.js aberto no navegador
+    ![](./bundle-nextjs.png)Bundle server Next.js aberto no navegador
     Esta é uma ferramenta que pode ajudá-lo na análise de sua build e lhe dar uma direção de por onde começar a sua otimização.
     ````
