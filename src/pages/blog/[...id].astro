@@ -12,7 +12,7 @@ import { getAdjacentPosts, getAllPosts, parseAuthors } from '@/lib/data-utils'
 import { formatDate, readingTime } from '@/lib/utils'
 import { Icon } from 'astro-icon/components'
 import { Image } from 'astro:assets'
-import { render } from 'astro:content'
+import { getEntry, render } from 'astro:content'
 
 export async function getStaticPaths() {
   const posts = await getAllPosts()
@@ -27,6 +27,7 @@ const currentPostId = Astro.params.id
 const { Content, headings } = await render(post)
 const { next, prev } = await getAdjacentPosts(currentPostId)
 const authors = await parseAuthors(post.data.authors ?? [])
+const topico = await getEntry(post.data.topico)
 
 const postUrl = new URL(`/blog/${post.id}/`, Astro.site).href
 // Posts without `authors` are still written by the site author: use their
@@ -66,6 +67,12 @@ const jsonLd = [
       {
         '@type': 'ListItem',
         position: 3,
+        name: topico.data.name,
+        item: new URL(`/topicos/${topico.id}/`, Astro.site).href,
+      },
+      {
+        '@type': 'ListItem',
+        position: 4,
         name: post.data.title,
         item: postUrl,
       },
@@ -81,6 +88,7 @@ const jsonLd = [
   author={authorName}
   type="article"
   publishedTime={post.data.date}
+  section={topico.data.name}
   modifiedTime={modifiedTime}
   jsonLd={jsonLd}
   isWide
@@ -92,6 +100,11 @@ const jsonLd = [
       <Breadcrumbs
         items={[
           { href: '/blog/', label: 'Blog', icon: 'lucide:archive' },
+          {
+            href: `/topicos/${topico.id}/`,
+            label: topico.data.name,
+            icon: 'lucide:library',
+          },
           { label: post.data.title, icon: 'lucide:file-text' },
         ]}
       />

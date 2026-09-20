@@ -3,6 +3,7 @@ title: Maestria
 slug: maestria
 description: 'O ato de buscar a excelência com determinação para romper barreiras cotidianas. Foco em transpassar as auto limitações e alcançar os maiores níveis de execução em um ofício.'
 date: '2020-10-12T12:21:50.000Z'
+topico: carreira
 image: ./maestria.png
 authors: ['iaurg']
 ---

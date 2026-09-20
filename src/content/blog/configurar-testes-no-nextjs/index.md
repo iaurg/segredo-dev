@@ -3,6 +3,7 @@ title: Configurar testes no Next.js
 slug: configurar-testes-no-nextjs
 description: 'Aprenda como configurar testes usando Jest e Testing Library no Next.js'
 date: '2019-12-18T21:05:06.000Z'
+topico: front-end
 tags: ['javascript', 'teste']
 authors: ['iaurg']
 image: './nextjs-jest-test.png'

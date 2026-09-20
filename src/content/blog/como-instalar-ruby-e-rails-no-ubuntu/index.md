@@ -3,6 +3,7 @@ title: Como instalar Ruby e Rails no Ubuntu em 5 minutos
 slug: como-instalar-ruby-e-rails-no-ubuntu
 description: 'Um passo a passo rápido para instalar Ruby e Rails no Ubuntu através da linha de comando.'
 date: '2025-08-05T10:55:50.000Z'
+topico: back-end-e-arquitetura
 tags: ['rails', 'ruby', 'ubuntu']
 image: ./como-instalar-ruby-e-rails.jpg
 authors: ['iaurg']

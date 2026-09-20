@@ -3,6 +3,7 @@ title: Como participar do Hacktoberfest
 slug: como-participar-do-hacktoberfest
 description: 'Hacktoberfest, entenda o que é e como participar deste evento da comunidade open source. Faça parte, ganhe prêmios e aprenda muito!'
 date: '2019-10-12T16:06:10.000Z'
+topico: carreira
 authors: ['iaurg']
 image: ./como-participar-do-hacktoberfest-2020.png
 ---

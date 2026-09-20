@@ -3,6 +3,7 @@ title: Qual será o próximo salto?
 description: 'Seguindo uma ideia mais reflexiva irei deixar esse post para que eu mesmo possa visualizar um dia. Espero que eu veja.'
 slug: qual-sera-o-proximo-salto
 date: '2019-10-27T23:46:48.000Z'
+topico: inteligencia-artificial
 authors: ['iaurg']
 image: ./o-que-sera-no-futuro.png
 ---

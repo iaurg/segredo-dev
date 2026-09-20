@@ -3,6 +3,7 @@ title: Como ler artigos bloqueados no Medium
 slug: como-burlar-o-medium
 description: 'Você já deve ter se deparado com o alerta You read a lot. We like that no Medium. Saiba como remover este limite.'
 date: '2019-09-20T10:55:41.000Z'
+topico: ferramentas-e-automacao
 authors: ['iaurg']
 image: ./como-ler-artigos-bloqueados-medium.png
 ---

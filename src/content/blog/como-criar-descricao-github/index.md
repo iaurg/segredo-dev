@@ -3,6 +3,7 @@ title: Como criar descrição pessoal no Github
 slug: como-criar-descricao-github
 description: 'Saiba como criar uma descrição completa em um readme com todas as informações necessárias no seu perfil do Github.'
 date: '2020-07-12T19:46:00.000Z'
+topico: carreira
 authors: ['iaurg']
 image: ./como-criar-descricao-perfil-github.jpg
 ---

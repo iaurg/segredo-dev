@@ -3,6 +3,7 @@ title: Entenda como funciona a internet e como o sinal chega
 slug: como-a-internet-funciona
 description: 'A maioria de nós apenas usa a internet, sem entender exatamente como ela funciona. Entenda como tudo se conecta!'
 date: '2022-11-07T10:55:41.000Z'
+topico: fundamentos
 authors: ['iaurg']
 ---
 

@@ -3,6 +3,7 @@ title: O que é um componente reutilizável?
 slug: o-que-e-um-componente-reutilizavel
 description: 'Componentes reutilizáveis visam manter uma linha tênue entre utilidade e complexidade. Podem ser facilmente replicados, configurados e mantidos.'
 date: '2020-06-25T00:01:08.000Z'
+topico: front-end
 tags: ['conceito', 'programação']
 image: ./componentes-reutilizaveis.png
 ---

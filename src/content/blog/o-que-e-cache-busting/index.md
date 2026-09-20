@@ -3,6 +3,7 @@ title: O que é Cache Busting? Entenda como funciona.
 slug: o-que-e-cache-busting
 description: 'O que é cache busting? A técnica para forçar o carregamento de versões atualizadas de um arquivo'
 date: '2025-08-17T07:25:50.000Z'
+topico: fundamentos
 tags: ['cache', 'programação', 'conceito']
 image: ./o-que-e-cache-busting.jpg
 authors: ['iaurg']

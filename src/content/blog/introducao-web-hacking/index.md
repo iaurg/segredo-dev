@@ -3,6 +3,7 @@ title: Introdução Web Hacking
 slug: introducao-web-hacking
 description: 'Conheça as principais vulnerabilidades que podem ser exploradas em aplicações. Segurança nunca é demais.'
 date: '2021-01-27T22:10:02.000Z'
+topico: fundamentos
 image: ./introducao-web-hacking.jpg
 authors: ['iaurg']
 ---

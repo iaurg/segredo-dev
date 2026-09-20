@@ -2,6 +2,7 @@
 title: Habilidades para ser um bom programador
 slug: habilidades-programador
 date: '2020-09-26T02:27:06.000Z'
+topico: carreira
 description: 'Atualmente a função de programador é requisitada em muitas empresas e se tornou essencial para um bom avanço no mercado, independente do ramo de atuação.'
 tags: ['filosofia', 'programação']
 authors: ['iaurg']

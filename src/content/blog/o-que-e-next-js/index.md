@@ -3,6 +3,7 @@ title: O que é e para que serve o Next.js?
 slug: o-que-e-next-js
 description: 'Saiba o que é e para o que serve o Next.js, um framework, com foco em acelerar a criação de sites e aplicações web com React.'
 date: '2020-09-07T23:59:45.000Z'
+topico: front-end
 tags: ['javascript', 'front-end']
 authors: ['iaurg']
 image: ./o-que-e-next-js.jpg

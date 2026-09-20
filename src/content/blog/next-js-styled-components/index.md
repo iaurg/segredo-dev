@@ -3,6 +3,7 @@ title: Next.js + Styled Components, guia simples
 slug: next-js-styled-components
 description: 'Como configurar Next.js com Styled Components.'
 date: '2019-11-28T14:01:05.000Z'
+topico: front-end
 tags: ['javascript']
 image: ./nextjs-styled-components.png
 authors: ['iaurg']

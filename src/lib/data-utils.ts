@@ -31,6 +31,18 @@ export async function getAdjacentPosts(currentId: string): Promise<{
   }
 }
 
+export async function getAllTopicos(): Promise<CollectionEntry<'topicos'>[]> {
+  const topicos = await getCollection('topicos')
+  return topicos.sort((a, b) => a.data.order - b.data.order)
+}
+
+export async function getPostsByTopico(
+  topicoId: string,
+): Promise<CollectionEntry<'blog'>[]> {
+  const posts = await getAllPosts()
+  return posts.filter((post) => post.data.topico.id === topicoId)
+}
+
 export async function getAllAuthors(): Promise<CollectionEntry<'authors'>[]> {
   return await getCollection('authors')
 }

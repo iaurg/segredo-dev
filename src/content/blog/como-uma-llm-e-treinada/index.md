@@ -3,6 +3,7 @@ title: Como uma LLM é treinada?
 slug: como-uma-llm-e-treinada
 description: 'Como é o processo de treinamento de uma LLM antes de chegar até nós.'
 date: '2026-03-02T16:06:00.000Z'
+topico: inteligencia-artificial
 tags: ['ia', 'machine-learning']
 authors: ['iaurg']
 image: ./como-uma-llm-e-treinada.jpg

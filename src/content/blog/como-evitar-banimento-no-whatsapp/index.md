@@ -3,6 +3,7 @@ title: Como evitar banimento no WhatsApp
 slug: como-evitar-banimento-no-whatsapp
 description: 'Como não ser bloqueado no WhatsApp é quase uma pedra filosofal no mundo da automação. Vou reunir tudo que encontrar sobre esse assunto aqui.'
 date: '2025-04-09T01:55:50.000Z'
+topico: ferramentas-e-automacao
 tags: ['whatsapp', 'ia', 'chatbot', 'automacao']
 image: ./como-evitar-bloqueio-no-whatsapp.jpg
 authors: ['iaurg']

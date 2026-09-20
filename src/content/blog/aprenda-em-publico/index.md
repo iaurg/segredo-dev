@@ -3,6 +3,7 @@ title: Aprenda em público
 slug: aprenda-em-publico
 description: 'A maneira mais rápida de aprender, crescer em sua carreira e construir um network. Aprender em público fará você avançar enquanto constroi sua carreira.'
 date: '2020-10-20T03:15:39.000Z'
+topico: carreira
 image: ./aprenda-em-publico.jpg
 authors: ['iaurg']
 ---

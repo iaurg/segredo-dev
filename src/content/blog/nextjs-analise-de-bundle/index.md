@@ -3,6 +3,7 @@ title: Como analisar o bundle do Next.js
 slug: nextjs-analise-de-bundle
 description: 'Analise um gráfico do bundle de seu site construído com Next.js de maneira fácil e rápida.'
 date: '2020-02-26T21:51:57.000Z'
+topico: front-end
 tags: ['front-end', 'javascript', 'otimização']
 image: ./como-analisar-bundle-nextjs.png
 authors: ['iaurg']

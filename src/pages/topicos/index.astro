@@ -1,0 +1,69 @@
+---
+import Breadcrumbs from '@/components/Breadcrumbs.astro'
+import { SITE } from '@/consts'
+import Layout from '@/layouts/Layout.astro'
+import { getAllTopicos, getPostsByTopico } from '@/lib/data-utils'
+
+const topicos = await getAllTopicos()
+const withCounts = await Promise.all(
+  topicos.map(async (topico) => ({
+    topico,
+    count: (await getPostsByTopico(topico.id)).length,
+  })),
+)
+
+const jsonLd = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'CollectionPage',
+    name: 'Tópicos',
+    url: new URL('/topicos/', Astro.site).href,
+    inLanguage: SITE.locale,
+    hasPart: withCounts.map(({ topico }) => ({
+      '@type': 'CollectionPage',
+      name: topico.data.name,
+      url: new URL(`/topicos/${topico.id}/`, Astro.site).href,
+    })),
+  },
+]
+---
+
+<Layout
+  title="Tópicos"
+  description="Os assuntos que eu escrevo sobre: fundamentos da computação, escola 42, inteligência artificial, front-end, back-end, carreira e ferramentas."
+  jsonLd={jsonLd}
+>
+  <Breadcrumbs items={[{ label: 'Tópicos', icon: 'lucide:library' }]} />
+
+  <section class="flex flex-col gap-y-4">
+    <h1 class="text-3xl leading-none font-medium">Tópicos</h1>
+    <p class="text-muted-foreground">
+      Cada post do blog pertence a um tópico. Comece pelo assunto que te
+      interessa.
+    </p>
+
+    <ul class="grid gap-4 sm:grid-cols-2">
+      {
+        withCounts.map(({ topico, count }) => (
+          <li>
+            <a
+              href={`/topicos/${topico.id}/`}
+              class="hover:bg-secondary/50 flex h-full flex-col gap-y-2 rounded-xl border border-l-4 p-4 transition-colors"
+              style={`border-left-color: ${topico.data.tint}`}
+            >
+              <div class="flex items-baseline justify-between gap-x-2">
+                <h2 class="text-lg font-medium">{topico.data.name}</h2>
+                <span class="text-muted-foreground text-xs">
+                  {count} {count === 1 ? 'post' : 'posts'}
+                </span>
+              </div>
+              <p class="text-muted-foreground text-sm">
+                {topico.data.description}
+              </p>
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </section>
+</Layout>
