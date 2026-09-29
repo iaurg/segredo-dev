@@ -59,7 +59,7 @@ Data lake: É o dado já tratado e pronto para uso sem impor tipo de arquivo ou 
 
 ETL (extract-transform-load): É o processo de extrair os dados de um banco de dados de sistema operacional para um sistema analitico, as vezes pode ser invertido ELT (extract-load-transform), o objetivo aqui é termos um data warehouse separado para consumo dos dados.
 
-HTPA (Hybrid Transaction/Analytical Processing): Permitir OLTP e analise em um unico sistema, sem a necessidade de ETL
+HTAP (Hybrid Transaction/Analytical Processing): Permitir OLTP e analise em um unico sistema, sem a necessidade de ETL
 
 ## Ferramentas
 
