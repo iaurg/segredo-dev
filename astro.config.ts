@@ -72,8 +72,8 @@ export default defineConfig({
     icon(),
   ],
   image: {
-    // Book covers come from Amazon; optimize them at build time.
-    domains: ['m.media-amazon.com'],
+    // Book covers come from Amazon (or the publisher); optimize them at build time.
+    domains: ['m.media-amazon.com', 's3.novatec.com.br'],
   },
   vite: {
     plugins: [tailwindcss()],

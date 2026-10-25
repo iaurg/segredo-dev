@@ -25,6 +25,8 @@ No primeiro bloco do capitulo o foco principal do autor é colocar todo mundo no
 
 Ainda não temos de fato um aprofundamento, mas sim comparativos e "quando usar o que" geral. O grande ponto é deixar claro como os dados são tratados, organizados e de onde eles surgem para que possam ser trabalhados. Já é perceptível o porque existem sub-grupos de profissionais dentro da área de dados, várias das camadas existentes desdes o sistema que gera o dado até a sua análise envolvem cada um suas técnicas e trade-offs. 
 
+
+
 ### Pontos de marcação no capítulo:
 
 > O código da aplicação frequentemente é sem estado (stateless), ou seja, ao concluir o tratamento de uma solicitação HTTP, não mantém nenhuma informação sobre ela. Qualquer informação que precise persistir entre uma solicitação e outra deve ser armazenada no cliente ou na infraestrutura de dados do lado do servidor.
@@ -49,9 +51,10 @@ sistema de dados derivados: normalmente consomem os dados do sistema de registro
 
 serverless: é um servidor que "levanta" apenas para servir a sua demanda e depois desliga, diferente de um servidor tradicional que está sempre disponivel mesmo quando não é utilizado. Essa mesma solução as vezes pode ser chamada de Function-as-a-Service (FaaS), similar ao conceito de edge functions.
 
-OLTP (online transaction processing): é o processo onde os dados são modificados atráves de entradas do usuários, as transações possuem ações vindas de "fora" que modificam os dados. O mais comum nesse tipo de operação é trabalhar com registros limitados e normalmente focados em um usuário ou grupo limitado de dados (point queries).
+OLTP (online transaction processing): é o processo onde os dados são modificados atráves de entradas do usuários, as transações possuem ações vindas de "fora" que modificam os dados. O mais comum nesse tipo de operação é trabalhar com registros limitados e normalmente focados em um usuário ou grupo limitado de dados (point queries). Sistemas web com CRUD são um exemplo bom aqui.
 
-OLAP (online analytical processing): neste tipo de processo a ideia é trabalhar com análise de dados ao inves de modificar os dados em si, o foco aqui normalmente é cruzar informações e responder perguntas que cruzam diversos usuários/grupos, normalmente realizando cálculos para responder uma pergunta analítica.
+
+OLAP (online analytical processing): neste tipo de processo a ideia é trabalhar com análise de dados ao inves de modificar os dados em si, o foco aqui normalmente é cruzar informações e responder perguntas que cruzam diversos usuários/grupos, normalmente realizando cálculos para responder uma pergunta analítica. ETL e dashboards são mais comuns aqui, eles muitas vezes trabalham com dados reunidos/gerados por um sistema OLTP.
 
 Data warehouse: É basicamente um (ou vários) banco de dados separado onde os analistas podem realizar operações sem afetar o sistema OLTP e suas transações.
 
@@ -65,7 +68,9 @@ HTAP (Hybrid Transaction/Analytical Processing): Permitir OLTP e analise em um u
 
 Lista de ferramentas mencionadas no livro
 
-Bancos de dados: DuckDB
+Bancos de dados: DuckDB, PostgreSQL, MySQL, MongoDB, AWS Aurora, Azure SQL DB HyperCart, Google Cloud Spanner
+
+Bancos de dados analiticos: Teradata, ClickHouse, Sparl, Snowflake, Google BigQuery, Azure Synapse Analytics
 
 Visualização de dados: Tableau, Looker, Power BI
 
