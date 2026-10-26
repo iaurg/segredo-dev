@@ -9,6 +9,7 @@ const DESTAQUES = [
   '42-get-next-line',
   'o-que-sao-migrations',
   'zen-da-programacao-com-ia',
+  'por-que-aprender-programacao-e-tao-dificil',
 ]
 
 const frontmatter = (folder: string) => {
@@ -45,7 +46,7 @@ test.describe('Destaques', () => {
   })
 
   test('a hub without destaques still lists its posts', async ({ page }) => {
-    await page.goto('/topicos/carreira/')
+    await page.goto('/topicos/front-end/')
     expect(
       await page.locator('main li a[href^="/blog/"]').count(),
     ).toBeGreaterThan(0)
