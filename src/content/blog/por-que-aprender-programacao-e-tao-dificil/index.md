@@ -9,7 +9,7 @@ image: ./por-que-aprender-programacao-e-tao-dificil.jpg
 destaque: true
 ---
 
-> Análise e resumo do artigo [Why Learning to Code is So Damn Hard](https://web.archive.org/web/20180413084800/http://www.vikingcodeschool.com:80/posts/why-learning-to-code-is-so-damn-hard), escrito por Erik Trautman para a Viking Code School (depois republicado no blog da Thinkful). O texto original saiu do ar e hoje só existe no [Internet Archive](https://web.archive.org/web/20240114143404/https://www.thinkful.com/blog/why-learning-to-code-is-so-damn-hard/). Os gráficos deste post foram redesenhados por mim a partir das ideias do artigo.
+> Análise e resumo do artigo [Why Learning to Code is So Damn Hard](https://web.archive.org/web/20180413084800/http://www.vikingcodeschool.com:80/posts/why-learning-to-code-is-so-damn-hard), escrito por Erik Trautman para a Viking Code School (depois republicado no blog da Thinkful). O texto original saiu do ar e hoje só existe no [Internet Archive](https://web.archive.org/web/20240114143404/https://www.thinkful.com/blog/why-learning-to-code-is-so-damn-hard/). As imagens e os gráficos são os do artigo original, recuperados de cópias salvas no Internet Archive.
 
 Esse é um dos textos que mais me marcaram sobre aprender a programar. Ele não ensina nenhuma linguagem nem ferramenta, mas explica por que a jornada parece tão confusa e por que tanta gente desiste no meio do caminho achando que o problema é ela mesma.
 
